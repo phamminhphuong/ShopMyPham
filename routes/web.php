@@ -103,5 +103,25 @@ Route::group(['prefix' => 'admin','middleware'=>'admin_login'], function() {
         Route::get('delete/{id}','Admin\SlideController@getDelete');
         Route::get('detail/{id}','Admin\SlideController@getDetail');
     });
+        //  nhap san pham
+     Route::group(['prefix' => 'nhapsanpham'], function() {
+        Route::get('list','Admin\NhapsanphamController@getList');
+         Route::get('add','Admin\NhapsanphamController@getAdd');
+         Route::post('add','Admin\NhapsanphamController@postAdd');
+         Route::get('edit/{id}','Admin\NhapsanphamController@getEdit');
+         Route::post('edit/{id}','Admin\NhapsanphamController@postEdit');
+        Route::get('delete/{id}','Admin\NhapsanphamController@getDelete');
+        Route::get('detail/{id}','Admin\NhapsanphamController@getDetail');
+    });
+        //  xuat san pham
+     Route::group(['prefix' => 'xuatsanpham'], function() {
+        Route::get('list','Admin\XuatsanphamController@getList');
+         Route::get('add','Admin\XuatsanphamController@getAdd');
+         Route::post('add','Admin\XuatsanphamController@postAdd');
+         Route::get('edit/{id}','Admin\XuatsanphamController@getEdit');
+         Route::post('edit/{id}','Admin\XuatsanphamController@postEdit');
+        Route::get('delete/{id}','Admin\XuatsanphamController@getDelete');
+        Route::get('detail/{id}','Admin\XuatsanphamController@getDetail');
+    });
     
 });
