@@ -60,6 +60,17 @@ class SanphamController extends Controller
         $sanpham->CongDung=$request->CongDung;
         $sanpham->HanSuDung=$request->HanSuDung;
         $sanpham->MieuTa=$request->MieuTa;
+        if($request->hasFile('HinhAnh'))
+        {
+            $file=$request->file('HinhAnh');
+            $name=$file->getClientOriginalName();
+            $HinhAnh=str_random(10)."_".$name;
+            $file->move('image_SanPham',$HinhAnh);
+            $sanpham->HinhAnh=$HinhAnh;
+        }
+        else{
+            $sanpham->HinhAnh='';
+        }
         $sanpham->SoLuong=$request->SoLuong;
         $sanpham->Gia=$request->Gia;
         $sanpham->GiaUuDai=$request->GiaUuDai;
@@ -118,6 +129,17 @@ class SanphamController extends Controller
         $sanpham->CongDung=$request->CongDung;
         $sanpham->HanSuDung=$request->HanSuDung;
         $sanpham->MieuTa=$request->MieuTa;
+        if($request->hasFile('HinhAnh'))
+        {
+            $file=$request->file('HinhAnh');
+            $name=$file->getClientOriginalName();
+            $HinhAnh=str_random(10)."_".$name;
+            $file->move('image_SanPham',$HinhAnh);
+            $sanpham->HinhAnh=$HinhAnh;
+        }
+        else{
+          
+        }
         $sanpham->SoLuong=$request->SoLuong;
         $sanpham->Gia=$request->Gia;
         $sanpham->GiaUuDai=$request->GiaUuDai;

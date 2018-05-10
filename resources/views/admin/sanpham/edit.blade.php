@@ -19,7 +19,7 @@
         </div>
         @endif
         <br>
-        <form action="admin/sanpham/edit/{!!$sanpham->id!!}" method="post">
+        <form action="admin/sanpham/edit/{!!$sanpham->id!!}" method="post" enctype="multipart/form-data">
            <input type="hidden" name="_token" value="{{csrf_token()}}">
            <div class="form-horizontal">
                     <div class="form-group">
@@ -72,6 +72,14 @@
                             <b class="control-label col-md-2"> Mô tả sản phẩm</b>
                             <div class="col-md-10">
                                 <textarea name="MieuTa" id="MieuTa">{!!$sanpham->MieuTa!!}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <b class="control-label col-md-2"> Hình ảnh</b>
+                            <div class="col-md-10">
+                            <img src="image_SanPham/{!!$sanpham->HinhAnh!!}" width="300px" height="200px" alt=""><br>
+                            <br>
+                              <input type="file" name="HinhAnh" class="form-control">
                             </div>
                         </div>
                             <div class="form-group">

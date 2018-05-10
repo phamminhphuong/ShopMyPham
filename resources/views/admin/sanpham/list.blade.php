@@ -58,6 +58,11 @@
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
+                                        Hình ảnh
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
+                            Mật khẩu
+                        : activate to sort column ascending" style="width: 239.799px;">
                                        Số lượng
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
@@ -127,6 +132,9 @@
                                     </td>
                                     <td>
                                         {!!$sp->MieuTa!!}
+                                    </td>
+                                    <td>
+                                        <img src="image_SanPham/{!!$sp->HinhAnh!!}" width="70px" height="70px" alt="">
                                     </td>
                                     <td>
                                         {!!$sp->SoLuong!!}

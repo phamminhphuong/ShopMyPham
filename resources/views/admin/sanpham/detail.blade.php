@@ -67,6 +67,14 @@
             </dl>
             <dl class="dl-horizontal">
                 <dt>
+                   Hình ảnh
+                </dt>
+                <dd>
+                    <img src="image_SanPham/{!!$sanpham->HinhAnh!!}" width="500px" height="300px" alt="">
+                </dd>
+            </dl>
+            <dl class="dl-horizontal">
+                <dt>
                    Số lượng
                 </dt>
                 <dd>

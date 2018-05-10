@@ -28,7 +28,7 @@ Route::get('dangxuat','Admin\TaikhoanController@getDangXuat');
 
 //  trang admin'middleware'=>'admin_login'
 
-Route::group(['prefix' => 'admin'], function() {
+Route::group(['prefix' => 'admin','middleware'=>'admin_login'], function() {
     // bang dieu khien
     Route::group(['prefix' => 'bangdieukhien'], function() {
         Route::get('index','Admin\BangdieukhienController@getBangdieukhien');
