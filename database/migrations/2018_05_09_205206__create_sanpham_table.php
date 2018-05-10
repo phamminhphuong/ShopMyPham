@@ -21,6 +21,7 @@ class CreateSanphamTable extends Migration
             $table->string('CongDung');
             $table->date('HanSuDung');
             $table->text('MieuTa');
+            $table->string('HinhAnh');
             $table->integer('SoLuong');
             $table->float('Gia', 12, 2);
             $table->float('GiaUuDai', 12, 2);

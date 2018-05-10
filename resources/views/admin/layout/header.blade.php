@@ -19,31 +19,44 @@
             <ul class="nav navbar-nav">
                 <!-- User Account: style can be found in dropdown.less -->
                 @if(Auth::user())
+                
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="image/admin.jpg" alt="" class="user-image">
-                        <span class="hidden-xs"> 
-                            {!!Auth::user()->email!!}
+                        <img src="image_HoSo/{!!empty(Auth::user()->HoSoXinViec->first())?'':Auth::user()->HoSoXinViec->first()->HinhAnh!!}" alt="" class="user-image">
                         
-                        </span>
+                        <span class="hidden-xs"> {!!Auth::user()->email!!}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            {{--  <img src="image/admin.jpg" alt="" class="img-circle">  --}}
+                            <img src="image_HoSo/{!!empty(Auth::user()->HoSoXinViec->first())?'':Auth::user()->HoSoXinViec->first()->HinhAnh!!}" alt="" class="img-circle">
                             <p>
                                 {{-- Account --}}
                                 {!!Auth::user()->email!!}
-                            
                             </p>
                         </li>
-                     
+                        <!-- Menu Body -->
+                        {{-- <li class="user-body">
+                            <div class="row">
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Followers</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Sales</a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Friends</a>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </li> --}}
+                        <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Sửa</a>
+                                <a href="admin/taikhoan/update-profile" class="btn btn-default btn-flat">Sửa</a>
                             </div>
                             <div class="pull-right">
-                                <a href="dangxuat" class="btn btn-default btn-flat">Đăng xuất</a>
+                                <a href="dang-xuat" class="btn btn-default btn-flat">Đăng xuất</a>
                             </div>
                         </li>
                     </ul>
