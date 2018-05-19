@@ -187,11 +187,7 @@
                                         <div class="product-item__container">
                                             <a class="product-item__thumbnail " href="chi-tiet-san-pham/{!!$sp->id!!}">
                                                 <img class="default lazy swiper-lazy " src="image_SanPham/{!!$sp->HinhAnh!!}"  style="width:200px;height:200px"/> 
-                                                {{--
-                                                <img class="hover " src="https://media.static-adayroi.com/sys_master/h04/hdc/15517085073438.jpg"
-                                                    alt="Bộ 5 mặt nạ chiết xuất cam Nature Republic Real Nature Orange Mask Sheet"
-                                                    title="Bộ 5 mặt nạ chiết xuất cam Nature Republic Real Nature Orange Mask Sheet"
-                                                /> --}}
+                                                <img class="hover " src="image_SanPham/{!!$sp->HinhAnh!!}"/>
                                             </a>
                                             <div class="product-item__info">
                                                 <a class="product-item__info-title" href="chi-tiet-san-pham/{!!$sp->id!!}">

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\DanhMucSanPham;
 use App\NhaCungCap;
 use App\SanPham;
+use Gloudemans\Shoppingcart\Facades\Cart;
 class PageController extends Controller
 {
     public function __construct(){
@@ -24,5 +25,22 @@ class PageController extends Controller
     public function getChitiet($id){
         $chitietsanpham=SanPham::find($id);
         return view('page.chi-tiet-san-pham',['chitietsanpham'=>$chitietsanpham]);
+    }
+
+    // GET /gio-hang
+    public function getGioHang() {
+        return view('page.gio-hang');
+    }
+
+    //POST /gio-hang
+    public function postGioHang(Request $request) {
+        $quantity = $request->quantity;
+        $id       = $request->productId;
+        
+        $product = SanPham::find($id);
+
+        //id, name, quantity, price
+        Cart::add($id, $product, $quantity, $product->GiaUuDai);
+        return view('page.gio-hang');
     }
 }
