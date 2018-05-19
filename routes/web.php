@@ -23,6 +23,9 @@ Route::get('dangxuat','Admin\TaikhoanController@getDangXuat');
 Route::get('gio-hang', 'PageController@getGioHang');
 Route::post('gio-hang', 'PageController@postGioHang');
 
+Route::get('thanh-toan', 'PageController@getThanhToan');
+Route::post('thanh-toan', 'PageController@postThanhToan');
+
 //  trang admin'middleware'=>'admin_login'
 
 Route::group(['prefix' => 'admin'], function() {

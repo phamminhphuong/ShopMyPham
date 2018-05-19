@@ -84,7 +84,7 @@
                                         <a class="js-cart-continue-shopping-button" href="">◀ Tiếp tục mua hàng</a>
                                     </div>
                                     <div class="cart-submit">
-                                        <a href="/checkout" class="btn btn-primary js-cart-checkout-button ">Tiến hành thanh toán&nbsp;
+                                        <a href="thanh-toan" class="btn btn-primary js-cart-checkout-button ">Tiến hành thanh toán&nbsp;
                                             <img class="visible-xs-inline visible-sm-inline" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/icons/icon-two-arow-mini-cart.png"
                                                 alt="">
                                         </a>
