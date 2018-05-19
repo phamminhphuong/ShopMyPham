@@ -71,17 +71,16 @@
                         </div>
                     </div>
                     <div class="yCmsContentSlot col-md-7 hidden-xs hidden-sm header--segment-right">
-                        <div class="content">
+                        {{--  <div class="content">
                             <div class="header--segment-item pull-right">
                                 <a href="https://www.adayroi.com/dang-ky-ban-hang-cung-Adayroi-lpncc?itm_source=home_top">B&aacute;n h&agrave;ng c&ugrave;ng Adayroi</a>
                             </div>
-                        </div>
+                        </div>  --}}
                         <div class="header--segment-item pull-right pop-hover js-pop-hover">
                             <a href="javascript:;" class="pop-hover-title" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true"
-                             aria-expanded="false" class="pop-hover-title">
+                                aria-expanded="false" class="pop-hover-title">
                                 <img src="https://media.static-adayroi.com/sys_master/images/h0b/h5b/9231713206302.png" alt="Header Middle Component" /> Chăm sóc khách hàng
-                                <img src="https://media.static-adayroi.com/sys_master/images/hb1/hd9/9231713107998.png" alt="Header Middle Component"
-                                />
+                                <img src="https://media.static-adayroi.com/sys_master/images/hb1/hd9/9231713107998.png" alt="Header Middle Component" />
                             </a>
                             <div class="pop-hover-open">
                                 <ul>
@@ -116,9 +115,9 @@
                             </div>
 
                         </div>
-                        <div class="header--segment-item pull-right pop-hover js-pop-hover">
+                        {{--  <div class="header--segment-item pull-right pop-hover js-pop-hover">
                             <a href="javascript:;" class="pop-hover-title" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true"
-                             aria-expanded="false" class="pop-hover-title">
+                                aria-expanded="false" class="pop-hover-title">
                                 <img src="https://media.static-adayroi.com/sys_master/h9a/hdb/9258712530974.gif" alt="" /> Thẻ VinID
                                 <img src="https://media.static-adayroi.com/sys_master/images/hb1/hd9/9231713107998.png" alt="" />
                             </a>
@@ -138,7 +137,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div>  --}}
                         <div class="content">
                             <style>
                                 .header__links__segment_mega_menu .menu__cat-list ul li,
@@ -295,7 +294,7 @@
 
                     <div class=" visible-xs-inline-block mobile__nav__row--seperator">
                         <button class="mobile__nav__row--btn btn mobile__nav__row--btn-search js-toggle-xs-search hidden-sm hidden-md hidden-lg"
-                         type="button">
+                            type="button">
                             <span class="adr-icon search-icon-mobile visible-xs visible-sm"></span>
 
                         </button>
@@ -349,7 +348,7 @@
                         <li class="col-sm-12 col-md-2">
                             <div class="nav-cart">
                                 <a href="https://www.adayroi.com/cart" class="mini-cart-link js-mini-cart-link" data-mini-cart-url="/cart/rollover" data-mini-cart-refresh-url="/cart/miniCart/SUBTOTAL"
-                                 data-mini-cart-name="Cart" data-mini-cart-empty-name="Empty Cart" data-mini-cart-items-text="Items">
+                                    data-mini-cart-name="Cart" data-mini-cart-empty-name="Empty Cart" data-mini-cart-items-text="Items">
                                     <div class="mini-cart-icon">
                                         <span class="adr-icon icon-cart hidden-xs hidden-sm"></span>
                                         <span class="adr-icon icon-cart-mobile visible-xs visible-sm"></span>
@@ -386,59 +385,24 @@
                                         <div class="input-group-btn no-padding hidden-xs hidden-sm">
                                             <div class="dropdown js-select-category">
                                                 <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                                    <span class="category-selected">SỨC KHỎE & SẮC ĐẸP</span>
+                                                    <span class="category-selected">Shop Mỹ Phẩm</span>
                                                     <input name="category" class="input-selected hidden" type="text" value="139" />
                                                     <span class="caret"></span>
                                                 </a>
+
                                                 <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                    @foreach($danhmucsanpham as $dmsp)
                                                     <li>
-                                                        <a href="#" data-value="332500">Voucher dịch vụ</a>
+                                                        <a href="#" data-value="332500">{!!$dmsp->TenDanhMuc!!}</a>
                                                     </li>
-                                                    <li>
-                                                        <a href="#" data-value="861">NHÀ CỬA & ĐỜI SỐNG</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-value="714">MẸ & BÉ</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-value="591">THỰC PHẨM</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-value="1383">Sách, VPP & Âm nhạc</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-value="1">THỜI TRANG</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-value="321">ĐIỆN MÁY & CÔNG NGHỆ</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-value="1802">Đồng hồ thông minh</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-value="139">SỨC KHỎE & SẮC ĐẸP</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-value="3325581">Vinmec</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-value="658">Hoa tươi</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-value="2127">CẨM NANG MUA SẮM TIẾT KIỆM</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" data-value="332560039012">CẨM NANG MUA SẮM</a>
-                                                    </li>
-                                                    <li>
-                                                        <a data-value="all" href="#" class="selected">Tất cả</a>
-                                                    </li>
+                                                    @endforeach
                                                 </ul>
                                             </div>
                                         </div>
                                         <input type="text" title="Vui lòng không để trống" id="js-site-search-input" class="form-control js-site-search-input" name="text"
-                                         value="" maxlength="100" placeholder="Tìm sản phẩm, thương hiệu bạn mong muốn" required="" autofocus oninvalid="this.setCustomValidity('Vui lòng không để trống')"
-                                         oninput="setCustomValidity('')" data-options='{"autocompleteUrl" : "/tim-kiem/autocomplete/AdayroiSearchBoxComponent","minCharactersBeforeRequest" : "2","waitTimeBeforeRequest" : "500","displayProductImages" : true}'>
+                                            value="" maxlength="100" placeholder="Tìm sản phẩm bạn mong muốn" required=""
+                                            autofocus oninvalid="this.setCustomValidity('Vui lòng không để trống')" oninput="setCustomValidity('')"
+                                            data-options='{"autocompleteUrl" : "/tim-kiem/autocomplete/AdayroiSearchBoxComponent","minCharactersBeforeRequest" : "2","waitTimeBeforeRequest" : "500","displayProductImages" : true}'>
 
                                         <span class="input-group-btn btn-find-group">
                                             <button class="btn btn-link" type="submit" style="background: #ed1d24; color: #ffffff;">Tìm kiếm</button>
@@ -461,7 +425,7 @@
                                                 <ul class="menu__cat-list menu__cat-list--parent">
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/voucher-dich-vu-c332500?sort=bestselling-desc&amp;q=%3Arelevance#"
-                                                         data-uid="navigationNode_000003UW">Voucher giảm tới 50% </a>
+                                                            data-uid="navigationNode_000003UW">Voucher giảm tới 50% </a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <a href="https://www.adayroi.com/am-thuc-ban-chay-lp32513?tabid=325134#325134">
@@ -547,7 +511,7 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/voucher-dich-vu-c332500?sort=bestselling-desc&amp;q=%3Arelevance#"
-                                                         data-uid="navigationNode_000003UX">Đi - Ăn - Chơi</a>
+                                                            data-uid="navigationNode_000003UX">Đi - Ăn - Chơi</a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <a href="https://www.adayroi.com/buffet-c332566?sort=bestselling-desc&amp;q=%3Arelevance#&origPage=32513">
@@ -629,10 +593,12 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/vinmec-c3325581" data-uid="VerticalMegaNodeMenu6" data-image1-url='https://media.static-adayroi.com/sys_master/h39/h9b/9232688807966.jpg'
-                                                         data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h21/h38/9232691527710.jpg'
-                                                         data-image3-url='https://media.static-adayroi.com/sys_master/h12/h38/9232827187230.jpg' data-image4-url='https://media.static-adayroi.com/sys_master/h8a/hf2/9232828301342.jpg'
-                                                         data-image5-url='https://media.static-adayroi.com/sys_master/hcf/h38/9232828891166.jpg' data-image6-url='https://media.static-adayroi.com/sys_master/h2a/h3a/9232829153310.jpg'
-                                                         data-image7-url='https://media.static-adayroi.com/sys_master/h9a/h85/9232830791710.jpg'>Sức khỏe - Vinmec</a>
+                                                            data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h21/h38/9232691527710.jpg'
+                                                            data-image3-url='https://media.static-adayroi.com/sys_master/h12/h38/9232827187230.jpg'
+                                                            data-image4-url='https://media.static-adayroi.com/sys_master/h8a/hf2/9232828301342.jpg'
+                                                            data-image5-url='https://media.static-adayroi.com/sys_master/hcf/h38/9232828891166.jpg'
+                                                            data-image6-url='https://media.static-adayroi.com/sys_master/h2a/h3a/9232829153310.jpg'
+                                                            data-image7-url='https://media.static-adayroi.com/sys_master/h9a/h85/9232830791710.jpg'>Sức khỏe - Vinmec</a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <a href="https://www.adayroi.com/vinmec-thunder-sale-lp32553">
@@ -681,10 +647,13 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/dien-thoai-may-tinh-bang-c322" data-uid="navigationNode_000002BC"
-                                                         data-image1-url='https://media.static-adayroi.com/sys_master/hfb/hf2/9671263125534.jpg' data-image1-alt=''
-                                                         data-image2-url='https://media.static-adayroi.com/sys_master/h31/h02/9671263158302.jpg' data-image3-url='https://media.static-adayroi.com/sys_master/h18/h34/9671263191070.jpg'
-                                                         data-image4-url='https://media.static-adayroi.com/sys_master/hdf/h79/9671263223838.jpg' data-image5-url='https://media.static-adayroi.com/sys_master/hef/h85/9238202417182.jpg'
-                                                         data-image6-url='https://media.static-adayroi.com/sys_master/h58/he8/9238202548254.jpg' data-image7-url='https://media.static-adayroi.com/sys_master/h10/h14/9257470820382.jpg'>Mobile - Tablet - Nạp thẻ</a>
+                                                            data-image1-url='https://media.static-adayroi.com/sys_master/hfb/hf2/9671263125534.jpg'
+                                                            data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h31/h02/9671263158302.jpg'
+                                                            data-image3-url='https://media.static-adayroi.com/sys_master/h18/h34/9671263191070.jpg'
+                                                            data-image4-url='https://media.static-adayroi.com/sys_master/hdf/h79/9671263223838.jpg'
+                                                            data-image5-url='https://media.static-adayroi.com/sys_master/hef/h85/9238202417182.jpg'
+                                                            data-image6-url='https://media.static-adayroi.com/sys_master/h58/he8/9238202548254.jpg'
+                                                            data-image7-url='https://media.static-adayroi.com/sys_master/h10/h14/9257470820382.jpg'>Mobile - Tablet - Nạp thẻ</a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <a href="https://www.adayroi.com/aukey-br12573?q=:relevance:category:322&amp;itm_source=Mega_Menu_MT&amp;itm_medium=PC">
@@ -766,11 +735,13 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/dien-may-cong-nghe-c321?itm_source=Mega_Menu_CE_CL&amp;itm_medium=PC"
-                                                         data-uid="VerticalMegaNodeMenu4" data-image1-url='https://media.static-adayroi.com/sys_master/hee/he7/9671337443358.jpg'
-                                                         data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/hf1/h29/9220148232222.jpg'
-                                                         data-image3-url='https://media.static-adayroi.com/sys_master/hdf/h0f/9220148527134.jpg' data-image4-url='https://media.static-adayroi.com/sys_master/h97/ha1/9220148658206.jpg'
-                                                         data-image5-url='https://media.static-adayroi.com/sys_master/h06/h3b/9220148592670.jpg' data-image6-url='https://media.static-adayroi.com/sys_master/h07/he0/9220148723742.jpg'
-                                                         data-image7-url='https://media.static-adayroi.com/sys_master/ha3/heb/9220148789278.jpg'>Tivi - Máy ảnh - Laptop </a>
+                                                            data-uid="VerticalMegaNodeMenu4" data-image1-url='https://media.static-adayroi.com/sys_master/hee/he7/9671337443358.jpg'
+                                                            data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/hf1/h29/9220148232222.jpg'
+                                                            data-image3-url='https://media.static-adayroi.com/sys_master/hdf/h0f/9220148527134.jpg'
+                                                            data-image4-url='https://media.static-adayroi.com/sys_master/h97/ha1/9220148658206.jpg'
+                                                            data-image5-url='https://media.static-adayroi.com/sys_master/h06/h3b/9220148592670.jpg'
+                                                            data-image6-url='https://media.static-adayroi.com/sys_master/h07/he0/9220148723742.jpg'
+                                                            data-image7-url='https://media.static-adayroi.com/sys_master/ha3/heb/9220148789278.jpg'>Tivi - Máy ảnh - Laptop </a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <a href="https://www.adayroi.com/dien-tu-sieu-khuyen-mai-lp838?itm_source=Mega_Menu_CE_CL&amp;itm_medium=PC">
@@ -851,10 +822,13 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/dien-may-dien-lanh-dien-gia-dung-c1773" data-uid="VerticalMegaNodeMenu3"
-                                                         data-image1-url='https://media.static-adayroi.com/sys_master/h55/h63/9569589952542.jpg' data-image1-alt=''
-                                                         data-image2-url='https://media.static-adayroi.com/sys_master/h7d/ha7/9569589985310.jpg' data-image3-url='https://media.static-adayroi.com/sys_master/h21/h3d/9569590018078.jpg'
-                                                         data-image4-url='https://media.static-adayroi.com/sys_master/h44/h48/9569590771742.jpg' data-image5-url='https://media.static-adayroi.com/sys_master/hdf/h5a/9569590050846.jpg'
-                                                         data-image6-url='https://media.static-adayroi.com/sys_master/hf4/haf/9569590083614.jpg' data-image7-url='https://media.static-adayroi.com/sys_master/ha9/h39/9569590116382.jpg'>Điện lạnh - Điện gia dụng </a>
+                                                            data-image1-url='https://media.static-adayroi.com/sys_master/h55/h63/9569589952542.jpg'
+                                                            data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h7d/ha7/9569589985310.jpg'
+                                                            data-image3-url='https://media.static-adayroi.com/sys_master/h21/h3d/9569590018078.jpg'
+                                                            data-image4-url='https://media.static-adayroi.com/sys_master/h44/h48/9569590771742.jpg'
+                                                            data-image5-url='https://media.static-adayroi.com/sys_master/hdf/h5a/9569590050846.jpg'
+                                                            data-image6-url='https://media.static-adayroi.com/sys_master/hf4/haf/9569590083614.jpg'
+                                                            data-image7-url='https://media.static-adayroi.com/sys_master/ha9/h39/9569590116382.jpg'>Điện lạnh - Điện gia dụng </a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <a href="https://www.adayroi.com/khuyen-mai-dien-gia-dung-lp820?itm_source=Mega_Menu_HA&amp;itm_medium=PC">
@@ -939,31 +913,30 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/rau-cu-qua-c639" data-uid="navigationNode_000001JK" data-image1-url='https://media.static-adayroi.com/sys_master/images/hd4/h47/11838602608670.jpg'
-                                                         data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/hdc/h15/11460165435422.jpg'
-                                                         data-image3-url='https://media.static-adayroi.com/sys_master/h03/hd9/11460165468190.jpg' data-image4-url='https://media.static-adayroi.com/sys_master/hed/h91/11460165500958.jpg'
-                                                         data-image5-url='https://media.static-adayroi.com/sys_master/h3f/h63/11460165533726.jpg' data-image6-url='https://media.static-adayroi.com/sys_master/he8/h5f/11460165566494.jpg'
-                                                         data-image7-url='https://media.static-adayroi.com/sys_master/h44/h95/11460165599262.jpg'>Thực phẩm tươi sống</a>
+                                                            data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/hdc/h15/11460165435422.jpg'
+                                                            data-image3-url='https://media.static-adayroi.com/sys_master/h03/hd9/11460165468190.jpg'
+                                                            data-image4-url='https://media.static-adayroi.com/sys_master/hed/h91/11460165500958.jpg'
+                                                            data-image5-url='https://media.static-adayroi.com/sys_master/h3f/h63/11460165533726.jpg'
+                                                            data-image6-url='https://media.static-adayroi.com/sys_master/he8/h5f/11460165566494.jpg'
+                                                            data-image7-url='https://media.static-adayroi.com/sys_master/h44/h95/11460165599262.jpg'>Thực phẩm tươi sống</a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <a href="https://www.adayroi.com/tdth-tp-thucpham-lp1603">
                                                                 <h3 class="have__hot-icon">
                                                                     <span class="infor-sale">Ưu Đãi Đến 30%</span>
-                                                                    <img class="icon-mb" src="https://media.static-adayroi.com/sys_master/images/h9c/h3c/11924438777886.png"
-                                                                     alt="">
+                                                                    <img class="icon-mb" src="https://media.static-adayroi.com/sys_master/images/h9c/h3c/11924438777886.png" alt="">
                                                                 </h3>
                                                             </a>
                                                             <a href="https://www.adayroi.com/goc-han-quoc-lp1207">
                                                                 <h3 class="have__hot-icon">
                                                                     <span class="infor-sale">Góc Hàn Quốc</span>
-                                                                    <img class="icon-mb" src="https://media.static-adayroi.com/sys_master/images/h9c/h3c/11924438777886.png"
-                                                                     alt="">
+                                                                    <img class="icon-mb" src="https://media.static-adayroi.com/sys_master/images/h9c/h3c/11924438777886.png" alt="">
                                                                 </h3>
                                                             </a>
                                                             <a href="https://www.adayroi.com/sua-kem-san-pham-tu-sua-c617?q=%3Arelevance%3AofferDiscount%3AGi%E1%BA%A3m+gi%C3%A1+t%E1%BB%AB+10%25">
                                                                 <h3 class="have__hot-icon">
                                                                     <span class="infor-sale">Sữa Ưu Đãi Đến 30%</span>
-                                                                    <img class="icon-mb" src="https://media.static-adayroi.com/sys_master/images/h9c/h3c/11924438777886.png"
-                                                                     alt="">
+                                                                    <img class="icon-mb" src="https://media.static-adayroi.com/sys_master/images/h9c/h3c/11924438777886.png" alt="">
                                                                 </h3>
                                                             </a>
                                                             <hr/>
@@ -1019,10 +992,12 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/do-dung-gia-dinh-c862" data-uid="VerticalMegaNodeMenu8" data-image1-url='https://media.static-adayroi.com/sys_master/hf1/hfa/13205804941342.jpg'
-                                                         data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h33/h19/11460165664798.jpg'
-                                                         data-image3-url='https://media.static-adayroi.com/sys_master/he8/ha8/11469956710430.jpg' data-image4-url='https://media.static-adayroi.com/sys_master/hef/h17/11469956743198.jpg'
-                                                         data-image5-url='https://media.static-adayroi.com/sys_master/hfc/h74/11469956775966.jpg' data-image6-url='https://media.static-adayroi.com/sys_master/h26/h8d/11460213112862.jpg'
-                                                         data-image7-url='https://media.static-adayroi.com/sys_master/h06/h68/11460213145630.jpg'>Hàng tiêu dùng</a>
+                                                            data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h33/h19/11460165664798.jpg'
+                                                            data-image3-url='https://media.static-adayroi.com/sys_master/he8/ha8/11469956710430.jpg'
+                                                            data-image4-url='https://media.static-adayroi.com/sys_master/hef/h17/11469956743198.jpg'
+                                                            data-image5-url='https://media.static-adayroi.com/sys_master/hfc/h74/11469956775966.jpg'
+                                                            data-image6-url='https://media.static-adayroi.com/sys_master/h26/h8d/11460213112862.jpg'
+                                                            data-image7-url='https://media.static-adayroi.com/sys_master/h06/h68/11460213145630.jpg'>Hàng tiêu dùng</a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <a href="https://www.adayroi.com/gia-dung-chinh-hang-khuyen-mai-lp2454">
@@ -1092,10 +1067,12 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/thoi-trang-c1" data-uid="VerticalMegaNodeMenu5" data-image1-url='https://media.static-adayroi.com/sys_master/h6e/h5b/9203013451806.jpg'
-                                                         data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/heb/hdd/9229111001118.jpg'
-                                                         data-image3-url='https://media.static-adayroi.com/sys_master/hd1/hc6/9229111296030.jpg' data-image4-url='https://media.static-adayroi.com/sys_master/h9f/h2a/9229112311838.jpg'
-                                                         data-image5-url='https://media.static-adayroi.com/sys_master/h81/h11/9229112606750.jpg' data-image6-url='https://media.static-adayroi.com/sys_master/h10/hde/9229112967198.jpg'
-                                                         data-image7-url='https://media.static-adayroi.com/sys_master/h7b/hcf/9229113786398.jpg'>Thời trang</a>
+                                                            data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/heb/hdd/9229111001118.jpg'
+                                                            data-image3-url='https://media.static-adayroi.com/sys_master/hd1/hc6/9229111296030.jpg'
+                                                            data-image4-url='https://media.static-adayroi.com/sys_master/h9f/h2a/9229112311838.jpg'
+                                                            data-image5-url='https://media.static-adayroi.com/sys_master/h81/h11/9229112606750.jpg'
+                                                            data-image6-url='https://media.static-adayroi.com/sys_master/h10/hde/9229112967198.jpg'
+                                                            data-image7-url='https://media.static-adayroi.com/sys_master/h7b/hcf/9229113786398.jpg'>Thời trang</a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <a href="https://www.adayroi.com/tui-xach-hang-hieu-khuyen-mai-lp3900?">
@@ -1169,10 +1146,12 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/suc-khoe-sac-dep-c139" data-uid="VerticalMegaNodeMenu9" data-image1-url='https://media.static-adayroi.com/sys_master/h52/h3d/12215703535646.jpg'
-                                                         data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h81/hcd/12215703568414.jpg'
-                                                         data-image3-url='https://media.static-adayroi.com/sys_master/hd4/hee/12215703601182.jpg' data-image4-url='https://media.static-adayroi.com/sys_master/h4f/h5c/12215703994398.jpg'
-                                                         data-image5-url='https://media.static-adayroi.com/sys_master/h96/h31/12215704027166.jpg' data-image6-url='https://media.static-adayroi.com/sys_master/h77/h2b/12215704059934.jpg'
-                                                         data-image7-url='https://media.static-adayroi.com/sys_master/hcc/h58/12215704453150.jpg'>Mỹ phẩm</a>
+                                                            data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h81/hcd/12215703568414.jpg'
+                                                            data-image3-url='https://media.static-adayroi.com/sys_master/hd4/hee/12215703601182.jpg'
+                                                            data-image4-url='https://media.static-adayroi.com/sys_master/h4f/h5c/12215703994398.jpg'
+                                                            data-image5-url='https://media.static-adayroi.com/sys_master/h96/h31/12215704027166.jpg'
+                                                            data-image6-url='https://media.static-adayroi.com/sys_master/h77/h2b/12215704059934.jpg'
+                                                            data-image7-url='https://media.static-adayroi.com/sys_master/hcc/h58/12215704453150.jpg'>Mỹ phẩm</a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <a href="https://www.adayroi.com/top-deal-thoi-trang-lp4113">
@@ -1250,10 +1229,12 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/me-be-c714" data-uid="VerticalMegaNodeMenu7" data-image1-url='https://media.static-adayroi.com/sys_master/h2a/ha1/9228059246622.jpg'
-                                                         data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h3e/h84/9228070223902.jpg'
-                                                         data-image3-url='https://media.static-adayroi.com/sys_master/hcd/hc4/9228059607070.jpg' data-image4-url='https://media.static-adayroi.com/sys_master/h9d/h66/9228059934750.jpg'
-                                                         data-image5-url='https://media.static-adayroi.com/sys_master/h3a/hc8/9228060262430.jpg' data-image6-url='https://media.static-adayroi.com/sys_master/ha4/h78/9228060590110.jpg'
-                                                         data-image7-url='https://media.static-adayroi.com/sys_master/h5d/hc4/9228062687262.jpg'>Mẹ bé</a>
+                                                            data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h3e/h84/9228070223902.jpg'
+                                                            data-image3-url='https://media.static-adayroi.com/sys_master/hcd/hc4/9228059607070.jpg'
+                                                            data-image4-url='https://media.static-adayroi.com/sys_master/h9d/h66/9228059934750.jpg'
+                                                            data-image5-url='https://media.static-adayroi.com/sys_master/h3a/hc8/9228060262430.jpg'
+                                                            data-image6-url='https://media.static-adayroi.com/sys_master/ha4/h78/9228060590110.jpg'
+                                                            data-image7-url='https://media.static-adayroi.com/sys_master/h5d/hc4/9228062687262.jpg'>Mẹ bé</a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <hr/>
@@ -1317,10 +1298,12 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/noi-that-c1107" data-uid="VerticalMegaNodeMenu10" data-image1-url='https://media.static-adayroi.com/sys_master/hca/h1a/9253600264222.jpg'
-                                                         data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h65/h43/9253600591902.jpg'
-                                                         data-image3-url='https://media.static-adayroi.com/sys_master/hc4/hb0/9253601181726.jpg' data-image4-url='https://media.static-adayroi.com/sys_master/h46/hc6/9253605539870.jpg'
-                                                         data-image5-url='https://media.static-adayroi.com/sys_master/hd5/h17/9253609898014.jpg' data-image6-url='https://media.static-adayroi.com/sys_master/h69/he9/9253614256158.jpg'
-                                                         data-image7-url='https://media.static-adayroi.com/sys_master/h35/h98/9253614321694.jpg'>Nội thất nhà cửa</a>
+                                                            data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h65/h43/9253600591902.jpg'
+                                                            data-image3-url='https://media.static-adayroi.com/sys_master/hc4/hb0/9253601181726.jpg'
+                                                            data-image4-url='https://media.static-adayroi.com/sys_master/h46/hc6/9253605539870.jpg'
+                                                            data-image5-url='https://media.static-adayroi.com/sys_master/hd5/h17/9253609898014.jpg'
+                                                            data-image6-url='https://media.static-adayroi.com/sys_master/h69/he9/9253614256158.jpg'
+                                                            data-image7-url='https://media.static-adayroi.com/sys_master/h35/h98/9253614321694.jpg'>Nội thất nhà cửa</a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <a href="https://www.adayroi.com/top-chan-drap-ban-chay-nhat-mua-dong-2017-lp6068">
@@ -1396,10 +1379,12 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/sach-vpp-am-nhac-c1383" data-uid="navigationNode_00000A14" data-image1-url='https://media.static-adayroi.com/sys_master/hca/h1a/9253600264222.jpg'
-                                                         data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h65/h43/9253600591902.jpg'
-                                                         data-image3-url='https://media.static-adayroi.com/sys_master/hc4/hb0/9253601181726.jpg' data-image4-url='https://media.static-adayroi.com/sys_master/h46/hc6/9253605539870.jpg'
-                                                         data-image5-url='https://media.static-adayroi.com/sys_master/hd5/h17/9253609898014.jpg' data-image6-url='https://media.static-adayroi.com/sys_master/h69/he9/9253614256158.jpg'
-                                                         data-image7-url='https://media.static-adayroi.com/sys_master/h35/h98/9253614321694.jpg'>Sách - Văn Phòng Phẩm</a>
+                                                            data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h65/h43/9253600591902.jpg'
+                                                            data-image3-url='https://media.static-adayroi.com/sys_master/hc4/hb0/9253601181726.jpg'
+                                                            data-image4-url='https://media.static-adayroi.com/sys_master/h46/hc6/9253605539870.jpg'
+                                                            data-image5-url='https://media.static-adayroi.com/sys_master/hd5/h17/9253609898014.jpg'
+                                                            data-image6-url='https://media.static-adayroi.com/sys_master/h69/he9/9253614256158.jpg'
+                                                            data-image7-url='https://media.static-adayroi.com/sys_master/h35/h98/9253614321694.jpg'>Sách - Văn Phòng Phẩm</a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <a href="https://www.adayroi.com/vinid-lp367">
@@ -1481,10 +1466,12 @@
                                                     </li>
                                                     <li class="menu__cat-item">
                                                         <a class="menu__cat-link" href="https://www.adayroi.com/o-to-xe-may-c1077" data-uid="navigationNode_00000GZ4" data-image1-url='https://media.static-adayroi.com/sys_master/hca/h1a/9253600264222.jpg'
-                                                         data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h65/h43/9253600591902.jpg'
-                                                         data-image3-url='https://media.static-adayroi.com/sys_master/hc4/hb0/9253601181726.jpg' data-image4-url='https://media.static-adayroi.com/sys_master/h46/hc6/9253605539870.jpg'
-                                                         data-image5-url='https://media.static-adayroi.com/sys_master/hd5/h17/9253609898014.jpg' data-image6-url='https://media.static-adayroi.com/sys_master/h69/he9/9253614256158.jpg'
-                                                         data-image7-url='https://media.static-adayroi.com/sys_master/h35/h98/9253614321694.jpg'>Xe - Phụ kiện </a>
+                                                            data-image1-alt='' data-image2-url='https://media.static-adayroi.com/sys_master/h65/h43/9253600591902.jpg'
+                                                            data-image3-url='https://media.static-adayroi.com/sys_master/hc4/hb0/9253601181726.jpg'
+                                                            data-image4-url='https://media.static-adayroi.com/sys_master/h46/hc6/9253605539870.jpg'
+                                                            data-image5-url='https://media.static-adayroi.com/sys_master/hd5/h17/9253609898014.jpg'
+                                                            data-image6-url='https://media.static-adayroi.com/sys_master/h69/he9/9253614256158.jpg'
+                                                            data-image7-url='https://media.static-adayroi.com/sys_master/h35/h98/9253614321694.jpg'>Xe - Phụ kiện </a>
 
                                                         <div class="menu__cat-list menu__cat-list--child">
                                                             <hr/>
@@ -1612,7 +1599,7 @@
                         <li class="col-sm-12 col-md-2">
                             <div class="nav-cart">
                                 <a href="https://www.adayroi.com/cart" class="mini-cart-link js-mini-cart-link" data-mini-cart-url="/cart/rollover" data-mini-cart-refresh-url="/cart/miniCart/SUBTOTAL"
-                                 data-mini-cart-name="Cart" data-mini-cart-empty-name="Empty Cart" data-mini-cart-items-text="Items">
+                                    data-mini-cart-name="Cart" data-mini-cart-empty-name="Empty Cart" data-mini-cart-items-text="Items">
                                     <div class="mini-cart-icon">
                                         <span class="adr-icon icon-cart hidden-xs hidden-sm"></span>
                                         <span class="adr-icon icon-cart-mobile visible-xs visible-sm"></span>
@@ -1675,8 +1662,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Khuyến mại hot</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Khuyến mại hot</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/voucher-dich-vu-c332500">
@@ -1713,8 +1699,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Ẩm thực</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Ẩm thực</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/am-thuc-c332551">
@@ -1752,8 +1737,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Spa & Làm đẹp</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Spa & Làm đẹp</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/spa-lam-dep-c332552">
@@ -1785,8 +1769,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Giải trí- Dịch vụ khác</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Giải trí- Dịch vụ khác</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/suc-khoe-giai-tri-dich-vu-ho-tro-c332555">
@@ -1848,8 +1831,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Ẩm Thực</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Ẩm Thực</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/vinpearl-sieu-tiet-kiem-lp32524">
@@ -1881,8 +1863,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Du lịch </a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Du lịch </a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/du-lich-c332550">
@@ -1924,8 +1905,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Spa - Làm Đẹp</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Spa - Làm Đẹp</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="#">
@@ -1962,8 +1942,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Giải trí - Dịch vụ khác</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Giải trí - Dịch vụ khác</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="#">
@@ -2045,8 +2024,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Sàng Lọc </a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Sàng Lọc </a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/cham-soc-suc-khoe-c332580">
@@ -2109,8 +2087,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Điện thoại di động</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Điện thoại di động</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/dien-thoai-di-dong-c323">
@@ -2142,8 +2119,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Máy tính bảng</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Máy tính bảng</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/may-tinh-bang-windows-he-dieu-hanh-khac-c331">
@@ -2175,8 +2151,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Sim & Thẻ điện thoại</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Sim & Thẻ điện thoại</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="#">
@@ -2209,8 +2184,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Phụ kiện điện thoại</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Phụ kiện điện thoại</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/phu-kien-c338">
@@ -2273,8 +2247,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Tivi - Thiết bị nghe nhìn</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Tivi - Thiết bị nghe nhìn</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/dien-tu-ky-thuat-so-c1772?itm_source=Mega_Menu_CE_CL&amp;itm_medium=PC">
@@ -2289,7 +2262,7 @@
                                         </li>
                                         <li class="nav__link--secondary">
                                             <a href="https://www.adayroi.com/may-anh-quay-phim-thiet-bi-quang-hoc-c407?itm_source=Mega_Menu_CE_CL&amp;itm_medium=PC">
-                                            Máy ảnh - Máy quay phim
+                                                Máy ảnh - Máy quay phim
                                                 <span class="adr-icon chevron-right"></span>
                                             </a>
                                         </li>
@@ -2322,8 +2295,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Thiết bị kỹ thuật số</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Thiết bị kỹ thuật số</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/may-anh-quay-phim-thiet-bi-quang-hoc-c407">
@@ -2355,8 +2327,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Máy tính - Linh phụ kiện</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Máy tính - Linh phụ kiện</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/may-tinh-linh-phu-kien-c349?itm_source=Mega_Menu_CE_CL&amp;itm_medium=PC">
@@ -2371,7 +2342,7 @@
                                         </li>
                                         <li class="nav__link--secondary">
                                             <a href="https://www.adayroi.com/may-tinh-xach-tay-apple-c351?itm_source=Mega_Menu_CE_CL&amp;itm_medium=PC">
-                                            Macbook
+                                                Macbook
                                                 <span class="adr-icon chevron-right"></span>
                                             </a>
                                         </li>
@@ -2446,8 +2417,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Điện lạnh giá tốt</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Điện lạnh giá tốt</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/dien-may-dien-lanh-dien-gia-dung-c1773">
@@ -2479,8 +2449,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Điện gia dụng mùa hè</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Điện gia dụng mùa hè</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/dien-may-dien-lanh-dien-gia-dung-c1773">
@@ -2495,13 +2464,13 @@
                                         </li>
                                         <li class="nav__link--secondary">
                                             <a href="https://www.adayroi.com/https://www.adayroi.com/may-xay-may-ep-trai-cay-c915?itm_source=Mega_Menu_HA&amp;itm_medium=PC">
-                                            Máy xay- Máy ép
+                                                Máy xay- Máy ép
                                                 <span class="adr-icon chevron-right"></span>
                                             </a>
                                         </li>
                                         <li class="nav__link--secondary">
                                             <a href="https://www.adayroi.com/tim-kiem?q=s%E1%BB%AFa+%C4%91%E1%BA%ADu+n%C3%A0nh%3Arelevance%3AleafCategory%3A917&amp;text=s%E1%BB%AFa+%C4%91%E1%BA%ADu+n%C3%A0nh#?itm_source=Mega_Menu_HA&itm_medium=PC">
-                                            Máy làm sữa đậu nành
+                                                Máy làm sữa đậu nành
                                                 <span class="adr-icon chevron-right"></span>
                                             </a>
                                         </li>
@@ -2514,8 +2483,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Điện gia dụng nhà bếp</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Điện gia dụng nhà bếp</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/thiet-bi-nha-bep-c496">
@@ -2547,8 +2515,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Điện gia dụng</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Điện gia dụng</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/dien-may-dien-lanh-dien-gia-dung-c1773">
@@ -2563,7 +2530,7 @@
                                         </li>
                                         <li class="nav__link--secondary">
                                             <a href="https://www.adayroi.com/thiet-bi-ve-sinh-cham-soc-gia-dinh-c532?itm_source=Mega_Menu_HA&amp;itm_medium=PC">
-                                            Bàn là, bàn ủi - Máy sấy tóc
+                                                Bàn là, bàn ủi - Máy sấy tóc
                                                 <span class="adr-icon chevron-right"></span>
                                             </a>
                                         </li>
@@ -2612,8 +2579,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Sữa - Kem & Sản phẩm t...</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Sữa - Kem & Sản phẩm t...</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/sua-kem-san-pham-tu-sua-c617">
@@ -2645,8 +2611,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Bánh kẹo - Đồ ăn vặt - G...</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Bánh kẹo - Đồ ăn vặt - G...</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/banh-keo-do-an-vat-giai-khat-c696">
@@ -2678,8 +2643,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Thực phẩm khô</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Thực phẩm khô</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/thuc-pham-kho-c670">
@@ -2748,8 +2712,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Vật dụng nhà bếp</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Vật dụng nhà bếp</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/vat-dung-nha-bep-phong-an-c863">
@@ -2781,8 +2744,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Nội thất</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Nội thất</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/noi-that-c1107">
@@ -2814,8 +2776,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Hóa phẩm - chất tẩy</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Hóa phẩm - chất tẩy</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/hoa-pham-chat-tay-c954">
@@ -2842,8 +2803,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Tân trang nhà cửa</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Tân trang nhà cửa</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/sua-chua-trang-tri-nha-cua-c975">
@@ -2906,8 +2866,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Thời trang nữ</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Thời trang nữ</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/thoi-trang-nu-c2">
@@ -2939,8 +2898,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Phụ kiện nữ</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Phụ kiện nữ</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/phu-kien-thoi-trang-nu-c67">
@@ -2972,8 +2930,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Thời trang nam</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Thời trang nam</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/thoi-trang-nam-c81">
@@ -3042,8 +2999,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Trang điểm</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Trang điểm</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/trang-diem-c140">
@@ -3075,8 +3031,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Chăm sóc mặt</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Chăm sóc mặt</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/cham-soc-mat-c173">
@@ -3103,8 +3058,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Chăm sóc toàn thân</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Chăm sóc toàn thân</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/cham-soc-toan-than-c211">
@@ -3136,8 +3090,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Chăm sóc sức khỏe</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Chăm sóc sức khỏe</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/cham-soc-ca-nhan-suc-khoe-c242">
@@ -3164,8 +3117,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Nước hoa</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Nước hoa</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/nuoc-hoa-c169">
@@ -3223,8 +3175,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Sữa & Bột cho bé</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Sữa & Bột cho bé</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/sua-bot-cho-be-c715">
@@ -3251,8 +3202,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Vệ sinh chăm sóc cho bé</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Vệ sinh chăm sóc cho bé</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/ve-sinh-cham-soc-cho-be-c748">
@@ -3284,8 +3234,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Đồ chơi & Đồ dùng trẻ em</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Đồ chơi & Đồ dùng trẻ em</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/do-choi-do-dung-tre-em-c789">
@@ -3317,8 +3266,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Đồ dùng ăn uống cho bé</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Đồ dùng ăn uống cho bé</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/do-dung-an-uong-cho-be-c732">
@@ -3381,8 +3329,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Vật dụng nhà bếp</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Vật dụng nhà bếp</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/vat-dung-nha-bep-phong-an-c863">
@@ -3414,8 +3361,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Nội thất</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Nội thất</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="#">
@@ -3447,8 +3393,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Hóa phẩm - Chất tẩy</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Hóa phẩm - Chất tẩy</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/hoa-pham-chat-tay-c954">
@@ -3475,8 +3420,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Tân trang nhà cửa</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Tân trang nhà cửa</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="https://www.adayroi.com/sua-chua-trang-tri-nha-cua-c975">
@@ -3539,8 +3483,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Sách</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Sách</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="#">
@@ -3577,8 +3520,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Văn phòng phẩm</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Văn phòng phẩm</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="#">
@@ -3610,8 +3552,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Quà tặng</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Quà tặng</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="#">
@@ -3643,8 +3584,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Nhạc cụ</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Nhạc cụ</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="#">
@@ -3707,8 +3647,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Phụ kiện ô tô</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Phụ kiện ô tô</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="#">
@@ -3745,8 +3684,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Phụ kiện xe máy</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Phụ kiện xe máy</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="#">
@@ -3778,8 +3716,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Xe đạp</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Xe đạp</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="#">
@@ -3816,8 +3753,7 @@
                                     <ul class="sub-navigation-list has-title">
                                         <li class="js-enquire-go-child-close">
                                             <a class="sm-back-two" href="#">
-                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png"
-                                                 alt="">Xe điện</a>
+                                                <img class="arrow-prev" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/arrow-prev.png" alt="">Xe điện</a>
                                         </li>
                                         <li>
                                             <a class="title view-all" href="#">

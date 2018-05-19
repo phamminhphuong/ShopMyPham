@@ -3,28 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\DanhMucSanPham;
+use App\NhaCungCap;
+use App\SanPham;
 class PageController extends Controller
 {
+    public function __construct(){
+        $danhmucsanpham=DanhMucSanPham::all();
+        $nhacungcap=NhaCungCap::all();
+        view()->share('danhmucsanpham', $danhmucsanpham);
+        view()->share('nhacungcap', $nhacungcap);
+        
+    }
+    //  trang chu
     public function getTrangChu(){
-        return view('layout.index');
+        $sanpham=SanPham::all();
+        return view('page.trang-chu',['sanpham'=>$sanpham]);
     }
-    public function getTrangChu1(){
-        return view('page.trangchu');
-    }
-    public function chitietsanpham(){
-        return view('page.chi-tiet-san-pham');
-    }
-    public function dangnhap(){
-        return view('page.dang-nhap');
-    }
-    public function dangky(){
-        return view('page.dang-ky');
-    }
-    public function giohang(){
-        return view('page.gio-hang');
-    }
-    public function xacnhan1(){
-        return view('page.xac-nhan-dia-chi');
+    // chi tiet san pham
+    public function getChitiet($id){
+        $chitietsanpham=SanPham::find($id);
+        return view('page.chi-tiet-san-pham',['chitietsanpham'=>$chitietsanpham]);
     }
 }

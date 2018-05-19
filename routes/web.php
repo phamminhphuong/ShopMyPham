@@ -11,16 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('trangchu','PageController@getTrangChu');
-Route::get('trangchu1','PageController@getTrangChu1');
-Route::get('chitiet','PageController@chitietsanpham');
+Route::get('/','PageController@getTrangChu');
 
-Route::get('dangky','PageController@dangky');
-Route::get('giohang','PageController@giohang');
-Route::get('xacnhan','PageController@xacnhan1');
+
+Route::get('chi-tiet-san-pham/{id}','PageController@getChitiet');
 // dang nhap
 Route::get('dangnhap','Admin\TaikhoanController@getDangnhap');
 Route::post('dangnhap','Admin\TaikhoanController@postDangnhap');
@@ -28,7 +22,7 @@ Route::get('dangxuat','Admin\TaikhoanController@getDangXuat');
 
 //  trang admin'middleware'=>'admin_login'
 
-Route::group(['prefix' => 'admin','middleware'=>'admin_login'], function() {
+Route::group(['prefix' => 'admin'], function() {
     // bang dieu khien
     Route::group(['prefix' => 'bangdieukhien'], function() {
         Route::get('index','Admin\BangdieukhienController@getBangdieukhien');

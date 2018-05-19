@@ -15,7 +15,7 @@ class CreateXuatsanphamTable extends Migration
     {
         Schema::create('xuatsanpham', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('MaKhachHang')->nullable();
+            $table->integer('MaKhachHang')->nullable()->unsigned();
             $table->foreign('MaKhachHang')->references('id')->on('khachhang')->onDelete('cascade');
             $table->string('TenVanChuyen');
             $table->text('ChuThich');

@@ -1,5 +1,4 @@
-@extends('layout.index') 
-@section('content')
+@extends('layout.index') @section('content')
 <div id="content" class="clearfix">
     <a id="skip-to-content"></a>
     <div class="page-category">
@@ -10,15 +9,19 @@
                         <ol id="header__breadcrumb" class="header__breadcrumb breadcrumb">
                             <li>
                                 <span class="item">
-                                    <a href="">
+                                    <a href="#">
                                         <span itemprop="title">Trang chủ</span>
                                     </a>
                                 </span>
                             </li>
                             <li class="hidden">></li>
-                            <li class="active">
-                                <span class="item">SỨC KHỎE &amp; SẮC ĐẸP</span>
+                            @foreach($danhmucsanpham as $dmsp)
+                            <li>
+                                 <a href="#">
+                                <span class="item">{!!$dmsp->TenDanhMuc!!}</span>
+                                </a>
                             </li>
+                            @endforeach
                         </ol>
                     </div>
                 </div>
@@ -34,12 +37,13 @@
                                 <div class="section__sidebar section__category">
                                     <ul data-role="listview" data-inset="true" data-theme="e" data-content-theme="e" class="category-menu ">
                                         <li class="selected active category-item category-item_lv1">
-                                            <a href="https://www.adayroi.com/suc-khoe-sac-dep-c139">SỨC KHỎE & SẮC ĐẸP</a>
+                                            <a href="https://www.adayroi.com/suc-khoe-sac-dep-c139">DANH MỤC SẢN PHẨM</a>
                                             <ul data-role="listview" data-inset="true" data-theme="e" data-content-theme="e" class="category-menu child-level-1">
+                                                @foreach($danhmucsanpham as $dmsp)
                                                 <li class=" category-item category-item_lv2">
-                                                    <a href="https://www.adayroi.com/tinh-dau-spa-c270">Tinh dầu & Spa</a>
+                                                    <a href="#">{!!$dmsp->TenDanhMuc!!}</a>
                                                 </li>
-                                                
+                                                @endforeach
                                             </ul>
                                         </li>
                                     </ul>
@@ -48,66 +52,28 @@
 
                                 <div class="js-facet section__sidebar ">
                                     <div class="facet-group js-facet-group">
-
-                                        <!-- <div class="facet__name js-facet-name"> -->
-                                        <div class="facet-group-title">
-                                            <!-- <span class="glyphicon facet__arrow"></span> -->
-                                            <a href="javascript:;"> Thương hiệu</a>
-                                        </div>
-
-                                        <!-- <div class="facet__values js-facet-values js-facet-form"> -->
-                                        <div class="facet-group-content js-facet-form">
-                                            <ul class="facet-list js-facet-list facet-list-scroll">
-                                                <!-- <ul class="facet__list js-facet-list "> -->
-                                                <li data-label="Alfaparf Milano">
-                                                    <form action="#" method="get">
-                                                        <input type="hidden" name="q" value=":relevance:brand:br20698" />
-                                                        <input type="hidden" name="text" value="" />
-
-                                                        <label>
-                                                            <!-- <input type="checkbox"   class="facet__list__checkbox js-facet-checkbox sr-only" /> -->
-                                                            <input type="checkbox" class="facet-checkbox js-facet-checkbox" />
-                                                            <span class="facet-label">
-                                                                <span class="facet-icon"></span>
-                                                                <span class="facet-text">
-                                                                    Alfaparf Milano&nbsp;
-                                                                    <span class="facet__value__count">(107)</span>
-                                                                </span>
-                                                            </span>
-                                                        </label>
-                                                    </form>
-                                                </li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                    <div class="facet-group js-facet-group">
                                         <div class="facet-group-title">
                                             <a href="javascript:;"> Nhà cung cấp</a>
                                         </div>
                                         <div class="facet-group-content js-facet-form">
                                             <ul class="facet-list js-facet-list facet-list-scroll">
-                                                <!-- <ul class="facet__list js-facet-list "> -->
+                                                @foreach($nhacungcap as $ncc)
                                                 <li data-label="BEAUTY CONCEPT">
                                                     <span class="facet__text">
-                                                        <a href="https://www.adayroi.com/suc-khoe-sac-dep-c139?q=%3Arelevance%3Amerchant%3A105004">BEAUTY CONCEPT</a>
+                                                        <a href="https://www.adayroi.com/suc-khoe-sac-dep-c139?q=%3Arelevance%3Amerchant%3A105004">{!!$ncc->TenNhaCC!!}</a>
                                                         <span class="facet__value__count">(99)</span>
-
                                                     </span>
                                                 </li>
+                                                @endforeach
                                             </ul>
                                         </div>
                                     </div>
-
-
                                     <div class="facet-group js-facet-group">
-
                                         <!-- <div class="facet__name js-facet-name"> -->
                                         <div class="facet-group-title">
                                             <!-- <span class="glyphicon facet__arrow"></span> -->
                                             <a href="javascript:;"> Giá sản phẩm</a>
                                         </div>
-
                                         <!-- <div class="facet__values js-facet-values js-facet-form"> -->
                                         <div class="facet-group-content js-facet-form">
 
@@ -194,7 +160,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </div>  
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -202,9 +168,9 @@
                         <div class="product-list__header">
                             <div class="row">
                                 <div class="col-md-6 col-lg-7">
-                                    <h1 class="header__title">SỨC KHỎE & SẮC ĐẸP</h1>
+                                    <h1 class="header__title">Shop Mỹ Phẩm</h1>
                                     <span class="header__search-result">
-                                        TODO Tìm thấy 1000 sản phẩm</span>
+                                        Hiện có {!!count($sanpham)!!} sản phẩm</span>
                                     <div class="header__description hidden-xs">
                                         <p></p>
                                         <p></p>
@@ -212,39 +178,37 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="product-list__container">
                             <div class="row">
+                                @foreach($sanpham as $sp)
                                 <div class="col-xs-6 col-sm-4 col-lg-3 product-item__wrapper product-item__wrapper--hover">
                                     <div class="product-item__placeholder hidden-sm hidden-xs"></div>
                                     <div class="product-item">
                                         <div class="product-item__container">
-                                            <a class="product-item__thumbnail " href="https://www.adayroi.com/bo-5-mat-na-chiet-xuat-cam-nature-republic-real-nature-orange-mask-sheet-p-1315105?offer=1315105_L4M">
-                                                <img class="default lazy swiper-lazy " data-original="https://media.static-adayroi.com/sys_master/h04/hdc/15517085073438.jpg"
-                                                    data-src="https://media.static-adayroi.com/sys_master/h04/hdc/15517085073438.jpg"
-                                                    src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/icons/AjaxLoader.gif"
+                                            <a class="product-item__thumbnail " href="chi-tiet-san-pham/{!!$sp->id!!}">
+                                                <img class="default lazy swiper-lazy " src="image_SanPham/{!!$sp->HinhAnh!!}"  style="width:200px;height:200px"/> 
+                                                {{--
+                                                <img class="hover " src="https://media.static-adayroi.com/sys_master/h04/hdc/15517085073438.jpg"
                                                     alt="Bộ 5 mặt nạ chiết xuất cam Nature Republic Real Nature Orange Mask Sheet"
                                                     title="Bộ 5 mặt nạ chiết xuất cam Nature Republic Real Nature Orange Mask Sheet"
-                                                />
-                                                <img class="hover " src="https://media.static-adayroi.com/sys_master/h04/hdc/15517085073438.jpg" alt="Bộ 5 mặt nạ chiết xuất cam Nature Republic Real Nature Orange Mask Sheet"
-                                                    title="Bộ 5 mặt nạ chiết xuất cam Nature Republic Real Nature Orange Mask Sheet"
-                                                />
+                                                /> --}}
                                             </a>
                                             <div class="product-item__info">
-                                                <a class="product-item__info-title" href="https://www.adayroi.com/bo-5-mat-na-chiet-xuat-cam-nature-republic-real-nature-orange-mask-sheet-p-1315105?offer=1315105_L4M">
-                                                    Bộ 5 mặt nạ chiết xuất cam Nature Republic Real Nature Orange Mask Sheet</a>
-
+                                                <a class="product-item__info-title" href="chi-tiet-san-pham/{!!$sp->id!!}">
+                                                    {!!$sp->TenSanPham!!}
+                                                </a>
                                                 <div class="product-item__info-price">
-                                                    <span class="product-item__info-price-sale"> 180.000đ</span>
+                                                    <span class="product-item__info-price-sale"> {!!$sp->GiaUuDai!!}đ</span>
+                                                    <span class="product-item__info-price-original">{!!$sp->Gia!!}đ</span>
                                                 </div>
-
-                                                <div class="product-item__info-vinid">
-                                                    Tích thêm
-                                                    <span>2%</span> vào thẻ VinID</div>
+                                                <div class="product-item__info-discount">
+                                                        -{!!$sp->PhanTramKhauTru!!}%
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                 @endforeach
                             </div>
                         </div>
 
