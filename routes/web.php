@@ -21,6 +21,8 @@ Route::post('dangnhap','Admin\TaikhoanController@postDangnhap');
 Route::get('dangxuat','Admin\TaikhoanController@getDangXuat');
 
 Route::get('gio-hang', 'PageController@getGioHang');
+Route::get('gio-hang/bo-san-pham/{id}', 'PageController@getBoSanPham');
+Route::get('gio-hang/change-quantity/{id}', 'PageController@getChangeQuantity');
 Route::post('gio-hang', 'PageController@postGioHang');
 
 Route::get('thanh-toan', 'PageController@getThanhToan');
@@ -122,6 +124,7 @@ Route::group(['prefix' => 'admin'], function() {
          Route::post('edit/{id}','Admin\XuatsanphamController@postEdit');
         Route::get('delete/{id}','Admin\XuatsanphamController@getDelete');
         Route::get('detail/{id}','Admin\XuatsanphamController@getDetail');
+        Route::get('giao-hang/{id}','Admin\XuatsanphamController@getGiaoHang');
     });
     
 });

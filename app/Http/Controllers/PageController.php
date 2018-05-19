@@ -36,6 +36,17 @@ class PageController extends Controller
         return view('page.gio-hang');
     }
 
+    // GET /gio-hang/bo-san-pham/{id}
+    public function getBoSanPham($id) {
+        Cart::remove($id);
+        return redirect('gio-hang');
+    }
+    // GET /gio-hang/change-quantity/{id}
+    public function getChangeQuantity($id, Request $request) {
+        Cart::update($id, $request->quantity);
+        return redirect('gio-hang');
+    }
+
     //POST /gio-hang
     public function postGioHang(Request $request) {
         $quantity = $request->quantity;

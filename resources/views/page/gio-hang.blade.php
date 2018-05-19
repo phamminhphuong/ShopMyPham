@@ -41,7 +41,7 @@
                                             <div class="clearfix"></div>
                                             <div>
                                             </div>
-                                            <a class="cart-product__item__remove js-remove-entry-button" id="removeEntry_0" href="#">
+                                            <a class="cart-product__item__remove" href="gio-hang/bo-san-pham/{!!$item->rowId!!}">
                                                 <i class="adr-icon icon-trash"></i>Bỏ sản phẩm</a>
                                         </div>
                                         <div class="cart-product__price">
@@ -52,7 +52,7 @@
 
                                         <div class="cart-product__quantity">
                                             <div class="item__quantity">
-                                                <input type="text" value="{!!$item->qty!!}">
+                                                <input type="text" value="{!!$item->qty!!}" onchange="changeQty(this, '{!!$item->rowId!!}');">
                                             </div>
                                         </div>
                                         <div class="cart-product__subtotal">
@@ -85,8 +85,7 @@
                                     </div>
                                     <div class="cart-submit">
                                         <a href="thanh-toan" class="btn btn-primary js-cart-checkout-button ">Tiến hành thanh toán&nbsp;
-                                            <img class="visible-xs-inline visible-sm-inline" src="https://css.static-adayroi.com/_ui/responsive/theme-alpha/images/icons/icon-two-arow-mini-cart.png"
-                                                alt="">
+                                            <img class="visible-xs-inline visible-sm-inline" src="">
                                         </a>
                                     </div>
                                 </div>
@@ -101,4 +100,12 @@
         </div>
     </div>
 </div>
+<script>
+    function changeQty(element, rowId) {
+        var quantity = parseInt(element.value);
+        if(Number.isInteger(quantity)) {
+            window.location.href = "gio-hang/change-quantity/" + rowId+"?quantity=" + quantity;
+        }
+    }
+</script>
 @endsection
