@@ -8,7 +8,7 @@
         <div class="box-header">
             <h3 class="box-title">Danh sách nhập sản phẩm</h3>
             <h3>
-                <a href="admin/khachhang/add">Tạo mới</a>
+                <a href="admin/nhapsanpham/add">Nhập hàng</a>
             </h3>
         </div>
         <!-- /.box-header -->

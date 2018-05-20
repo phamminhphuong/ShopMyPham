@@ -94,6 +94,10 @@ Route::group(['prefix' => 'admin'], function() {
          Route::post('edit/{id}','Admin\SanphamController@postEdit');
         Route::get('delete/{id}','Admin\SanphamController@getDelete');
         Route::get('detail/{id}','Admin\SanphamController@getDetail');
+
+
+        Route::get('api/all','Admin\SanphamController@apiAll');
+        Route::get('api/find-one/{id}','Admin\SanphamController@apiFindOne');
     });
         //  slide
      Route::group(['prefix' => 'slide'], function() {

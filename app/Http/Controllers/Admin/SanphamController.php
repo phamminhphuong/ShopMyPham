@@ -161,4 +161,23 @@ class SanphamController extends Controller
         $sanpham=SanPham::find($id);
         return view('admin.sanpham.detail',['sanpham'=>$sanpham]);
     }
+
+    //GET   /admin/sanpham/api/all
+    public function apiAll() {
+        $list = SanPham::all();
+        $arr = array();
+
+        foreach($list as $item) {
+            $arr[] = $item->id." - ".$item->TenSanPham;
+        }
+        
+        return response()
+        ->json($arr);
+    }
+
+    //GET   /admin/sanpham/api/find-one/{id}
+    public function apiFindOne($id) {
+        $sanpham = SanPham::find($id);
+        return response()->json($sanpham);
+    }
 }

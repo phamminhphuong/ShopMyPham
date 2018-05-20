@@ -33,15 +33,9 @@
   <link rel="stylesheet" href="fontAnwesome/css/fontawesome-all.min.css">
   <link rel="stylesheet" href="fontAnwesome/css/fontawesome.css">
   <link rel="stylesheet" href="fontAnwesome/css/fontawesome.min.css">
-{{-- fontanwesome --}}
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+  <link href="style_admin/bower_components/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet" />
 
-  <!-- Google Font -->
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -56,8 +50,6 @@
 </div>
 
 <script src="style_admin/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="style_admin/bower_components/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button);
@@ -92,6 +84,8 @@
 <!-- AdminLTE for demo purposes -->
 <script src="style_admin/dist/js/demo.js"></script>
 <script src="style_admin/bower_components/ckeditor/ckeditor.js"></script>
+<script src="style_admin/bower_components/jquery-migrate/jquery-migrate.min.js"></script>
+<script src="style_admin/bower_components/jquery-ui/jquery-ui.min.js"></script>
 <script src="style_admin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="style_admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 @yield('script') 
