@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\XuatSanPham;
+use Illuminate\Support\Facades\DB;
 class XuatsanphamController extends Controller
 {
     public function getList(){
@@ -17,7 +18,19 @@ class XuatsanphamController extends Controller
         $xuatSanPham = XuatSanPham::find($id);
         $xuatSanPham->TrangThai = 1;
         $xuatSanPham->NgayXuat = date('Y-m-d H:i:s');
+        DB::beginTransaction();
+        foreach($xuatSanPham->ChiTietXuats as $item) {
+            $sanPham = $item->SanPham;
+            if($sanPham->SoLuong < $item->SoLuong) {
+                return redirect('admin/xuatsanpham/list')->withErrors(['msg', 'Sản phẩm '.$sanPham->TenSanPham.' đã hết hàng']);
+            }
+            else {  
+                $sanPham->SoLuong -= $item->SoLuong;
+                $sanPham->save();
+            }
+        }
         $xuatSanPham->save();
+        DB::commit();
         return redirect('admin/xuatsanpham/list');
     }
 

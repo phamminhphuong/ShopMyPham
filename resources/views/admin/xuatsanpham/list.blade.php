@@ -7,6 +7,13 @@
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Danh sách xuất sản phẩm</h3>
+            @if(count($errors) >0) 
+            <div class="alert alert-danger">
+                @foreach($errors->all() as $er)
+                        {{$er}}<br>
+                @endforeach 
+            </div>
+            @endif
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -115,7 +122,9 @@
                                         {!!$xsp->updated_at!!}
                                     </td> 
                                     <td>
-                                        <a href="admin/xuatsanpham/giao-hang/{!!$xsp->id!!}">Giao hàng</a> |
+                                        @if(empty($xsp->NgayXuat))
+                                            <a href="admin/xuatsanpham/giao-hang/{!!$xsp->id!!}">Giao hàng</a> |
+                                        @endif
                                         <a href="admin/xuatsanpham/detail/{!!$xsp->id!!}">Chi tiết</a>
                                     </td>
                                 </tr>

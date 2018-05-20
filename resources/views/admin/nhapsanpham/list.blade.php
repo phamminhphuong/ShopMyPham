@@ -10,6 +10,13 @@
             <h3>
                 <a href="admin/nhapsanpham/add">Nhập hàng</a>
             </h3>
+            @if(count($errors) >0) 
+            <div class="alert alert-danger">
+                @foreach($errors->all() as $er)
+                        {{$er}}<br>
+                @endforeach 
+            </div>
+            @endif
         </div>
         <!-- /.box-header -->
         <div class="box-body">
