@@ -56,4 +56,10 @@ class NhapsanphamController extends Controller
         DB::commit();
         return redirect('admin/nhapsanpham/list');
     }
+
+    //GET /admin/nhapsanpham/detail/{id}
+    public function getDetail($id) {
+        $nhapSanPham = NhapSanPham::find($id);
+        return view('admin.nhapsanpham.detail', ['nhapSanPham' => $nhapSanPham]);
+    }
 }

@@ -125,9 +125,7 @@
                                         {!!$nsp->updated_at!!}
                                     </td> 
                                     <td>
-                                        <a href="admin/nhapsanpham/edit/{!!$nsp->id!!}">Sửa</a> |
-                                        <a href="admin/nhapsanpham/detail/{!!$nsp->id!!}">Chi tiết</a> |
-                                        <a href="admin/nhapsanpham/delete/{!!$nsp->id!!}">Xóa</a>
+                                        <a href="admin/nhapsanpham/detail/{!!$nsp->id!!}">Chi tiết</a>
                                     </td>
                                 </tr>
                                 @endforeach

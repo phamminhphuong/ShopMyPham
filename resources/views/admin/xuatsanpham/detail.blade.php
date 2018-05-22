@@ -10,6 +10,23 @@
         </div>
         <!-- /.box-header -->
         <div class="box-body">
+            <div class="row" style="padding:0 10%;">
+                <div class="col-md-6">
+                    <p>Mã phiếu xuất: {{$xuatSanPham->id}}</p>
+                    <p>Tên vận chuyển: {{$xuatSanPham->id}}</p>
+                    <p>Ngày xuất: {{$xuatSanPham->NgayXuat}}</p>
+                    <p>Trạng thái: {{$xuatSanPham->TrangThai}}</p>
+                    <p>Chú thích: {{$xuatSanPham->ChuThich}}</p>
+                </div>
+                <div class="col-md-6" >
+                    <p style="text-align:right;">Mã khách hàng: {{$xuatSanPham->MaKhachHang}}</p>
+                    <p style="text-align:right;">Địa chỉ: {{$xuatSanPham->DiaChi}}</p>
+                    <p style="text-align:right;">Điện thoại: {{$xuatSanPham->DienThoai}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-body">
             <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
              
                 <div class="row">
@@ -20,104 +37,54 @@
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
-                                       Mã nhập sản phẩm
+                                       Mã sản phẩm
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
-                                        Mã khách hàng
+                                        Tên sản phẩm
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
-                                        Tên vận chuyển
+                                        Hình ảnh
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
-                                        Chú thích
+                                        Giá
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
-                                        Trạng thái
+                                        Số lượng
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
-                                        Ngày xuất
-                                    </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
-                            Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                       Họ tên
-                                    </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
-                            Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                        Địa chỉ
-                                  </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
-                            Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                        Điện thoại
-                                  </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
-                            Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                        Thời gian tạo
-                                    </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                        Thời gian sửa
-                                    </th> 
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Mật khẩu
-: activate to sort column ascending" style="width: 239.799px;">
-                                        Tùy chọn
+                                        Thành tiền
                                     </th>
                             </thead>
                             <tbody>
-                                @foreach($xuatsanpham as $xsp)
+                                @foreach($xuatSanPham->ChiTietXuats as $item)
                                 <tr role="row" class="odd">
                                     <td>
-                                        {!!$xsp->id!!}
+                                        {!!$item->MaSanPham!!}
                                     </td>
                                     <td>
-                                        {!!$xsp->MaKhachHang!!}
+                                        {!!$item->SanPham->TenSanPham!!}
                                     </td>
                                     <td>
-                                        {!!$xsp->TenVanChuyen!!}
-                                    </td>
-                                   
-                                    <td>
-                                        {!!$xsp->ChuThich!!}
+                                        <img width="150" src="image_SanPham/{!!$item->SanPham->HinhAnh!!}" alt="">
                                     </td>
                                     <td>
-                                        {!!$xsp->TrangThai!!}
-                                    </td>
-                                    
-                                    <td>
-                                        {!!$xsp->NgayXuat!!}
+                                        {!!$item->Gia!!} $
                                     </td>
                                     <td>
-                                        {!!$xsp->HoTen!!}
+                                        {!!$item->SoLuong!!}
                                     </td>
                                     <td>
-                                        {!!$xsp->DiaChi!!}
-                                    </td>
-                                    <td>
-                                        {!!$xsp->DienThoai!!}
-                                    </td>
-                                     <td>
-                                        {!!$xsp->created_at!!}
-                                    </td>
-                                    <td>
-                                        {!!$xsp->updated_at!!}
-                                    </td> 
-                                    <td>
-                                        <a href="admin/xuatsanpham/edit/{!!$xsp->id!!}">Sửa</a> |
-                                        <a href="admin/xuatsanpham/detail/{!!$xsp->id!!}">Chi tiết</a> |
-                                        <a href="admin/xuatsanpham/delete/{!!$xsp->id!!}">Xóa</a>
+                                        {!!$item->Gia * $item->SoLuong!!} $
                                     </td>
                                 </tr>
                                 @endforeach
