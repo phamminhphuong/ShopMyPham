@@ -139,7 +139,7 @@
                             <div class="col-sm-7 product-detail__info product-detail__info-block">
                                 <div class="hidden-xs">
                                     <div class="product-detail__title">
-                                        <h1>Tinh dầu tràm trà Cây Tea Tree Essential Oil Premium 10ml</h1>
+                                        <h1>{!!$chitietsanpham->TenSanPham!!}</h1>
                                         <div class="product-detail__title-brand">
                                             Thương hiệu:&nbsp;
                                             <a href="/b/br332519323" title="Cây">Cây&nbsp;</a>
@@ -268,8 +268,7 @@
                                 <div class="panel panel-product-detail">
                                     <div class="panel-body product-classifications product-detail__specs-modal">
                                         <h1 class="product-detail__specs-title">Thông tin sản phẩm
-                                            <span class="panel-serial-number">
-                                                (Mã SP: 1342017 - Mã SKU: TDTT10ml )</span>
+                                            
                                         </h1>
                                         <!-- 	<h1 class="product-detail__specs-title hidden-xs">ThÃÂ´ng tin sÃ¡ÂºÂ£n phÃ¡ÂºÂ©m</h1> -->
                                         <div class="product-detail__specs" id="js-product-detail__specs">
@@ -280,19 +279,19 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td class="specs-table__property">Xuất xứ</td>
-                                                                    <td class="specs-table__value">Australia</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="specs-table__property">Dung tích</td>
-                                                                    <td class="specs-table__value">10ml</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="specs-table__property">Hạn sử dụng</td>
-                                                                    <td class="specs-table__value">2 năm từ ngày sản xuất</td>
+                                                                    <td class="specs-table__value">{!!$chitietsanpham->XuatXu!!}</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="specs-table__property">Thành phần</td>
-                                                                    <td class="specs-table__value">Tách xuất từ lá cây tràm trà Úc</td>
+                                                                    <td class="specs-table__value">{!!$chitietsanpham->ThanhPhan!!}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="specs-table__property">Cồng dụng</td>
+                                                                    <td class="specs-table__value">{!!$chitietsanpham->CongDung!!}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="specs-table__property">Hạn sử dụng</td>
+                                                                    <td class="specs-table__value">{!!$chitietsanpham->HanSuDung!!}</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
@@ -356,60 +355,7 @@
                                         Mô tả sản phẩm</div>
                                     <div class="panel-body">
                                         <div class="product-detail__description">
-                                            <p>
-                                                <strong>Tinh dầu tràm trà Cây Tea Tree Essential Oil Premium</strong>&nbsp;có
-                                                khả năng trị mụn và chăm sóc da, đặc biệt là da mụn nhờ đặc tính kháng khuẩn.</p>
-                                            <ul>
-                                                <li>Chỉ cần nhúng tăm bông vào dầu tràm trà và chấm lên các nốt mụn mỗi ngày
-                                                    hai lần sáng, tối, các nốt mụn của bạn sẽ nhanh chóng khô đầu, giảm sưng
-                                                    viêm và xẹp đi nhanh chóng. Việc&nbsp;sử dụng dầu tràm trà vào thời điểm
-                                                    mụn mới hình thành còn có thể kiểm soát được sự phát triển của mụn, đồng
-                                                    thời khiến da khỏe mạnh và láng mịn hơn.</li>
-                                                <li>Trộn vài giọt tinh dầu tràm trà vào hộp kem dưỡng ẩm hằng ngày để tạo thành
-                                                    loại kem dưỡng ẩm đã năng. Tinh dầu cùng các thành phần trong kem dưỡng
-                                                    nhẹ nhàng thẩm thấu vào da bạn, vừa giúp trị mụn một cách an toàn, vừa
-                                                    nhẹ nhàng chăm sóc và nuôi dưỡng làn da.</li>
-                                                <li>Tinh dầu tràm trà còn có thể dùng để xông hơi thải độc, làm thông thoáng
-                                                    lỗ chân lông giúp điều trị mụn hiệu quả hơn. Hòa 5-10 giọt tinh dầu tràm
-                                                    trà Premium vào chậu nước hoặc bình xông hơi da mặt, mùi hương nhẹ nhàng
-                                                    của tinh dầu sẽ khiến bạn cảm thấy được thư giãn, đồng thời bạn cũng
-                                                    sẽ nhận thấy tình trạng mụn của mình được cải thiện, làn da sáng và mịn
-                                                    hơn.
-                                                </li>
-                                                <li>Ngoài trị mụn, tinh dầu tràm trà còn có thể giải quyết các vấn đề khác về
-                                                    da như eczema, vẩy nến. Bạn có thể chế kem dưỡng da trị eczema bằng cách
-                                                    trộn 5 giọt tinh dầu tràm trà cùng 1 thìa dầu dừa và 5 giọt tinh dầu
-                                                    oải hương.&nbsp;</li>
-                                                <li>Tinh dầu tràm trà còn là sự lựa chọn tuyệt vời để trị nấm móng chân hay nấm
-                                                    ngoài da, đặc biệt đối với các vận động viên.</li>
-                                                <li>Bên cạnh tác dụng trị mụn, tinh dầu tràm trà còn có khả năng làm giảm sâu
-                                                    răng và chảy máu nướu răng, làm sạch răng và khử mùi hôi miệng, rất thích
-                                                    hợp cho dân văng phòng. Chỉ cần súc miệng bằng nước có pha thêm 1-2 giọt
-                                                    tinh dầu tràm trà, bạn sẽ có hàm răng luôn sạch khỏe&nbsp;cùng hơi thở
-                                                    thơm mát.</li>
-                                            </ul>
-                                            <p>
-                                                <strong>Hướng dẫn sử dụng và bảo quản</strong>
-                                            </p>
-                                            <ul>
-                                                <li>Dùng tăm bông chấm vào dầu tràm trà rồi chấm trực tiếp lên nốt mụn</li>
-                                                <li>Trộn tinh dầu tràm trà vào lọ kem dưỡng ẩm hoặc kem dưỡng da</li>
-                                                <li>Kết hợp cùng dầu dừa, dầu jojoba</li>
-                                                <li>Dùng để xông hơi hoặc khuếch tán trong không khí</li>
-                                                <li>Nhỏ 1-2 giọt tinh dầu tràm trà vào ly nước dùng để súc miệng giúp loại bỏ
-                                                    mùi khô và giữ răng sạch khỏe</li>
-                                                <li>Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp</li>
-                                            </ul>
-                                            <p>
-                                                <strong>Thông tin thương hiệu</strong>
-                                            </p>
-
-                                            <p>Cây là thương hiệu chuyên phân phối các loại tinh dầu thiên nhiên từ các nhà
-                                                cung cấp uy tín trên thế giới như:&nbsp;BioAssoberg Italy,&nbsp;Casace Pacific
-                                                USA,&nbsp;SCA3P France,... Sản phẩm của Cây sử dụng thành phần hoàn toàn
-                                                từ tự nhiên cùng nhiều công dụng hiệu quả, đóng gói bao bì nhã nhặn, đẹp
-                                                mắt.
-                                            </p>
+                                            <p>{!!$chitietsanpham->MieuTa!!}<p>
                                         </div>
                                     </div>
                                 </div>
@@ -427,7 +373,7 @@
                                         <span class="hidden-xs">Có</span>
                                         <span id="totalComment">0</span> bình luận
                                         <span class="hidden-xs">về sản phẩm này</span>
-                                        <div class="product-comment__rating-overview">
+                                        {{--  <div class="product-comment__rating-overview">
                                             <span class="rating-overview__title  hidden-xs hidden-sm">Đánh giá trung bình:
                                                 <b id="productAverageRating" class=" hidden-xs hidden-sm">
                                                 </b>
@@ -452,7 +398,7 @@
                                             </div>
                                             <span id="rating-overview__counter" class="rating-overview__counter  hidden-xs hidden-sm">
                                             </span>
-                                        </div>
+                                        </div>  --}}
                                     </div>
                                     <div class="panel-body">
                                         <div class="product-detail__comment">
@@ -488,16 +434,16 @@
                                                 <div class="comment-form__navigation">
                                                     <div class="row">
                                                         <div id="anonymous-info">
-                                                            <div class="col-xs-12 col-sm-3" id="alias-comment-process">
+                                                            {{--  <div class="col-xs-12 col-sm-3" id="alias-comment-process">
                                                                 <div class="form-group">
                                                                     <label class="control-label invisible-label hidden" for="alias">
                                                                     </label>
 
                                                                     <input id="alias" name="alias" class="form-control form-control" placeholder="Tên của bạn" type="text" value="">
                                                                 </div>
-                                                            </div>
+                                                            </div>  --}}
                                                         </div>
-                                                        <div class="comment-form__rating-wrapper js-review-write">
+                                                        {{--  <div class="comment-form__rating-wrapper js-review-write">
                                                             <div class="form-group comment-form__rating">
                                                                 <div class="vertical-alignment-helper">
                                                                     <div class="vertical-align-center">
@@ -525,7 +471,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div>  --}}
                                                         <div class="comment-form__captcha-wrapper">
                                                             <div class="comment-form__captcha">
                                                             </div>
@@ -576,7 +522,7 @@
                                                         <img class="img-responsive" data-product="1342017" src="https://media.static-adayroi.com/sys_master/images/h9d/h83/14565122572318.jpg"
                                                             alt="Tinh dầu tràm trà Cây Tea Tree Essential Oil Premium 10ml">
                                                     </div>
-                                                    <div class="sticky-header__info-title">Tinh dầu tràm trà Cây Tea Tree Essential Oil Premium 10ml</div>
+                                                    {{--  <div class="sticky-header__info-title">Tinh dầu tràm trà Cây Tea Tree Essential Oil Premium 10ml</div>  --}}
                                                     <div class="sticky-header__info-subtitle">
                                                         <span class="sticky-header__info-price">
                                                             275.000đ
@@ -962,7 +908,7 @@
                                     alt="Tinh dầu sả chanh Milaganics Lemongrass Essential Oil 30ml" title="Tinh dầu sả chanh Milaganics Lemongrass Essential Oil 30ml">
                             </div>
                             <div class="product-item__info">
-                                <h3 class="product-item__info-title">Tinh dầu sả chanh Milaganics Lemongrass Essential Oil 30ml</h3>
+                                {{--  <h3 class="product-item__info-title">Tinh dầu sả chanh Milaganics Lemongrass Essential Oil 30ml</h3>  --}}
                                 <div class="product-item__info-price">
                                     <span class="product-item__info-price-sale">193.500đ</span>
                                     <span class="product-item__info-price-original">215.000đ</span>

@@ -17,7 +17,7 @@
                             <li class="hidden">></li>
                             @foreach($danhmucsanpham as $dmsp)
                             <li>
-                                 <a href="san-pham-danh-muc/{!!$dmsp->id!!}">
+                                 <a href="#">
                                 <span class="item">{!!$dmsp->TenDanhMuc!!}</span>
                                 </a>
                             </li>
@@ -62,7 +62,7 @@
                                                 </a>
                                                 <div class="product-item__info-price">
                                                     <span class="product-item__info-price-sale"> {{ number_format($sp->GiaUuDai, 0, '.', '.') }}đ</span>
-                                                    <span class="product-item__info-price-original">{{ number_format($sp->Gia, 0, '.', '.') }} đ</span>
+                                                    <span class="product-item__info-price-original">{{ number_format($sp->Gia, 0, '.', '.') }}đ</span>
                                                 </div>
                                                 <div class="product-item__info-discount">
                                                         -{!!$sp->PhanTramKhauTru!!}%

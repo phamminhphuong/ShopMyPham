@@ -21,7 +21,7 @@ class MiddlewareAdmin
                   return $next($request);
             }
             else{
-                return redirect('trangchu1');
+                return redirect('/');
             }
         }
         else{

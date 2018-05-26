@@ -1,6 +1,5 @@
 @extends('layout.index') @section('content')
 <div class="container" style="padding-left:310px">
-
     <div class="modal-body step step-1" data-step="1" style="">
         <div class="modal-dialog" role="document">
             <div class="modal-content ui-ajax-block">
@@ -9,19 +8,30 @@
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active tab-1">
                                 <span>
-                                    Đăng ký tài khoản</span>
+                                    Đăng ký tài khoản
+                                </span>
+                                @if(count($errors) >0)
+                                <div style="margin:0px auto" class="alert alert-danger">
+                                    @foreach($errors->all() as $er) {{$er}}
+                                    <br> @endforeach
+                                </div>
+                                @endif @if(session('thongbao'))
+                                <div class="alert alert-danger">
+                                    {{session('thongbao')}}
+                                    <br>
+                                </div>
+                                @endif
                             </li>
                         </ul>
                         <div class="auth-content">
                             <h3>
                                 Đăng ký tài khoản</h3>
                             <div class="errorContainer"></div>
-
-                            <form action="#" id="sign-up__popup_normal_register_form" role="form" autocomplete="off">
-
+                            <form action="dangky" method="post" id="sign-up__popup_normal_register_form" role="form" autocomplete="off">
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="text" name="email" class="form-control clearText" placeholder="Vui lòng nhập Email">
+                                    <input type="email" name="email" class="form-control clearText" placeholder="Vui lòng nhập Email">
                                     <p class="error-message"></p>
                                 </div>
                                 <div class="form-group">
@@ -43,11 +53,8 @@
                                 <button type="submit" class="btn btn-primary btn-block js_button_normal_signup_continue">
                                     Tiếp tục </button>
                             </form>
-
-
                         </div>
                     </div>
-
                 </div>
             </div>
             <!-- /.modal-content -->

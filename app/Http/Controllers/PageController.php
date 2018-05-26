@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\DanhMucSanPham;
 use App\NhaCungCap;
@@ -9,6 +8,7 @@ use App\SanPham;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use App\XuatSanPham;
 use App\ChiTietXuat;
+use App\User;
 use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
@@ -30,7 +30,37 @@ class PageController extends Controller
         $chitietsanpham=SanPham::find($id);
         return view('page.chi-tiet-san-pham',['chitietsanpham'=>$chitietsanpham]);
     }
-
+    // san pham theo danh muc
+    public function getSanPhamDanhMuc($id){
+        $sanpham=SanPham::Where('MaDanhMuc',$id)->get();
+        return view('page.san-pham-danh-muc',['sanpham'=>$sanpham]);
+    }
+    // tim kiem san pham
+    public function postTimKiem(Request $request){
+        $tukhoa=$request->timkiem;
+        $timkiemsanpham=SanPham::Where('TenSanPham','like',"%$tukhoa%")->get();
+        return view('page.tim-kiem',['tukhoa'=>$tukhoa,'timkiemsanpham'=>$timkiemsanpham]);
+        
+    }
+    // tim kiem san pham theo gia
+    public function getSanPhamGia($number){
+        if($number==1){
+            $sanpham=SanPham::Where('Gia','<=',500000)->get();
+        }
+        if($number==2){
+            $sanpham=SanPham::Where([['Gia','>=',500000],['Gia','<=',2000000]])->get();
+        }
+        if($number==3){
+            $sanpham=SanPham::Where([['Gia','>=',2000000],['Gia','<=',5000000]])->get();
+        }
+        if($number==4){
+            $sanpham=SanPham::Where([['Gia','>=',5000000],['Gia','<=',10000000]])->get();
+        }
+        if($number==5){
+            $sanpham=SanPham::Where('Gia','>=',10000000)->get();
+        }
+        return view('page.san-pham-theo-gia',['sanpham'=>$sanpham]);
+    }
     // GET /gio-hang
     public function getGioHang() {
         return view('page.gio-hang');
@@ -101,5 +131,35 @@ class PageController extends Controller
 
         //FIXME - Thêm hiển thị thành công khi thanh toán
         return view('page.thanh-toan', ['messageSuccess' => 'Đơn đặt hàng của bạn đã sẵn sàng. Đơn vị vận chuyển sẽ chuyển hàng cho bạn sớm nhất có thể. Chúc bạn hạnh phúc!!!']);
+    }
+
+    //  dang ky
+    public function getDangKy(){
+        return view('page.dang-ky');
+    }
+    public function postDangKy(Request $request){
+        $this->validate($request,
+        [
+            'email'=>'required|unique:users|min:3|max:100',
+            'password'=>'required|min:6|max:8',
+            'confirmPassword'=>'required|same:password'
+        ],
+        [
+            'email.required'=>'Bạn không được để trống tên đăng nhập',
+            'email.unique'=>'Bạn không được nhập trùng với email đã tồn tại ',
+            'email.min'=>'Bạn nhập ít nhất 3 ký tự',
+            'email.max'=>'Bạn phải nhập ít hơn 100 ký tự',
+            'password.required'=>'Bạn không được để trống mật khẩu',
+            'password.min'=>'Bạn phải nhập mật khẩu trong khoảng 6-8 ký tự',
+            'password.max'=>'Bạn phải nhập mật khẩu trong khoảng 6-8 ký tự',
+            'confirmPassword.required'=>'Bạn không được để trống nhập lại mật khẩu',
+            'confirmPassword.same'=>'Bạn phải nhập giống mật khẩu'
+        ]);
+        $taikhoan=new User();
+        $taikhoan->email=$request->email;
+        $taikhoan->password=bcrypt($request->password);
+        $taikhoan->MaLoaiTaiKhoan=2;
+        $taikhoan->save();
+        return redirect('dangnhap');
     }
 }

@@ -22,14 +22,12 @@
                 
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        {{-- <img src="image_HoSo/{!!empty(Auth::user()->HoSoXinViec->first())?'':Auth::user()->HoSoXinViec->first()->HinhAnh!!}" alt="" class="user-image"> --}}
                         
                         <span class="hidden-xs"> {!!Auth::user()->email!!}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            {{-- <img src="image_HoSo/{!!empty(Auth::user()->HoSoXinViec->first())?'':Auth::user()->HoSoXinViec->first()->HinhAnh!!}" alt="" class="img-circle"> --}}
                             <p>
                                 {{-- Account --}}
                                 {!!Auth::user()->email!!}

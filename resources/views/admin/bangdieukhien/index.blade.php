@@ -22,7 +22,7 @@
             <p>Loại tài khoản</p>
           </div>
           <div class="icon">
-            <i class="fas fa-copyright"></i>
+            <i class="fas fa-address-book"></i>
           </div>
           <a href="admin/loaitaikhoan/list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -37,7 +37,7 @@
             <p>Tài khoản</p>
           </div>
           <div class="icon">
-            <i class="fas fa-align-left"></i>
+            <i class="fas fa-user-circle"></i>
           </div>
           <a href="admin/taikhoan/list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -52,7 +52,7 @@
             <p>Nhà cung cấp</p>
           </div>
           <div class="icon">
-            <i class="fas fa-file-pdf"></i>
+            <i class="fas fa-building"></i>
           </div>
           <a href="admin/nhacungcap/list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -67,7 +67,7 @@
             <p>Khách hàng</p>
           </div>
           <div class="icon">
-            <i class="fas fa-user-circle"></i>
+            <i class="ion ion-person-add"></i>
           </div>
           <a href="admin/khachhang/list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -81,7 +81,7 @@
             <p>Danh mục sản phẩm</p>
           </div>
           <div class="icon">
-            <i class="fas fa-user-circle"></i>
+            <i class="fas fa-file-pdf"></i>
           </div>
           <a href="admin/danhmucsanpham/list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -95,26 +95,12 @@
             <p>Sản phẩm</p>
           </div>
           <div class="icon">
-            <i class="fas fa-building"></i>
+            <i class="fab fa-product-hunt"></i>
           </div>
           <a href="admin/sanpham/list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-xs-6">
-        <!-- small box -->
-        <div class="small-box bg-gray">
-          <div class="inner">
-            <h3>{!!$slide!!}<sup style="font-size: 20px"></sup></h3>
-
-            <p>Slide</p>
-          </div>
-          <div class="icon">
-            <i class="fas fa-users"></i>
-          </div>
-          <a href="admin/slide/list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
       <!-- ./col -->
       <div class="col-lg-3 col-xs-6">
         <!-- small box -->
@@ -125,9 +111,9 @@
             <p>Phiếu nhập sản phẩm</p>
           </div>
           <div class="icon">
-            <i class="ion ion-person-add"></i>
+            <i class="fas fa-keyboard"></i> 
           </div>
-          <a href="admin/phieudangtuyen/list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="admin/nhapsanpham/list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -140,9 +126,9 @@
             <p>Phiếu xuất sản phẩm</p>
           </div>
           <div class="icon">
-            <i class="ion ion-pie-graph"></i>
+            <i class="fas fa-outdent"></i>
           </div>
-          <a href="admin/quangcao/list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="admin/xuatsanpham/list" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->

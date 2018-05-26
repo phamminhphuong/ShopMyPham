@@ -50,11 +50,11 @@
                         : activate to sort column ascending" style="width: 239.799px;">
                                         Hạn sử dụng
                                     </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
+                                    {{--  <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
                                         Miêu tả
-                                    </th>
+                                    </th>  --}}
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
@@ -130,9 +130,9 @@
                                     <td>
                                         {!!$sp->HanSuDung!!}
                                     </td>
-                                    <td>
+                                    {{--  <td>
                                         {!!$sp->MieuTa!!}
-                                    </td>
+                                    </td>  --}}
                                     <td>
                                         <img src="image_SanPham/{!!$sp->HinhAnh!!}" width="70px" height="70px" alt="">
                                     </td>

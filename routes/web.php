@@ -15,22 +15,32 @@ Route::get('/','PageController@getTrangChu');
 
 
 Route::get('chi-tiet-san-pham/{id}','PageController@getChitiet');
+
+//san pham theo danh muc
+Route::get('san-pham-danh-muc/{id}','PageController@getSanPhamDanhMuc');
+// san pham theo gia
+Route::get('san-pham-theo-gia/{number}','PageController@getSanPhamGia');
+// tim kiem san pham theo ten
+Route::post('tim-kiem','PageController@postTimKiem');
 // dang nhap
 Route::get('dangnhap','Admin\TaikhoanController@getDangnhap');
 Route::post('dangnhap','Admin\TaikhoanController@postDangnhap');
+// dang xuat
 Route::get('dangxuat','Admin\TaikhoanController@getDangXuat');
-
+// dang ky
+Route::get('dangky','PageController@getDangKy');
+Route::post('dangky','PageController@postDangKy');
+// gio hang
 Route::get('gio-hang', 'PageController@getGioHang');
 Route::get('gio-hang/bo-san-pham/{id}', 'PageController@getBoSanPham');
 Route::get('gio-hang/change-quantity/{id}', 'PageController@getChangeQuantity');
 Route::post('gio-hang', 'PageController@postGioHang');
-
+// thanh toan
 Route::get('thanh-toan', 'PageController@getThanhToan');
 Route::post('thanh-toan', 'PageController@postThanhToan');
 
-//  trang admin'middleware'=>'admin_login'
 
-Route::group(['prefix' => 'admin'], function() {
+Route::group(['prefix' => 'admin', 'middleware'=>'admin_login'], function() {
     // bang dieu khien
     Route::group(['prefix' => 'bangdieukhien'], function() {
         Route::get('index','Admin\BangdieukhienController@getBangdieukhien');

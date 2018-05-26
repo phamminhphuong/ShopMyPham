@@ -100,20 +100,10 @@
                                 <a href="/lp-veadayroi" rel="nofollow">Giới thiệu về Adayroi</a>
                             </li>
                             <li class="footer__link">
-                                <a href="/quy-che-hoat-dong-lptc2" rel="nofollow">Quy chế hoạt động Sàn TMĐT</a>
-                            </li>
-                            <li class="footer__link">
-                                <a href="/dieu-kien-dieu-khoan-lptc1" rel="nofollow">Điều khoản và điều kiện giao dịch</a>
-                            </li>
-                            <li class="footer__link">
-                                <a href="https://cdn02.static-adayroi.com/0/2016/04/02/1459562286124_4339455.pdf?_ga=2.216148886.1209368513.1499652233-2118612601.1498788649"
-                                    rel="nofollow" target="_blank">Thông báo từ Adayroi</a>
-                            </li>
-                            <li class="footer__link">
                                 <a href="https://authen.adayroi.com/Oauth/SearchingEinvoice" rel="nofollow" target="_blank">Tra cứu hóa đơn</a>
                             </li>
                             <li class="footer__link">
-                                <a href="/lp-contactUsPage" rel="nofollow">Liên hệ với Adayroi</a>
+                                <a href="/lp-contactUsPage" rel="nofollow">Liên hệ với Shop Mỹ Huyền</a>
                             </li>
                         </ul>
                         <div class="title link-section hidden-xs hidden-sm">
@@ -145,12 +135,6 @@
                                 <a href="/chinh-sach-giao-hang-lptc7" target="_blank" rel="nofollow">Chính sách giao hàng</a>
                             </li>
                             <li class="yCmsComponent footer__link">
-                                <a href="/chinh-sach-doi-tra-lptc8" target="_blank" rel="nofollow">Chính sách đổi trả</a>
-                            </li>
-                            <li class="yCmsComponent footer__link">
-                                <a href="/huong-dan-gui-tra-hang-lptc9" target="_blank" rel="nofollow">Hướng dẫn gửi trả hàng</a>
-                            </li>
-                            <li class="yCmsComponent footer__link">
                                 <a href="/chinh-sach-bao-hanh-lptc10" target="_blank" rel="nofollow">Chính sách bảo hành</a>
                             </li>
                             <li class="yCmsComponent footer__link">
@@ -172,33 +156,8 @@
                             </li>
 
                         </ul>
-                        <div class="title hidden-xs hidden-sm link-section">
-                            <span class="nav-click">
-                                <i class="nav-arrow"></i>
-                            </span>LIÊN KẾT WEBSITE</div>
-                        <ul class="row footer__nav-links hidden-xs">
-                            <li class="footer__link col-xs-12 col-sm-12 col-md-6">
-                                <a href="http://vinhomes.vn/" target="_blank" rel="nofollow">VinHomes.vn</a>
-                            </li>
-                            <li class="footer__link col-xs-12 col-sm-12 col-md-6">
-                                <a href="http://vinmart.com/" target="_blank" rel="nofollow">Vinmart.vn</a>
-                            </li>
-                            <li class="footer__link col-xs-12 col-sm-12 col-md-6">
-                                <a href="https://vinmec.com/" target="_blank" rel="nofollow">Vinmec.com</a>
-                            </li>
-                            <li class="footer__link col-xs-12 col-sm-12 col-md-6">
-                                <a href="https://vinpearl.com/" target="_blank" rel="nofollow">VinPearl.com</a>
-                            </li>
-                            <li class="footer__link col-xs-12 col-sm-12 col-md-6">
-                                <a href="http://almaz.vn/" target="_blank" rel="nofollow">Almaz.vn</a>
-                            </li>
-                            <li class="footer__link col-xs-12 col-sm-12 col-md-6">
-                                <a href="http://vinpro.net/" target="_blank" rel="nofollow">VinPro.net</a>
-                            </li>
-                            <li class="footer__link col-xs-12 col-sm-12 col-md-6">
-                                <a href="http://vinpearlland.com/" target="_blank" rel="nofollow">Vinpearlland.com</a>
-                            </li>
-                        </ul>
+                      
+                       
                     </div>
                     <!--Footer Social-->
                     <div class="footer__nav-list footer__social--nav col-xs-12 col-sm-12 col-md-3 hidden-sm hidden-xs">

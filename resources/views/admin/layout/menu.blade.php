@@ -68,7 +68,7 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fas fa-building"></i>  <span> Khách hàng</span>
+            <i class="ion ion-person-add"></i>  <span> Khách hàng</span>
             <span class="pull-right-container"> 
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -92,7 +92,7 @@
           </li>
         <li class="treeview">
             <a href="#">
-              <i class="fas fa-align-left"></i>  <span> Sản phẩm</span>
+              <i class="fab fa-product-hunt"></i>  <span> Sản phẩm</span>
               <span class="pull-right-container"> 
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -102,21 +102,10 @@
               <li><a href="admin/sanpham/add"><i class="far fa-circle small"> </i>  Thêm sản phẩm</a></li>
             </ul>
           </li>
+      
         <li class="treeview">
             <a href="#">
-              <i class="fas fa-align-left"></i>  <span> Slide</span>
-              <span class="pull-right-container"> 
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li class="active"><a href="admin/slide/list"><i class="far fa-circle small"> </i>  Danh sách slide</a></li>
-              <li><a href="admin/slide/add"><i class="far fa-circle small"> </i>  Thêm slide</a></li>
-            </ul>
-          </li>
-        <li class="treeview">
-            <a href="#">
-              <i class="fas fa-align-left"></i>  <span> Nhập sản phẩm</span>
+              <i class="fas fa-keyboard"></i>  <span> Nhập sản phẩm</span>
               <span class="pull-right-container"> 
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -128,7 +117,7 @@
           </li>
         <li class="treeview">
             <a href="#">
-              <i class="fas fa-align-left"></i>  <span> Xuất sản phẩm</span>
+              <i class="fas fa-outdent"></i>  <span> Xuất sản phẩm</span>
               <span class="pull-right-container"> 
                 <i class="fa fa-angle-left pull-right"></i>
               </span>

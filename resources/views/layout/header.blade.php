@@ -282,7 +282,7 @@
                             <div class="yCmsContentSlot js-site-logo">
                                 <div class="banner__component banner banner__component--logo">
                                     <a href="https://www.adayroi.com/">
-                                        <img title="Adayroi.com" alt="Adayroi.com" src="https://media.static-adayroi.com/sys_master/images/h49/h37/15474515214366.png">
+                                        <img title="" alt="" src="image_SanPham/logo.jpg">
                                     </a>
                                 </div>
                             </div>
@@ -370,8 +370,8 @@
                     <div class="col-sm-3 hidden-xs hidden-sm">
                         <div class="yCmsContentSlot js-site-logo">
                             <div class="banner__component banner banner__component--logo">
-                                <a href="https://www.adayroi.com/">
-                                    <img title="Adayroi.com" alt="Adayroi.com" src="https://media.static-adayroi.com/sys_master/images/h49/h37/15474515214366.png">
+                                <a href="http://localhost:8080/ShopBanMiPham/public/">
+                                    <img title="" alt="" src="image_SanPham/logo.jpg">
                                 </a>
                             </div>
                         </div>
@@ -380,7 +380,8 @@
                         <div class="site-search">
                             <span class="adr-icon icon-search-complete visible-xs visible-sm"></span>
                             <div class="ui-front">
-                                <form name="search_form_SearchBox" method="get" action="https://www.adayroi.com/tim-kiem" class="js-search-form">
+                                <form name="search_form_SearchBox" method="post" action="tim-kiem" class="js-search-form">
+                                    <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <div class="input-group" style="border: solid 2px #ed1d24">
                                         <div class="input-group-btn no-padding hidden-xs hidden-sm">
                                             <div class="dropdown js-select-category">
@@ -389,27 +390,22 @@
                                                     <input name="category" class="input-selected hidden" type="text" value="139" />
                                                     <span class="caret"></span>
                                                 </a>
-
                                                 <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                                    @foreach($danhmucsanpham as $dmsp)
+                                                    {{--  @foreach($danhmucsanpham as $dmsp)
                                                     <li>
                                                         <a href="#" data-value="332500">{!!$dmsp->TenDanhMuc!!}</a>
                                                     </li>
-                                                    @endforeach
+                                                    @endforeach  --}}
                                                 </ul>
                                             </div>
                                         </div>
-                                        <input type="text" title="Vui lòng không để trống" id="js-site-search-input" class="form-control js-site-search-input" name="text"
-                                            value="" maxlength="100" placeholder="Tìm sản phẩm bạn mong muốn" required=""
-                                            autofocus oninvalid="this.setCustomValidity('Vui lòng không để trống')" oninput="setCustomValidity('')"
-                                            data-options='{"autocompleteUrl" : "/tim-kiem/autocomplete/AdayroiSearchBoxComponent","minCharactersBeforeRequest" : "2","waitTimeBeforeRequest" : "500","displayProductImages" : true}'>
-
+                                        <input type="text" title="Vui lòng không để trống" id="js-site-search-input" class="form-control js-site-search-input" name="timkiem"
+                                            value="" maxlength="100" placeholder="Tìm sản phẩm bạn mong muốn">
                                         <span class="input-group-btn btn-find-group">
                                             <button class="btn btn-link" type="submit" style="background: #ed1d24; color: #ffffff;">Tìm kiếm</button>
                                         </span>
                                     </div>
                                 </form>
-
                             </div>
                         </div>
                         <div class="header__links__segment_mega_menu hidden-xs hidden-sm">
@@ -1570,29 +1566,48 @@
                             </div>
                             <div class="js-user--info">
                                 <div class="user-group--info">
+                                    {{--    --}}
+                                    @if(Auth::user())
+                                    <div class="pop-hover js-pop-hover">
+                                            <a href="javascript:void(0);" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="pop-hover-title">
+                                                <span>{!!Auth::user()->email!!}</span>
+                                                <span class="adr-icon dropdownlist-header"></span>
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="dangxuat">
+                                                                Đăng xuất
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                        @else
+                                    {{--    --}}
                                     <div class="pop-hover js-pop-hover">
                                         <a href="javascript:void(0);" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="pop-hover-title">
                                             <span>Đăng nhập & Đăng ký Tài khoản</span>
                                             <span class="adr-icon dropdownlist-header"></span>
                                         </a>
-
                                         <div class="dropdown-menu">
                                             <ul>
                                                 <li>
-                                                    <a href="#" class="btn btn-login js-sign-in__popup">
-                                                        Đăng nhập</a>
-                                                    <!--<a href="/loginclass="btn btn-login">Đăng nhập</a>"-->
+                                                    <a href="dangnhap" class="btn btn-login js-sign-in__popup">
+                                                        Đăng nhập
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <span>Chưa có tài khoản?</span>
                                                 </li>
                                                 <li>
-                                                    <a href="#" class="btn-sigup highlight-blue js-sign-up__popup_button">
+                                                    <a href="dangky" class="btn-sigup highlight-blue js-sign-up__popup_button">
                                                         Đăng ký tài khoản mới</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
+                                    @endif
                                 </div>
                             </div>
                         </li>

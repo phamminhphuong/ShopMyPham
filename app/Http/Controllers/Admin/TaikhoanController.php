@@ -83,8 +83,9 @@ class TaikhoanController extends Controller
     }
     //  dang nhap
     public function getDangnhap(){
-        return view('admin.dangnhap');
+        return view('page.dang-nhap');
     }
+
     public function postDangnhap(Request $request){
         $this->validate($request,
                 [
@@ -109,7 +110,7 @@ class TaikhoanController extends Controller
     public function getDangXuat(){
         
         Auth::logout();
-        return redirect('dangnhap');
+        return redirect('/');
         
     }
 }

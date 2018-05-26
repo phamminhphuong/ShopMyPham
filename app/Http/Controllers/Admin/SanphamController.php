@@ -21,10 +21,10 @@ class SanphamController extends Controller
     public function postAdd(Request $request){   
         $this->validate($request,
         [
-            'TenSanPham'=>'required|min:3|max:100',
-            'XuatXu'=>'required|min:3|max:100',
+            'TenSanPham'=>'required|min:3|max:200',
+            'XuatXu'=>'required|min:3|max:200',
             'ThanhPhan'=>'required|min:3|max:200',
-            'CongDung'=>'required|min:3|max:100',
+            'CongDung'=>'required|min:3|max:200',
             'HanSuDung'=>'required',
             'MieuTa'=>'required|min:3|max:2500',
             'Gia'=>'required',
@@ -34,16 +34,16 @@ class SanphamController extends Controller
         [
             'TenSanPham.required'=>'Bạn không được để trống tên sản phẩm',
             'TenSanPham.min'=>'Bạn nhập tên sản phẩm ít nhất 3 ký tự',
-            'TenSanPham.max'=>'Bạn nhập tên sản phẩm không quá 100 ký tự',
+            'TenSanPham.max'=>'Bạn nhập tên sản phẩm không quá 200 ký tự',
             'XuatXu.required'=>'Bạn không được để trống xuất xứ',
             'XuatXu.min'=>'Bạn nhập xuất xứ ít nhất 3 ký tự',
-            'XuatXu.max'=>'Bạn nhập xuất xứ không quá 100 ký tự',
+            'XuatXu.max'=>'Bạn nhập xuất xứ không quá 200 ký tự',
             'ThanhPhan.required'=>'Bạn không được để trống thành phần',
             'ThanhPhan.min'=>'Bạn nhập thành phần ít nhất 3 ký tự',
-            'ThanhPhan.max'=>'Bạn nhập thành phần không quá 100 ký tự',
+            'ThanhPhan.max'=>'Bạn nhập thành phần không quá 200 ký tự',
             'CongDung.required'=>'Bạn không được để trống công dụng',
             'CongDung.min'=>'Bạn nhập công dụng ít nhất 3 ký tự',
-            'CongDung.max'=>'Bạn nhập công dụng không quá 100 ký tự',
+            'CongDung.max'=>'Bạn nhập công dụng không quá 200 ký tự',
             'HanSuDung.required'=>'Bạn không được để trống hạn sử dụng',
             'MieuTa.required'=>'Bạn không được để trống mô tả sản phẩm',
             'MieuTa.min'=>'Bạn nhập mô tả sản phẩm ít nhất 3 ký tự',
@@ -73,6 +73,8 @@ class SanphamController extends Controller
         }
         $sanpham->SoLuong=$request->SoLuong;
         $sanpham->Gia=$request->Gia;
+
+        setlocale(LC_MONETARY,"en_US");
         $sanpham->GiaUuDai=$request->GiaUuDai;
         $sanpham->PhanTramKhauTru=$request->PhanTramKhauTru;
         $sanpham->DoUuTien=$request->DoUuTien;
@@ -90,10 +92,10 @@ class SanphamController extends Controller
     public function postEdit(Request $request, $id){
         $this->validate($request,
         [
-            'TenSanPham'=>'required|min:3|max:100',
-            'XuatXu'=>'required|min:3|max:100',
+            'TenSanPham'=>'required|min:3|max:200',
+            'XuatXu'=>'required|min:3|max:200',
             'ThanhPhan'=>'required|min:3|max:200',
-            'CongDung'=>'required|min:3|max:100',
+            'CongDung'=>'required|min:3|max:200',
             'HanSuDung'=>'required',
             'MieuTa'=>'required|min:3|max:2500',
             'Gia'=>'required',
@@ -103,16 +105,16 @@ class SanphamController extends Controller
         [
             'TenSanPham.required'=>'Bạn không được để trống tên sản phẩm',
             'TenSanPham.min'=>'Bạn nhập tên sản phẩm ít nhất 3 ký tự',
-            'TenSanPham.max'=>'Bạn nhập tên sản phẩm không quá 100 ký tự',
+            'TenSanPham.max'=>'Bạn nhập tên sản phẩm không quá 200 ký tự',
             'XuatXu.required'=>'Bạn không được để trống xuất xứ',
             'XuatXu.min'=>'Bạn nhập xuất xứ ít nhất 3 ký tự',
-            'XuatXu.max'=>'Bạn nhập xuất xứ không quá 100 ký tự',
+            'XuatXu.max'=>'Bạn nhập xuất xứ không quá 200 ký tự',
             'ThanhPhan.required'=>'Bạn không được để trống thành phần',
             'ThanhPhan.min'=>'Bạn nhập thành phần ít nhất 3 ký tự',
-            'ThanhPhan.max'=>'Bạn nhập thành phần không quá 100 ký tự',
+            'ThanhPhan.max'=>'Bạn nhập thành phần không quá 200 ký tự',
             'CongDung.required'=>'Bạn không được để trống công dụng',
             'CongDung.min'=>'Bạn nhập công dụng ít nhất 3 ký tự',
-            'CongDung.max'=>'Bạn nhập công dụng không quá 100 ký tự',
+            'CongDung.max'=>'Bạn nhập công dụng không quá 200 ký tự',
             'HanSuDung.required'=>'Bạn không được để trống hạn sử dụng',
             'MieuTa.required'=>'Bạn không được để trống mô tả sản phẩm',
             'MieuTa.min'=>'Bạn nhập mô tả sản phẩm ít nhất 3 ký tự',
