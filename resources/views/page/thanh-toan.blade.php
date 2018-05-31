@@ -43,10 +43,10 @@
                                     <div class="col-xs-4">
                                         <div class="sidebar-product__item-order">
                                             <p class="sidebar-product__item-price">
-                                                    {!!$item->price!!}  $</p>
+                                                    {!!$item->price!!}  đ</p>
                                             <p class="sidebar-product__item-quantity">x {!!$item->qty!!} </p>
                                             <p class="sidebar-product__item-total">
-                                                    {!!$item->qty * $item->name->GiaUuDai!!} $</p>
+                                                    {!!$item->qty * $item->name->GiaUuDai!!} đ</p>
                                         </div>
                                     </div>
                                 </div>
@@ -55,14 +55,13 @@
                         </ul>
                         <div class="subtotals sidebar-product__order ">
                             <div class="sidebar-product-order__item">
-                                <span class="sidebar-product-order__label">Số tiền cần phải trả</span>
+                                <span class="sidebar-product-order__label" style="margin-left:25px;margin-top:20px">Số tiền cần phải trả</span>
                                 <span id="js-checkout-cart-total-price" class="sidebar-product-order__value sidebar-product-order__total text-red">
-                                {!! Cart::total() !!} $</span>
+                                {!! Cart::subtotal() !!} đ</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div id="checkoutAddressWrapper">
                     <form action="thanh-toan" method="post">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -106,7 +105,7 @@
                                                     <div class="row">
                                                         <div class="col-xs-12 col-sm-4 col-md-7"></div>
                                                         <div class="col-xs-12 col-sm-8 col-md-5">
-                                                            <button type="submit" class="btn btn-block btn-primary">Chọn hình thức thanh toán </button>
+                                                            <button type="submit" class="btn btn-block btn-primary">Mua hàng </button>
                                                         </div>
                                                     </div>
                             
@@ -114,8 +113,8 @@
                                                         <div class="col-sm-12 col-md-7 col-md-offset-5 col-xs-12 text-right">
                                                             <div class="content">
                                                                 <br>
-                                                                <p>Bằng việc ấn nút Thanh toán trên, Quý khách xác nhận đã kiểm tra kỹ đơn hàng với
-                                                                    <a href="/dieu-kien-dieu-khoan-lptc1" target="_blank"> Điều khoản &amp; Điều kiện giao dịch</a>                                        của Adayroi</p>
+                                                                <p>Bằng việc ấn nút mua hàng trên, Quý khách xác nhận mua hàng trên shop Mỹ Huyền thành công!!!
+                                                                    </p>
                                                             </div>
                                                         </div>
                                                     </div>

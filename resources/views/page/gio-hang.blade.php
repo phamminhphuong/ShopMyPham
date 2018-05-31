@@ -45,8 +45,8 @@
                                                 <i class="adr-icon icon-trash"></i>Bỏ sản phẩm</a>
                                         </div>
                                         <div class="cart-product__price">
-                                            <div class="cart-product__price-sale">{!!$item->price!!} $</div>
-                                            <div class="cart-product__price-original">{!!$item->name->Gia!!} $</div> 
+                                            <div class="cart-product__price-sale">{!!$item->price!!} đ</div>
+                                            <div class="cart-product__price-original">{!!$item->name->Gia!!} đ</div> 
                                         </div>
 
 
@@ -56,7 +56,7 @@
                                             </div>
                                         </div>
                                         <div class="cart-product__subtotal">
-                                            <div class="item__total js-item-total hidden-xs">{!!$item->qty * $item->name->GiaUuDai!!} $</div>
+                                            <div class="item__total js-item-total hidden-xs">{!!$item->qty * $item->name->GiaUuDai!!} đ</div>
                                         </div>
                                         <div class="js-item-warnings" style="display:none;">
                                         </div>
@@ -71,9 +71,9 @@
                                     <div class="cart-total">
                                         <div class="cart-total__item">
                                             <div class="cart-total__item-label">Thành tiền:</div>
-                                            <div class="cart-total__item-value text-red cart-total__bill">{!! Cart::subtotal() !!} $</div>
+                                            <div class="cart-total__item-value text-red cart-total__bill">{!! Cart::subtotal() !!} đ</div>
                                         </div>
-                                        <small>Giá đã bao gồm VAT</small>
+                                       
                                     </div>
                                     <div class="cart-note">
                                     </div>

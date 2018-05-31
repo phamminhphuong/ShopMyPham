@@ -5,73 +5,9 @@
             <div class="container">
                 <div class="row">
                     <div class="yCmsContentSlot col-xs-12 col-md-5 header--segment-left">
-                        <script type="text/javascript">
-                            /*<![CDATA[*/
-                            var ACC = ACC || {};
-                            ACC.deliverydata = ACC.deliverydata || {};
-                            ACC.deliverydata.selectedProvince = "4";
-                            ACC.deliverydata.selectedDistrict = "7";
-                            ACC.deliverydata.selectedWard = "295";
-                            ACC.deliverydata.selectedProvinceName = "Hà Nội";
-                            ACC.deliverydata.selectedDistrictName = "Quận Hai Bà Trưng";
-                            ACC.deliverydata.selectedWardName = "Phường Minh Khai";
-                            ACC.deliverydata.pageType = "CATEGORY";
-                            ACC.deliverydata.firstTimeUser = "false";
-                            ACC.deliverydata.missingMessage = "Bạn vui lòng điền đầy đủ tất cả các thông tin nhận hàng";
-                            ACC.deliverydata.successMessage = "Thay đổi Quận/Huyện giao hàng thành công";
-/*]]>*/
-                        </script>
-
-                        <div class="header--location pop-hover js-pop-hover js-shippingArea ">
-
-                            <a href="javascript:;" class="pop-hover-title" data-toggle="dropdown" data-component="shippingArea">
-                                <i class="adr-icon icon-location-red"></i>
-                                <span class="text-secondary">Giao hàng đến:&nbsp;</span>
-                                <span class="text-location-home">
-                                    Phường Minh Khai&#44;&nbsp;Quận Hai Bà Trưng&#44;&nbsp;Hà Nội</span>
-                                <span class="caret"></span>
-                            </a>
-
-                            <div class="pop-hover-open pop-hover-static ">
-
-                                <h4 class="title">Chọn nơi bạn muốn nhận hàng</h4>
-
-                                <form id="deliveryForm" class="popover-location-form" action="#" method="post">
-                                    <div class="form-group shipping--zone-city">
-                                        <select name="city" id="shipping--zone-city" class="js-selectize" placeholder="Chọn hoặc nhập Tỉnh/Thành phố">
-                                            <option value="">Chọn hoặc nhập Tỉnh/Thành phố</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group shipping--zone-district">
-                                        <select name="district" id="shipping--zone-district" class="js-selectize" placeholder="Chọn Quận/Huyện">
-                                            <option value="">Chọn Quận/Huyện</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group shipping--zone-ward">
-                                        <select name="ward" id="shipping--zone-ward" class="js-selectize" placeholder="Chọn Phường/Xã">
-                                            <option value="">Chọn xã/phường/thị trấn</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <button class="btn btn-block btn-positive" id="btnSubmit">
-                                            Chọn</button>
-                                    </div>
-
-                                    <div>
-                                        <input type="hidden" name="CSRFToken" value="eca1f301-71b8-4f7c-ad64-6c655e12f687" />
-                                    </div>
-                                </form>
-                                <div class="error-message js-confirm-delivery-updated"></div>
-
-                            </div>
-
-                        </div>
+                            <marquee>Chào mừng quý khách đến với website mỹ phẳm Mỹ Huyền</marquee>
                     </div>
                     <div class="yCmsContentSlot col-md-7 hidden-xs hidden-sm header--segment-right">
-                       
                         <div class="header--segment-item pull-right pop-hover js-pop-hover">
                             <a href="javascript:;" class="pop-hover-title" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true"
                                 aria-expanded="false" class="pop-hover-title">
@@ -94,24 +30,19 @@
                                     <li>
                                         <a href="lien-he">Liên hệ Adayroi</a>
                                     </li>
-                                  
                                 </ul>
                             </div>
-
                         </div>
-                      
                         <div class="content">
                             <style>
                                 .header__links__segment_mega_menu .menu__cat-list ul li,
                                 .header__links__segment_mega_menu .menu__cat-list ul li a {
                                     line-height: 17px !important;
                                 }
-
                                 .navigation--middle {
                                     padding-top: 8px;
                                     padding-bottom: 8px;
                                 }
-
                                 .product-detail__order .btn-add-to-cart {
                                     background-color: #ed1d24;
                                 }
@@ -281,16 +212,9 @@
                                             <div class="dropdown js-select-category">
                                                 <a data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                                     <span class="category-selected">Shop Mỹ Phẩm</span>
-                                                    {{--  <input name="category" class="input-selected hidden" type="text" value="139" />  --}}
-                                                    {{--  <span class="caret"></span>  --}}
+                                                   
                                                 </a>
-                                                {{--  <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                                    @foreach($danhmucsanpham as $dmsp)
-                                                    <li>
-                                                        <a href="#" data-value="332500">{!!$dmsp->TenDanhMuc!!}</a>
-                                                    </li>
-                                                    @endforeach
-                                                </ul>  --}}
+                                               
                                             </div>
                                         </div>
                                         <input type="text" title="Vui lòng không để trống" id="js-site-search-input" class="form-control js-site-search-input" name="timkiem"

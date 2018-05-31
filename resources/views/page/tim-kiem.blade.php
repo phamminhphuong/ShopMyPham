@@ -17,8 +17,8 @@
                             <li class="hidden">></li>
                             @foreach($danhmucsanpham as $dmsp)
                             <li>
-                                 <a href="#">
-                                <span class="item">{!!$dmsp->TenDanhMuc!!}</span>
+                                <a href="san-pham-danh-muc/{!!$dmsp->id!!}">
+                                    <span>{!!$dmsp->TenDanhMuc!!}</span>
                                 </a>
                             </li>
                             @endforeach

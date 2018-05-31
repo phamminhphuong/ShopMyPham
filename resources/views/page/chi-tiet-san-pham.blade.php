@@ -14,16 +14,13 @@
                         </span>
                     </li>
                     <li class="hidden">&gt;</li>
-                    @foreach($danhmucsanpham as $dm)
-                    <li>
-                        <span itemscope="">
-                            <a href="#" itemprop="url">
-                                <span itemprop="title">{!!$dm->TenDanhMuc!!}</span>
-                        </a>
-                        </span>
-                    </li>
-                    <li class="hidden">&gt;</li>
-                    @endforeach
+                    @foreach($danhmucsanpham as $dmsp)
+                            <li>
+                                <a href="san-pham-danh-muc/{!!$dmsp->id!!}">
+                                    <span>{!!$dmsp->TenDanhMuc!!}</span>
+                                </a>
+                            </li>
+                            @endforeach
                 </ol>
             </div>
         </div>
@@ -92,24 +89,15 @@
                                         <ul>
                                             <li class="nobullet">
                                                 <ul>
-                                                    {{-- <li>Tinh dầu tràm trà &nbsp;của Cây có nguồn gốc từ&nbsp;Koree Herb Australia.</li>
-                                                    <li>&nbsp;Tràm trà khá nổi tiếng với công dụng kháng viêm, điều trị các vấn
-                                                        đề về da và tóc do vi khuẩn gây nên.</li>
-                                                    <li>Nếu bị mụn, hãy để tinh dầu tràm chăm sóc!</li>
-                                                    <li>Đối với các nốt mụn viêm đầu trắng:&nbsp;&nbsp;dùng tăm bông thấm 1-2
-                                                        giọt tràm trà Cây&nbsp;và chấm lên các nốt mụn 2 lần/ngày vào buổi
-                                                        sáng và tối</li>
-                                                    <li>Tinh chất α-Terpineol có trong dầu tràm trà sẽ khiến cho các nốt mụn
-                                                        này nhanh chóng khô đầu, giảm tình trạng sưng viêm.</li>
-                                                    <li>Tinh dầu tràm trà rất tốt cho trẻ nhỏ, nhỏ vào nước tắm giúp giữ ấm cơ
-                                                        thể và làm sạch nhẹ nhàng.</li> --}}
+                                                    
                                                 </ul>
                                             </li>
                                             <li class="nobullet">
                                                 <ul>
-                                                    <li>Thành phần tách xuất từ lá cây tràm trà Úc</li>
-                                                    <li>Giúp trị mụn và chăm sóc da mụn</li>
-                                                    <li>Xuất xứ: Australia</li>
+                                                    <li>Xuất sứ: {!!$chitietsanpham->XuatXu!!}</li>
+                                                    <li>Thành phần: {!!$chitietsanpham->ThanhPhan!!}</li>
+                                                    <li>Công dụng: {!!$chitietsanpham->CongDung!!}</li>
+                                                    <li>Hạn sử dụng: {!!$chitietsanpham->HanSuDung!!}</li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -121,24 +109,18 @@
                                 </script>
                                 <div class="product-detail__price">
                                     <div class="product-detail__price-info">
-                                        Giá bán:
-                                        <span class="price-info__sale">275.000đ</span>
+                                        Giá ưu đãi:
+                                        <span class="price-info__sale">{{ number_format($chitietsanpham->GiaUuDai, 0, '.', '.') }}đ</span>
                                     </div>
                                  
                                     <div class="product-detail__price-vinid">
                                         <i class="adr-icon icon-vinid"></i>
                                         <div class="price-vinid__description">
-                                           Giá ưu đãi
-                                            <span class="price-vinid__value">269.000đ</span>
+                                           Giá bán
+                                            <span class="price-vinid__value">{{ number_format($chitietsanpham->Gia, 0, '.', '.') }}đ</span>
                                             <span class="price-vinid__discount-info">
                                             </span>
-                                            <div class="tooltip">
-                                                <i class="adr-icon icon-hint"></i>
-                                                <span class="tooltiptext">- Thẻ VinID là thẻ khách hàng thân thiết của Tập đoàn Vingroup cho phép khách
-                                                    hàng tích và tiêu điểm với nhiều ưu đãi hấp dẫn.
-                                                    <br>- Số tiền tích điểm sẽ được hoàn vào thẻ VinID sau khi giao hàng thành
-                                                    công.</span>
-                                            </div>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -148,9 +130,8 @@
                                 <div class="product-detail__order addtocart-component">
                                     <div class="product-order__title">
                                         <span class="txt-level-count-stock">Số lượng: </span>
-                                        <span class="txt-total-stock">Còn 5 sản phẩm</span>
+                                        <span class="txt-total-stock">Còn {!!$chitietsanpham->SoLuong!!} sản phẩm</span>
                                     </div>
-
                                     {{-- LuanTM Đoạn này đã oki đừng xóa --}}
                                     <div class="row">
                                         <form action="gio-hang" method="post">
@@ -161,11 +142,9 @@
                                                 <div class="product-order__quanity js-qty-selector js-product-order__quanity">
                                                     <div class="product-order__form-control pdpAddtoCartSelectSection adr-dropdown" id="pdpAddtoCartSelectSection">
                                                         <select name="quantity" id="pdpAddtoCartSelect" class="product-order__quanity-select form-control">
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                            <option value="4">4</option>
-                                                            <option value="5">5</option>
+                                                            @for($i=1; $i <= $chitietsanpham->SoLuong; $i++)
+                                                            <option value="{{$i}}">{{$i}}</option>
+                                                            @endfor
                                                         </select>
                                                     </div>
                                                 </div>
@@ -175,8 +154,6 @@
                                             </div>
                                         </form>
                                     {{-- LuanTM end --}}
-
-
 
 
                                         <div class="col-xs-12 col-sm-3 col-md-5">
@@ -199,91 +176,6 @@
                             <!-- can not delete id below -->
                             <div id="place-show__sticky"></div>
                             <!--  infor product  -->
-
-                            <div id="js-product-classifications" class="col-sm-12 product-info">
-                                <div class="panel panel-product-detail">
-                                    <div class="panel-body product-classifications product-detail__specs-modal">
-                                        <h1 class="product-detail__specs-title">Thông tin sản phẩm
-                                            
-                                        </h1>
-                                        <!-- 	<h1 class="product-detail__specs-title hidden-xs">ThÃÂ´ng tin sÃ¡ÂºÂ£n phÃ¡ÂºÂ©m</h1> -->
-                                        <div class="product-detail__specs" id="js-product-detail__specs">
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="product-specs__table">
-                                                        <table>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td class="specs-table__property">Xuất xứ</td>
-                                                                    <td class="specs-table__value">{!!$chitietsanpham->XuatXu!!}</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="specs-table__property">Thành phần</td>
-                                                                    <td class="specs-table__value">{!!$chitietsanpham->ThanhPhan!!}</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="specs-table__property">Cồng dụng</td>
-                                                                    <td class="specs-table__value">{!!$chitietsanpham->CongDung!!}</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="specs-table__property">Hạn sử dụng</td>
-                                                                    <td class="specs-table__value">{!!$chitietsanpham->HanSuDung!!}</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal modal-adr modal-adr-fix-height fade in" tabindex="-1" role="dialog" id="allClassificationAtrrModal" aria-hidden="true"
-                                        data-backdrop="static" data-keyboard="false">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content" style="text-align: left; padding: 15px;">
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                                    <span aria-hidden="true">Ã</span>
-                                                </button>
-                                                <div class="modal-body">
-                                                    <div class="panel-body product-classifications product-detail__specs-modal">
-                                                        <h1 class="product-detail__specs-title">Thông tin sản phẩm</h1>
-                                                        <!-- 	<h1 class="product-detail__specs-title hidden-xs">ThÃÂ´ng tin sÃ¡ÂºÂ£n phÃ¡ÂºÂ©m</h1> -->
-                                                        <div class="product-detail__specs" id="js-product-detail__specs">
-                                                            <div class="row">
-                                                                <div class="col-sm-12">
-                                                                    <div class="product-specs__table">
-                                                                        <table>
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <td class="specs-table__property">Xuất xứ</td>
-                                                                                    <td class="specs-table__value">Australia</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="specs-table__property">Dung tích</td>
-                                                                                    <td class="specs-table__value">10ml</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="specs-table__property">Hạn sử dụng</td>
-                                                                                    <td class="specs-table__value">2 năm từ ngày sản xuất</td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td class="specs-table__property">Thành phần</td>
-                                                                                    <td class="specs-table__value">Tách xuất từ lá cây tràm trà Úc</td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end infor product -->
                             <!-- trademark -->
                             <div class="col-sm-12 detail__info">
                                 <div class="panel panel-product-detail">
@@ -297,175 +189,9 @@
                                 </div>
                             </div>
                             <!-- /end trademark -->
-
-                            <!-- suggest product -->
-                            <!-- end suggest product -->
-
-                            <!-- comment client -->
-                            <div class="col-sm-12">
-                                <div class="panel panel-product-detail panel-product-comment">
-                                    <div class="panel-heading">
-
-                                        <span class="hidden-xs">Có</span>
-                                        <span id="totalComment">0</span> bình luận
-                                        <span class="hidden-xs">về sản phẩm này</span>
-                                        
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="product-detail__comment">
-                                            <form id="vinReviewForm" class="product-comment__form js-validation-10-charactor" action="/tinh-dau-tram-tra-cay-tea-tree-essential-oil-premium-10ml-p-1342017/review?offer=1342017_094175"
-                                                method="post">
-                                                <div class="comment-form__container">
-                                                    <div class="form-group">
-                                                        <label class="" for="reviewComment">
-                                                            <span class="skip"></span>
-                                                        </label>
-
-                                                        <textarea id="reviewComment" name="comment" class="form-control" placeholder="Mời bạn viết đánh giá về sản phẩm này, vui lòng viết tiếng Việt có dấu....."></textarea>
-                                                    </div>
-                                                    <div class="help-block new-block hidden" style="color: #c53131">
-                                                        Nội dung bình luận phải từ 10 kí tự trở lên</div>
-                                                    <div class="help-block over-character-block hidden" style="color: #c53131">
-                                                        Nội dung bình luận không vượt quá 500 kí tự</div>
-                                                    <grammarly-btn>
-                                                        <div style="z-index: 2; opacity: 1; transform: translate(861.5px, 156px);" class="_9b5ef6-textarea_btn _9b5ef6-not_focused"
-                                                            data-grammarly-reactid=".0">
-                                                            <div class="_9b5ef6-transform_wrap" data-grammarly-reactid=".0.0">
-                                                                <div title="Protected by Grammarly" class="_9b5ef6-status" data-grammarly-reactid=".0.0.0"></div>
-                                                            </div>
-                                                        </div>
-                                                    </grammarly-btn>
-                                                    <div class="comment-form__message">
-                                                        <div id="commentCounter" class="comment-form__counter hidden-xs">
-                                                            <span id="currentCommentCounter">0</span>/ 500 ký tự</div>
-
-                                                        <div id="commentErrMsg" class="comment-form__error" style="display: none"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="comment-form__navigation">
-                                                    <div class="row">
-                                                        <div id="anonymous-info">
-                                                        
-                                                        </div>
-                                                      
-                                                        <div class="comment-form__captcha-wrapper">
-                                                            <div class="comment-form__captcha">
-                                                            </div>
-                                                            <div class="g-recaptcha_incorrect error-captcha"></div>
-                                                        </div>
-                                                        <input type="hidden" name="isAnonymous" value="true">
-                                                        <div class="col-xs-12 col-sm-1-5">
-                                                            <button type="button" class="btn btn-block btn-positive comment-form__submit js-review-submit" value="Gửi" data-url="/tinh-dau-tram-tra-cay-tea-tree-essential-oil-premium-10ml-p-1342017/review?offer=1342017_094175"
-                                                                disabled="disabled">
-                                                                Gửi</button>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- message sucess -->
-                                                <div id="comment-form__message--sucess"></div>
-                                                <div>
-                                                    <input type="hidden" name="CSRFToken" value="8221e548-c24b-416d-8d30-c3d7213b2a5e">
-                                                </div>
-                                            </form>
-                                            <div class="product-comment__container">
-                                                <div class="product-comment__list js-view-more-review" id="reviews" data-reviews="/tinh-dau-tram-tra-cay-tea-tree-essential-oil-premium-10ml-p-1342017/reviewhtml/all"
-                                                    data-allreviews="/tinh-dau-tram-tra-cay-tea-tree-essential-oil-premium-10ml-p-1342017/reviewhtml/all"
-                                                    data-totalreviews="">
-                                                    <div id="showingAllReviews" data-showingallreviews="true"></div>
-                                                    <div class="review-list " data-totalreviews="0">
-                                                        <a href="javascript:;" class="btn btn-white btn-view-more-review  hidden">Xem thêm bình luận</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end comment client -->
-                            <!-- banner promotion -->
-                            <!-- product similar -->
-                            <!-- product similar -->
                         </div>
 
-                        <div class="modal modal-adr modal-theatre fade in" role="dialog" id="modal-theatre-image" aria-hidden="false">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                        <span aria-hidden="true">Ã</span>
-                                    </button>
-
-                                    <div class="modal-body">
-                                        <div class="product-detail__theatre">
-                                            <div class="product-detail__theatre-content">
-                                                <div class="clearfix">
-                                                    <div class="col-xs-12 col-sm-push-2 col-sm-10">
-                                                        <div class="theatre-image__content">
-                                                            <div class="theatre-image__content-wrapper">
-                                                                <div class="swiper-container js-theatre-image__swiper">
-                                                                    <div class="swiper-wrapper">
-                                                                        <div class="swiper-slide">
-                                                                            <a class="theatre-image__stage-item" href="#" data-type="image" data-index="0">
-                                                                                <img class="img-responsive lazy" src="https://media.static-adayroi.com/sys_master/images/haa/h9a/14565122506782.jpg" alt="">
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="swiper-slide"><a class="theatre-image__stage-item" href="#" data-type="image"
-                                                                                data-index="0"><img width="100%" height="auto" class="img-responsive lazy" src="https://media.static-adayroi.com/sys_master/images/haa/h9a/14565122506782.jpg" alt=""></a></div>
-                                                                    </div>
-                                                                    <div class="swiper-button-prev"></div>
-                                                                    <div class="swiper-button-next"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-pull-10 col-sm-2 theatre-image__list">
-                                                        <div class="theatre-image__list-wrapper">
-                                                            <div class="swiper-container js-theatre-image__list">
-                                                                <!-- Additional required wrapper -->
-                                                                <div class="swiper-wrapper">
-                                                                    <div class="swiper-slide">
-                                                                        <a class="theatre-image__list-item" data-type="image" href="#" data-index="0">
-                                                                            <img class="img-responsive lazy" width="92" src="https://media.static-adayroi.com/sys_master/images/haa/h9a/14565122506782.jpg" alt="">
-                                                                        </a>
-                                                                    </div>
-                                                                    <div class="swiper-slide"><a class="theatre-image__list-item" data-type="image"
-                                                                            href="#" data-index="0"><img class="img-responsive lazy" width="92" src="https://media.static-adayroi.com/sys_master/images/haa/h9a/14565122506782.jpg" alt=""></a></div>
-                                                                </div>
-                                                                <!-- If we need scrollbar -->
-                                                                <div class="swiper-scrollbar"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.modal-content -->
-                            </div>
-                            <!-- /.modal-dialog -->
-                        </div>
-                        <div class="modal modal-adr modal-theatre fade in" role="dialog" id="modal-theatre-video" aria-hidden="false">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                        <span aria-hidden="true">Ã</span>
-                                    </button>
-                                    <div class="modal-body">
-                                        <div class="product-detail__theatre">
-                                            <div class="product-detail__theatre-title">
-                                                <h1></h1>
-                                            </div>
-                                            <div class="product-detail__theatre-content"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.modal-content -->
-                            </div>
-                            <!-- /.modal-dialog -->
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-md-3 pannel-right">
