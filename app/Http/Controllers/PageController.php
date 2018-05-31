@@ -31,7 +31,7 @@ class PageController extends Controller
     public function getChitiet($id){
         $chitietsanpham=SanPham::find($id);
         $madanhmuc=$chitietsanpham->MaDanhMuc;
-        $sanphamgiong=SanPham::where('MaDanhMuc',$madanhmuc)->get();
+        $sanphamgiong=SanPham::where('MaDanhMuc',$madanhmuc)->Where('id','<>',$id)->get();
         return view('page.chi-tiet-san-pham',['chitietsanpham'=>$chitietsanpham,'sanphamgiong'=>$sanphamgiong]);
     }
     // san pham theo danh muc

@@ -243,7 +243,7 @@
                         <div class="yCmsComponent yComponentWrapper">
                             <div class="yCmsContentSlot js-site-logo">
                                 <div class="banner__component banner banner__component--logo">
-                                    <a href="#">
+                                    <a href="">
                                         <img title="" alt="" src="image_SanPham/logo.jpg">
                                     </a>
                                 </div>
