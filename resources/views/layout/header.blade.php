@@ -450,7 +450,7 @@
                                 <a href="#" class="mini-cart-link js-mini-cart-link" data-mini-cart-url="/cart/rollover" data-mini-cart-refresh-url="/cart/miniCart/SUBTOTAL"
                                     data-mini-cart-name="Cart" data-mini-cart-empty-name="Empty Cart" data-mini-cart-items-text="Items">
                                     <div class="mini-cart-icon" style="margin-top:-10px">
-                                        <h3><i class="fas fa-cart-arrow-down"></i></h3>
+                                        <h3><a href="gio-hang"><i class="fas fa-cart-arrow-down"></i></a></h3>
                                         <span class="adr-icon icon-cart-mobile visible-xs visible-sm"></span>
                                     </div>
                                 </a>
