@@ -106,7 +106,7 @@
         <!-- small box -->
         <div class="small-box bg-orange">
           <div class="inner">
-            <h3>0</h3>
+            <h3>{!!$nhapsanpham!!}</h3>
 
             <p>Phiếu nhập sản phẩm</p>
           </div>
@@ -121,7 +121,7 @@
         <!-- small box -->
         <div class="small-box bg-blue">
           <div class="inner">
-            <h3>0</h3>
+            <h3>{!!$xuatsanpham!!}</h3>
 
             <p>Phiếu xuất sản phẩm</p>
           </div>

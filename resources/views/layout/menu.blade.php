@@ -87,7 +87,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="facet-group js-facet-group">
+                    {{--  <div class="facet-group js-facet-group">
 
                         <!-- <div class="facet__name js-facet-name"> -->
                         <div class="facet-group-title">
@@ -127,7 +127,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div>  --}}
                 </div>
             </div>
         </div>

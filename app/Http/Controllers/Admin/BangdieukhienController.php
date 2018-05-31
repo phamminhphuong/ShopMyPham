@@ -11,6 +11,9 @@ use App\NhaCungCap;
 use App\DanhMucSanPham;
 use App\SanPham;
 use App\Slide;
+use App\NhapSanPham;
+use App\XuatSanPham;
+
 class BangdieukhienController extends Controller
 {
     public function getBangdieukhien(){
@@ -20,7 +23,9 @@ class BangdieukhienController extends Controller
         $nhacungcap=count(NhaCungCap::all());
         $danhmucsanpham=count(DanhMucSanPham::all());
         $sanpham=count(SanPham::all());
-        $slide=count(Slide::all());
+        $nhapsanpham=count(NhapSanPham::all());
+        $xuatsanpham=count(XuatSanPham::all());
+
         return view('admin.bangdieukhien.index',
         [
         'loaitaikhoan'=>$loaitaikhoan,
@@ -29,7 +34,8 @@ class BangdieukhienController extends Controller
         'nhacungcap'=>$nhacungcap,
         'danhmucsanpham'=>$danhmucsanpham,
         'sanpham'=>$sanpham,
-        'slide'=>$slide
+        'nhapsanpham'=>$nhapsanpham,
+        'xuatsanpham'=>$xuatsanpham
         ]);
     }
 }

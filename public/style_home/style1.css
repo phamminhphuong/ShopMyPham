@@ -2,3 +2,10 @@
     text-align: center;
     margin-left: 200px;
 }
+
+.footer__bottom .container{
+    background-color: red;
+}
+.container .col-md-6{
+    color: red;
+}

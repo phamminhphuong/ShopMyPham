@@ -54,21 +54,7 @@
                         : activate to sort column ascending" style="width: 239.799px;">
                                         Ngày xuất
                                     </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
-                            Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                       Họ tên
-                                    </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
-                            Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                        Địa chỉ
-                                  </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
-                            Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                        Điện thoại
-                                  </th>
+                                   
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
@@ -106,15 +92,7 @@
                                     <td>
                                         {!!$xsp->NgayXuat!!}
                                     </td>
-                                    <td>
-                                        {!!$xsp->HoTen!!}
-                                    </td>
-                                    <td>
-                                        {!!$xsp->DiaChi!!}
-                                    </td>
-                                    <td>
-                                        {!!$xsp->DienThoai!!}
-                                    </td>
+                                   
                                      <td>
                                         {!!$xsp->created_at!!}
                                     </td>

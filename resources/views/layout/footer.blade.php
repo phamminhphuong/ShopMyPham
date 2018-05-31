@@ -5,12 +5,14 @@
                 .slogan-container {
                     background-color: #fff;
                     padding-top: 20px;
+                    
                 }
 
                 .slogan {
                     position: relative;
                     padding-left: 48px;
                     margin-bottom: 20px;
+                    margin-left:60px;
                 }
 
                 .slogan .thumb {
@@ -41,12 +43,12 @@
                 <div class="col-xs-12 col-md-4">
                     <div class="slogan">
                         <div class="thumb">
-                            <img src="https://media.static-adayroi.com/sys_master/images/h5a/h5f/15343402385438.png" alt="" />
+                            <img src="img/3.png" alt="" />
                         </div>
                         <!-- end .media-left -->
                         <div class="text">
-                            <div class="title">&nbsp;Uy t&iacute;n h&agrave;ng đầu</div>
-                            <div class="subtitle">&nbsp; Một th&agrave;nh vi&ecirc;n của Tập đo&agrave;n Vingroup</div>
+                            <div class="title">&nbsp;Uy tín hàng đầu</div>
+                            <div class="subtitle">&nbsp; Một thành viên của CT mỹ phẩm Việt Hương</div>
                         </div>
                         <!-- end .media-body -->
                     </div>
@@ -55,12 +57,12 @@
                 <div class="col-xs-12 col-md-4">
                     <div class="slogan">
                         <div class="thumb">
-                            <img src="https://media.static-adayroi.com/sys_master/images/h41/h77/15343402319902.png" alt="" />
+                            <img src="img/2.png" alt="" />
                         </div>
                         <!-- end .media-left -->
                         <div class="text">
-                            <div class="title">&nbsp; &nbsp; Vận chuyển si&ecirc;u tốc</div>
-                            <div class="subtitle">&nbsp; &nbsp; &nbsp; Giao trong ng&agrave;y với hầu hết c&aacute;c mặt h&agrave;ng</div>
+                            <div class="title">&nbsp; &nbsp; Vận chuyển siêu tốc</div>
+                            <div class="subtitle">&nbsp; &nbsp; &nbsp; Giao hàng nhanh thuận tiện</div>
                         </div>
                         <!-- end .media-body -->
                     </div>
@@ -69,12 +71,12 @@
                 <div class="col-xs-12 col-md-4">
                     <div class="slogan">
                         <div class="thumb">
-                            <img src="https://media.static-adayroi.com/sys_master/images/h57/h6f/15343402647582.png" alt="" />
+                            <img src="img/1.png" alt="" />
                         </div>
                         <!-- end .media-left -->
                         <div class="text">
                             <div class="title">&nbsp; &nbsp; Sản phẩm đa dạng</div>
-                            <div class="subtitle">&nbsp; &nbsp; &nbsp; Từ rau, củ, quả, deal dịch vụ đến &ocirc; t&ocirc;, xe m&aacute;y</div>
+                            <div class="subtitle">&nbsp; &nbsp; &nbsp; Các loại mỹ phẩm da dạng các loại</div>
                         </div>
                         <!-- end .media-body -->
                     </div>
@@ -89,30 +91,31 @@
     <div class="container">
         <div class="row">
             <div class="footer__top">
-                <div class="footer__nav-container">
-                    <div class="footer__nav-list col-xs-12 col-sm-12 col-md-3">
+                <div class="footer__nav-container" style="width:1224px">
+                    <div class="footer__nav-list col-md-3" style="width:300px;padding-left:20px">
                         <div class="title">
                             <span class="nav-click">
                                 <i class="nav-arrow"></i>
-                            </span>ADAYROI</div>
+                            </span>SHOP MỸ HUYỀN</div>
                         <ul class="footer__nav-links">
                             <li class="footer__link">
-                                <a href="/lp-veadayroi" rel="nofollow">Giới thiệu về Adayroi</a>
+                                <a href="gioi-thieu" rel="nofollow">Giới thiệu về Shop Mỹ Huyền</a>
                             </li>
                             <li class="footer__link">
-                                <a href="https://authen.adayroi.com/Oauth/SearchingEinvoice" rel="nofollow" target="_blank">Tra cứu hóa đơn</a>
+                                <a href="gio-hang" rel="nofollow" target="_blank">Giỏ hàng</a>
                             </li>
                             <li class="footer__link">
-                                <a href="/lp-contactUsPage" rel="nofollow">Liên hệ với Shop Mỹ Huyền</a>
+                                <a href="lien-he" rel="nofollow">Liên hệ với Shop Mỹ Huyền</a>
                             </li>
                         </ul>
                         <div class="title link-section hidden-xs hidden-sm">
                             <span class="nav-click">
                                 <i class="nav-arrow"></i>
-                            </span>ĐƯỢC CHỨNG NHẬN</div>
+                            </span>
+                        </div>
 
                     </div>
-                    <div class="footer__nav-list col-xs-12 col-sm-12 col-md-3">
+                    <div class="footer__nav-list col-md-3" style="width:300px;padding-left:20px">
                         <div class="title">
                             <span class="nav-click">
                                 <i class="nav-arrow"></i>
@@ -120,55 +123,35 @@
                         </div>
                         <ul class="footer__nav-links">
                             <li class="yCmsComponent footer__link">
-                                <a href="/help-center" target="_blank" rel="nofollow">Trung tâm hỗ trợ khách hàng</a>
-                            </li>
-                            <li class="yCmsComponent footer__link">
-                                <a href="/bao-mat-thanh-toan-lptc4" target="_blank" rel="nofollow">Chính sách bảo mật thanh toán</a>
-                            </li>
-                            <li class="yCmsComponent footer__link">
-                                <a href="/chinh-sach-dinh-danh-khach-hang-lptc5" target="_blank" rel="nofollow">Chính sách định danh khách hàng</a>
-                            </li>
-                            <li class="yCmsComponent footer__link">
-                                <a href="/chinh-sach-thanh-toan-lptc6" target="_blank" rel="nofollow">Chính sách thanh toán</a>
-                            </li>
-                            <li class="yCmsComponent footer__link">
-                                <a href="/chinh-sach-giao-hang-lptc7" target="_blank" rel="nofollow">Chính sách giao hàng</a>
-                            </li>
-                            <li class="yCmsComponent footer__link">
-                                <a href="/chinh-sach-bao-hanh-lptc10" target="_blank" rel="nofollow">Chính sách bảo hành</a>
-                            </li>
-                            <li class="yCmsComponent footer__link">
-                                <a href="/cau-hoi-thuong-gap-ve-tai-khoan-lpfaq1" target="_blank" rel="nofollow">Câu hỏi thường gặp</a>
+                                <a href="cau-hoi-thuong-gap" target="_blank" rel="nofollow">Câu hỏi thường gặp</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="footer__nav-list col-xs-12 col-sm-12 col-md-3">
+                    <div class="footer__nav-list col-md-3" style="width:300px;padding-left:20px">
                         <div class="title">
                             <span class="nav-click">
                                 <i class="nav-arrow"></i>
                             </span>TÀI KHOẢN</div>
                         <ul class="footer__nav-links">
                             <li class="footer__link">
-                                <a class="js-sign-in__popup" href="#" rel="nofollow">Đăng nhập</a>
+                                <a class="js-sign-in__popup" href="dangnhap" rel="nofollow">Đăng nhập</a>
                             </li>
                             <li class="footer__link">
-                                <a class="js-sign-up__popup_button" href="#" rel="nofollow">Đăng ký</a>
+                                <a class="js-sign-up__popup_button" href="dangky" rel="nofollow">Đăng ký</a>
                             </li>
 
                         </ul>
-                      
-                       
                     </div>
                     <!--Footer Social-->
-                    <div class="footer__nav-list footer__social--nav col-xs-12 col-sm-12 col-md-3 hidden-sm hidden-xs">
+                    <div class="footer__nav-list footer__social--nav col-md-3" style="width:300px;padding-left:20px">
                         <div class="title">
                             <span class="nav-click">
                                 <i class="nav-arrow"></i>
                             </span>KẾT NỐI VỚI CHÚNG TÔI</div>
                         <div class="footer__nav-links clearfix hidden-xs hidden-sm">
                             <div class="col-md-12 col-lg-6" style="padding:0">
-                                <a target="_blank" href="https://www.facebook.com/ADR.Vingroup/" rel="nofollow">
-                                    <img alt="Kết nối với Adayroi.com trên facebook" title="" src="https://media.static-adayroi.com/sys_master/images/h99/hca/15450042368030.png?cimgnr=S553h"
+                                <a target="_blank" href="#" rel="nofollow">
+                                    <img alt="Kết nối với Shop Mỹ Huyền trên facebook" title="" src="#"
                                         class="img-responsive">
                                 </a>
                             </div>
@@ -178,39 +161,34 @@
             </div>
             <!--Footer Bottom-->
             <div class="footer__bottom">
-                <div class="footer__credit">
-                    <div class="footer__credit--title">
-                        <span class="nav-click">
-                            <i class="nav-arrow"></i>
-                        </span>CÔNG TY CỔ PHẦN DỊCH VỤ THƯƠNG MẠI TỔNG HỢP VINCOMMERCE</div>
-                    <div class="row footer__credit--content">
-                        <div class="col-xs-12 col-md-4">
-                            <p>
-                                <strong>TRỤ SỞ CHÍNH:</strong>
-                                <br> Số 72 Lê Thánh Tôn, Phường Bến Nghé, Quận 1,
-                                <br> Thành phố Hồ Chí Minh, Việt Nam.</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-3" style="text-align: center;">
+                            <img id="logo_thuonghieu" width="120px" height="120px" src="img/logo.jpg" alt="">
                         </div>
+                        <div class="col-md-4" style="text-align: center;">
+                            <h3> Thông tin liên hệ</h3>
+                            <p>
+                                <span class="tieude">
+                                        <i class="fas fa-map-marker"></i> Địa chỉ:</span>Cầu Giấy - Hà Nội
+                            </p>
+                            <p>
+                                <span class="tieude">
+                                        <i class="fas fa-envelope-open"></i> Email :</span>
+                                <a href="#">admin@gmail.com</a>
+                            </p>
+                            <p>
+                                <span class="tieude">
+                                        <i class="fas fa-phone-volume"></i> Điện thoại :</span> 12345678888
+                            </p>
+                        </div>
+                        <div class="col-md-3" style="text-align: center;">
+                            <h3> Thành viên :</h3>
+                            <p>Phạm Thị Mỹ Huyền</p>
 
-                        <div class="col-xs-12 col-md-4">
-                            <p>
-                                <strong>ĐỊA CHỈ GIAO DỊCH:</strong>
-                                <br>
-                                <strong>Tại thành phố Hồ Chí Minh:</strong>
-                                <br> Tầng B1, Vincom Mega Mall Thảo Điền, 159-161 Xa Lộ Hà Nội,
-                                <br> Phường Thảo Điền, Quận 2, Thành Phố Hồ Chí Minh.</p>
                         </div>
-                        <div class="col-xs-12 col-md-4">
-                            <p>
-                                <br>
-                                <strong>Tại Hà Nội:</strong>
-                                <br> Tower 2, Times City, 458 Minh Khai, Phường Vĩnh Tuy,
-                                <br> Quận Hai Bà Trưng, Thành Phố Hà Nội.</p>
-                        </div>
-                        <div class="col-xs-12">
-                            <p>Điện thoại: HN - 024-3975.9568, HCM -028-3975.9568. Email: cskh@adayroi.com. </p>
-                            <p>Mã số doanh nghiệp: 0104918404 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp lần đầu ngày 20/09/2010.
-                                Đăng ký thay đổi lần thứ 35 do Sở kế hoạch Đầu tư TP. Hồ Chí Minh ngày 04/04/2018.</p>
-                        </div>
+                        <div class="col-md-1"></div>
                     </div>
                 </div>
             </div>

@@ -141,12 +141,7 @@
                                     <div class="product-detail__title">
                                         <h1>{!!$chitietsanpham->TenSanPham!!}</h1>
                                         <div class="product-detail__title-brand">
-                                            Thương hiệu:&nbsp;
-                                            <a href="/b/br332519323" title="Cây">Cây&nbsp;</a>
-                                            <span class="divider">|</span>
-                                            <a href="/c/272?q=%3aprice-asc%3abrand%3abr332519323">Tinh dầu xông &amp; thăng hương&nbsp;-&nbsp;Cây</a>
-                                            <span class="divider">|</span>
-                                            <a href="#panel-review-container" id="js-focus-ratingbox">Hãy là người đầu tiên đánh giá</a>
+                                          
                                         </div>
                                     </div>
                                 </div>
@@ -155,7 +150,7 @@
                                         <ul>
                                             <li class="nobullet">
                                                 <ul>
-                                                    <li>Tinh dầu tràm trà &nbsp;của Cây có nguồn gốc từ&nbsp;Koree Herb Australia.</li>
+                                                    {{-- <li>Tinh dầu tràm trà &nbsp;của Cây có nguồn gốc từ&nbsp;Koree Herb Australia.</li>
                                                     <li>&nbsp;Tràm trà khá nổi tiếng với công dụng kháng viêm, điều trị các vấn
                                                         đề về da và tóc do vi khuẩn gây nên.</li>
                                                     <li>Nếu bị mụn, hãy để tinh dầu tràm chăm sóc!</li>
@@ -165,7 +160,7 @@
                                                     <li>Tinh chất α-Terpineol có trong dầu tràm trà sẽ khiến cho các nốt mụn
                                                         này nhanh chóng khô đầu, giảm tình trạng sưng viêm.</li>
                                                     <li>Tinh dầu tràm trà rất tốt cho trẻ nhỏ, nhỏ vào nước tắm giúp giữ ấm cơ
-                                                        thể và làm sạch nhẹ nhàng.</li>
+                                                        thể và làm sạch nhẹ nhàng.</li> --}}
                                                 </ul>
                                             </li>
                                             <li class="nobullet">
@@ -184,17 +179,16 @@
                                 </script>
                                 <div class="product-detail__price">
                                     <div class="product-detail__price-info">
+                                        Giá bán:
                                         <span class="price-info__sale">275.000đ</span>
                                     </div>
-                                    <div class="insPurchase">
-                                        <span class="insBold">5 khách</span> đã đặt mua trong 1 tiếng trước.</div>
+                                 
                                     <div class="product-detail__price-vinid">
                                         <i class="adr-icon icon-vinid"></i>
                                         <div class="price-vinid__description">
-                                            Giá cho chủ thẻ VinID (-2%)
-                                            <br>
+                                           Giá ưu đãi
                                             <span class="price-vinid__value">269.000đ</span>
-                                            <span class="price-vinid__discount-info">(6.000đ&nbsp; sẽ được hoàn vào thẻ VinID)
+                                            <span class="price-vinid__discount-info">
                                             </span>
                                             <div class="tooltip">
                                                 <i class="adr-icon icon-hint"></i>
@@ -511,47 +505,6 @@
                             <!-- banner promotion -->
                             <!-- product similar -->
                             <!-- product similar -->
-                            <div class="col-sm-12">
-                                <!-- should be replace by product.addToCartEnable when complete ATS  -->
-                                <div class="product-detail__sticky-header hidden-xs js-product-detail__sticky-header animated sticky slideInDown">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-sm-7">
-                                                <div class="sticky-header__info">
-                                                    <div class="sticky-header__thumbnail">
-                                                        <img class="img-responsive" data-product="1342017" src="https://media.static-adayroi.com/sys_master/images/h9d/h83/14565122572318.jpg"
-                                                            alt="Tinh dầu tràm trà Cây Tea Tree Essential Oil Premium 10ml">
-                                                    </div>
-                                                    {{--  <div class="sticky-header__info-title">Tinh dầu tràm trà Cây Tea Tree Essential Oil Premium 10ml</div>  --}}
-                                                    <div class="sticky-header__info-subtitle">
-                                                        <span class="sticky-header__info-price">
-                                                            275.000đ
-                                                        </span>
-                                                        <span class="divider hidden-sm">&nbsp;|</span>
-                                                        <span class="sticky-header__info-delivery-time">
-                                                            &nbsp;Giao hàng từ 2 - 5 ngày làm việc.</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-5">
-                                                <div class="sticky-header__button">
-                                                    <a href="#" id="sticky_add_to_cart" class="btn btn-positive js-sticky-atc">Cho vào giỏ hàng</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Debug info -->
-                                <input type="hidden" value="true" id="stk_isShowable">
-                                <input type="hidden" value="true" id="stk_isPurchasable">
-                                <input type="hidden" value="false" id="stk_isEmptyCurrentOffer">
-                                <input type="hidden" value="" id="stk_zeroprice">
-                                <input type="hidden" value="" id="stk_noprice">
-                                <input type="hidden" value="" id="stk_hasOfferOutOfArea">
-                                <input type="hidden" value="false" id="stk_isNotConfigDuration">
-                                <input type="hidden" value="false" id="stk_countryWideDelivery">
-                                <input type="hidden" value="true" id="stk_isOnlineCurrentOffer">
-                            </div>
                         </div>
 
                         <div class="modal modal-adr modal-theatre fade in" role="dialog" id="modal-theatre-image" aria-hidden="false">
@@ -852,7 +805,7 @@
             </div>
             <div class="product-detail__sidebar__features">
                 <h3 class="product-detail__sidebar__title">
-                    <i class="icon-car"></i> Giao hàng bởi Adayroi
+                    <i class="icon-car"></i> Giao hàng bởi Shop Mỹ Huyền
                     <!-- expected delivery time -->
                     <!--             expected delivery time -->
                     <span class="time-delivery-note text-green" title="">Giao hàng từ 2 - 5 ngày làm việc.</span>
@@ -867,22 +820,20 @@
                 </h3>
                 <h3 class="product-detail__sidebar__title">
 
-                    <i class="icon-bill"></i> Adayroi xuất hóa đơn cho sản phẩm này.
+                    <i class="icon-bill"></i> Shop Mỹ Huyền xuất hóa đơn cho sản phẩm này.
                 </h3>
                 <h3 class="product-detail__sidebar__title">
                 </h3>
                 <h3 class="product-detail__sidebar__title">
 
                 </h3>
-                <h3 class="product-detail__sidebar__title">
-                    <i class="icon-card"></i> Sản phẩm áp dụng tiêu điểm VinID
-                </h3>
+               
             </div>
             <div class="product-detail__sidebar__merchant">
                 <h3 class="product-detail__sidebar__title">
                     <i class="icon-store"></i>
                     <small>Sản phẩm được cung cấp bởi</small>
-                    <a href="XANH CAY-mc195175">XANH CAY</a>
+                    <a href="XANH CAY-mc195175">Công ty mỹ phẩm Hoàng Hà</a>
                 </h3>
             </div>
             <div class="product-detail__sidebar__list-othersuppliers">

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\DanhMucSanPham;
 use App\NhaCungCap;
@@ -9,6 +10,7 @@ use Gloudemans\Shoppingcart\Facades\Cart;
 use App\XuatSanPham;
 use App\ChiTietXuat;
 use App\User;
+use App\KhachHang;
 use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
@@ -60,6 +62,93 @@ class PageController extends Controller
             $sanpham=SanPham::Where('Gia','>=',10000000)->get();
         }
         return view('page.san-pham-theo-gia',['sanpham'=>$sanpham]);
+    }
+    // lien he
+    public function getLienHe(){
+        return view('page.lien-he');
+    }
+
+    // gioi thieu
+    public function getGioiThieu(){
+        return view('page.gioi-thieu');
+    }
+    //quan ly tai khoan
+    public function getQuanLyTaiKhoan(){
+        return view('page.quan-ly-tai-khoan');
+    }
+    // get sửa tai khoan
+    public function getSuaTaiKhoanDangNhap(){
+        return view('page.sua-tai-khoan-dang-nhap');
+    }
+    // post sửa tai khoan
+    public function postSuaTaiKhoanDangNhap(Request $request){
+        $this->validate($request,
+        [
+            'password'=>'required|min:6|max:8',
+            'Resetpassword'=>'required|same:password'
+        ],
+        [
+            'password.required'=>'Bạn không được để trống mật khẩu',
+            'password.min'=>'Bạn nhập mật khẩu trong khoảng 6-8 ký tự',
+            'password.max'=>'Bạn nhập mật khẩu trong khoảng 6-8 ký tự',
+            'Resetpassword.required'=>'Bạn không được để trống nhập lại mật khẩu',
+            'Resetpassword.same'=>'Bạn phải nhập giống mật khẩu'
+        ]);
+        $taikhoan=User::find(Auth::user()->id);
+        $taikhoan->password=bcrypt($request->password);
+        $taikhoan->save();
+        return redirect('quan-ly-tai-khoan');
+
+    }
+    //get sửa thông tin ca nhan
+    public function getSuaThongTinCaNhan(){
+        return view('page.sua-thong-tin-ca-nhan');
+    }
+    //post sửa thông tin ca nhan
+    public function postSuaThongTinCaNhan(Request $request){
+        $this->validate($request,
+        [
+            'HoTen'=>'required|min:3|max:100',
+            'DiaChi'=>'required|min:3|max:200',
+            'DienThoai' => 'required|regex:/(0)[0-9]{9,11}/',
+            'NgaySinh'=>'required',
+        ],
+        [
+            
+            'HoTen.required'=>'Bạn không được để trống họ tên',
+            'HoTen.min'=>'Bạn nhập họ tên ít nhất 3 ký tự',
+            'HoTen.max'=>'Bạn nhập họ tên không quá 100 ký tự',
+            'DiaChi.required'=>'Bạn không được để trống địa chỉ',
+            'DiaChi.min'=>'Bạn nhập địa chỉ ít nhất 3 ký tự',
+            'DiaChi.max'=>'Bạn nhập địa chỉ không quá 200 ký tự',
+            'DienThoai.required'=>'Bạn không được để trống điện thoại',
+            'DienThoai.regex'=>'Bạn phải nhập điện thoại  từ 10-12 số và phải bắt đầu bằng số 0',
+            'NgaySinh.required'=>'Bạn không được để trống ngày sinh',
+        
+        ]);
+        $thongtincanhan=KhachHang::find(Auth::user()->KhachHang->first()->id);
+        $thongtincanhan->HoTen=$request->HoTen;
+        $thongtincanhan->NgaySinh=$request->NgaySinh;
+        $thongtincanhan->GioiTinh=$request->GioiTinh;
+        $thongtincanhan->DiaChi=$request->DiaChi;
+        $thongtincanhan->DienThoai=$request->DienThoai;
+        if($request->hasFile('HinhAnh')){
+            $file=$request->file('HinhAnh');
+            $name=$file->getClientOriginalName();
+            $HinhAnh=str_random(10)."_".$name;
+            $file->move('image_KhachHang',$HinhAnh);
+            $thongtincanhan->HinhAnh=$HinhAnh;
+        }
+        else{
+            
+        }
+        $thongtincanhan->save();
+        return redirect('quan-ly-tai-khoan');
+    }
+    
+    // câu hỏi thường gặp
+    public function getCauHoiThuongGap(){
+        return view('page.cau-hoi-thuong-gap');
     }
     // GET /gio-hang
     public function getGioHang() {

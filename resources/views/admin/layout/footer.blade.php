@@ -1,7 +1,9 @@
-<footer class="main-footer">
+<footer class="main-footer" style="height:50px">
     <div class="pull-right hidden-xs">
-      <b>Hệ thống quản lý bán mỹ phẩm</b>
+      <b>Website quản lý bán mỹ phẩm</b>
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-    reserved.
+    <div class="pull-left hidden-xs">
+        <marquee>Xin chào đến với quản lý website bán mỹ phẩm</marquee>
+    </div>
+  
   </footer>
