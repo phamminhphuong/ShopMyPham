@@ -8,17 +8,16 @@
                     <div class="container">
                         <ol id="header__breadcrumb" class="header__breadcrumb breadcrumb">
                             <li>
-                                <span class="item">
-                                    <a href="#">
-                                        <span itemprop="title">Trang chủ</span>
+                                <span class="">
+                                    <a href="">
+                                        <span>Trang chủ</span>
                                     </a>
                                 </span>
                             </li>
-                            <li class="hidden">></li>
                             @foreach($danhmucsanpham as $dmsp)
                             <li>
-                                 <a href="san-pham-danh-muc/{!!$dmsp->id!!}">
-                                <span class="item">{!!$dmsp->TenDanhMuc!!}</span>
+                                <a href="san-pham-danh-muc/{!!$dmsp->id!!}">
+                                    <span>{!!$dmsp->TenDanhMuc!!}</span>
                                 </a>
                             </li>
                             @endforeach

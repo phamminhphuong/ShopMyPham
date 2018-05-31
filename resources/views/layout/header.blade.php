@@ -373,7 +373,7 @@
                         </li>
                         <li class="col-sm-12 col-md-2">
                             <div class="nav-cart">
-                                <a href="#" class="mini-cart-link js-mini-cart-link" data-mini-cart-url="/cart/rollover" data-mini-cart-refresh-url="/cart/miniCart/SUBTOTAL"
+                                <a href="gio-hang" class="mini-cart-link js-mini-cart-link" data-mini-cart-url="/cart/rollover" data-mini-cart-refresh-url="/cart/miniCart/SUBTOTAL"
                                     data-mini-cart-name="Cart" data-mini-cart-empty-name="Empty Cart" data-mini-cart-items-text="Items">
                                     <div class="mini-cart-icon"><span class="adr-icon icon-cart hidden-xs hidden-sm"></span>
                                         <span class="adr-icon icon-cart-mobile visible-xs visible-sm"></span>
