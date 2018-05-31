@@ -63,78 +63,20 @@
                             </div>
                             <!-- section gallery -->
                             <div class="col-sm-5 product-detail__info-block">
-                                <script type="text/javascript">
-                                    var productJsonMedias = [{ "type": "IMAGE", "container": "TDTT10ml_1", "format": "fresh_product_details_thumbnail_format", "url": "https://media.static-adayroi.com/sys_master/images/h9d/h83/14565122572318.jpg", "carouselUrl": "https://media.static-adayroi.com/sys_master/images/haa/h9a/14565122506782.jpg", "zoomUrl": "https://media.static-adayroi.com/sys_master/images/hcc/hdc/14565122703390.jpg", "description": "", "altText": "Tinh dầu tràm trà Cây Tea Tree Essential Oil Premium 10ml" }];
-                                    var pdpTemplateType = 'FRESH';
-                                </script>
+                                
                                 <div id="productJsonMedias"></div>
                                 <div class="product-detail__gallery js-product-detail__gallery">
                                     <div class="product-gallery__stage">
                                         <div class="product-gallery__stopper">
                                         </div>
-                                        <img class="stage" src="https://media.static-adayroi.com/sys_master/images/hcc/hdc/14565122703390.jpg" data-zoom-image="https://media.static-adayroi.com/sys_master/images/hcc/hdc/14565122703390.jpg"
-                                            data-image="https://media.static-adayroi.com/sys_master/images/hcc/hdc/14565122703390.jpg">
-                                        <img class="stage" src="https://media.static-adayroi.com/sys_master/images/hcc/hdc/14565122703390.jpg" data-zoom-image="https://media.static-adayroi.com/sys_master/images/hcc/hdc/14565122703390.jpg"
-                                            data-image="https://media.static-adayroi.com/sys_master/images/hcc/hdc/14565122703390.jpg"></div>
-                                    <div class="product-gallery__thumbnail">
-                                        <div class="row">
-                                            <div class="col-xs-2-5">
-                                                <div class="gallery-thumbnail__item-wrapper">
-                                                    <div class="gallery-thumbnail__item gallery-thumbnail__item-image" data-type="image" data-image="https://media.static-adayroi.com/sys_master/images/hcc/hdc/14565122703390.jpg"
-                                                        data-zoom-image="https://media.static-adayroi.com/sys_master/images/hcc/hdc/14565122703390.jpg">
-                                                        <img class="img-responsive" src="https://media.static-adayroi.com/sys_master/images/h9d/h83/14565122572318.jpg">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-2-5">
-                                                <div class="gallery-thumbnail__item-wrapper">
-                                                    <div class="gallery-thumbnail__item gallery-thumbnail__item-image" data-type="image"
-                                                        data-image="https://media.static-adayroi.com/sys_master/images/hcc/hdc/14565122703390.jpg"
-                                                        data-zoom-image="https://media.static-adayroi.com/sys_master/images/hcc/hdc/14565122703390.jpg"><img class="img-responsive" src="https://media.static-adayroi.com/sys_master/images/h9d/h83/14565122572318.jpg"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <img class="stage" src="image_SanPham/{!!$chitietsanpham->HinhAnh!!}">
                                     </div>
-
                                 </div>
                                 <!--VIN WARNING MESSAGE-->
                                 <div class="product-detail__notice">
                                 </div>
-                                <!-- include facebook plugin tag -->
-                                <!--google button-->
-                                <div class="product-detail__share">
-                                    <div class="product-detail__save-facebook text-center">
-                                        <div class="clearfix">
-                                            <div class="pull-left">
-                                                <div class="fb-save fb_iframe_widget" data-uri="https://www.adayroi.com///tinh-dau-tram-tra-cay-tea-tree-essential-oil-premium-10ml-p-1342017"
-                                                    data-size="large" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=749384515190849&amp;container_width=152&amp;locale=vi_VN&amp;sdk=joey&amp;size=large&amp;uri=https%3A%2F%2Fwww.adayroi.com%2F%2F%2Ftinh-dau-tram-tra-cay-tea-tree-essential-oil-premium-10ml-p-1342017"><span style="vertical-align: bottom; width: 152px; height: 28px;"><iframe name="f6e8140677b548" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:save Facebook Social Plugin" src="https://www.facebook.com/plugins/save.php?app_id=749384515190849&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FRQ7NiRXMcYA.js%3Fversion%3D42%23cb%3Dfaf674d843e358%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A8080%252Ff265cfd29ebc7%26relation%3Dparent.parent&amp;container_width=152&amp;locale=vi_VN&amp;sdk=joey&amp;size=large&amp;uri=https%3A%2F%2Fwww.adayroi.com%2F%2F%2Ftinh-dau-tram-tra-cay-tea-tree-essential-oil-premium-10ml-p-1342017" style="border: none; visibility: visible; width: 152px; height: 28px;" class=""></iframe></span></div>
-                                            </div>
-                                            <div class="pull-left">
-                                                <a href="https://www.facebook.com/saved/" target="_blank" class="btn btn-white save-facebook__list">Xem sản phẩm đã lưu</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-detail__sharing-button text-center">
-                                        <div class="clearfix">
-                                            <div class="fb-like fb_iframe_widget pull-left" data-href="https://www.adayroi.com/tinh-dau-tram-tra-cay-tea-tree-essential-oil-premium-10ml-p-1342017"
-                                                data-layout="button_count" data-action="like" data-size="small" data-show-faces="false"
-                                                data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=749384515190849&amp;container_width=68&amp;href=https%3A%2F%2Fwww.adayroi.com%2Ftinh-dau-tram-tra-cay-tea-tree-essential-oil-premium-10ml-p-1342017&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=false&amp;show_faces=false&amp;size=small"><span style="vertical-align: bottom; width: 68px; height: 20px;"><iframe name="f51e2281554338" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" title="fb:like Facebook Social Plugin" src="https://www.facebook.com/plugins/like.php?action=like&amp;app_id=749384515190849&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FRQ7NiRXMcYA.js%3Fversion%3D42%23cb%3Dfbd352209a1638%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A8080%252Ff265cfd29ebc7%26relation%3Dparent.parent&amp;container_width=68&amp;href=https%3A%2F%2Fwww.adayroi.com%2Ftinh-dau-tram-tra-cay-tea-tree-essential-oil-premium-10ml-p-1342017&amp;layout=button_count&amp;locale=vi_VN&amp;sdk=joey&amp;share=false&amp;show_faces=false&amp;size=small" style="border: none; visibility: visible; width: 68px; height: 20px;" class=""></iframe></span></div>
-
-                                            <div class="pull-left" id="widget-div" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 38px; height: 24px;">
-                                                <iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 38px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;"
-                                                    tabindex="0" vspace="0" width="100%" id="I1_1525834767906" name="I1_1525834767906"
-                                                    src="https://apis.google.com/u/0/se/0/_/+1/fastbutton?usegapi=1&amp;origin=https%3A%2F%2Fwww.adayroi.com&amp;url=https%3A%2F%2Fwww.adayroi.com%2Ftinh-dau-tram-tra-cay-tea-tree-essential-oil-premium-10ml-p-1342017&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.vi.L718caA3rLA.O%2Fm%3D__features__%2Fam%3DAQE%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCM77so5l4YibwjqUW984Yjo-G_dsQ#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I1_1525834767906&amp;_gfid=I1_1525834767906&amp;parent=https%3A%2F%2Fwww.adayroi.com&amp;pfname=&amp;rpctoken=42644554"
-                                                    data-gapiattached="true" title="G+"></iframe>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
                             </div>
-
-
-
+                            
                             <!-- end section galery -->
                             <div class="col-sm-7 product-detail__info product-detail__info-block">
                                 <div class="hidden-xs">
