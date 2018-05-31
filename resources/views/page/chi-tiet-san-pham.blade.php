@@ -719,12 +719,7 @@
                     <!-- end delivery time -->
                     <!-- end delivery time -->
                 </h3>
-                <h3 class="product-detail__sidebar__title">
-                    <i class="icon-box"></i> Đổi trả trong 20 ngày.
-                    <a href="#" data-toggle="popover" data-html="true" data-placement="bottom" data-trigger="hover" data-content="<h4>Thời gian đổi trả</h4><p>- Trong vòng 20 ngày kể từ ngày nhận sản phẩm</p><h4>Hình thức đổi trả</h4><p>- Mang trực tiếp hàng hoá cần đổi trả đến Trung tâm đổi trả của Adayroi.</p><p>- Gửi hàng đổi trả qua bưu điện</p><p>- Không áp dụng với một số ngành hàng. <a href='/chinh-sach-doi-tra'>Xem chi tiết</a></p>"
-                        data-original-title="" title="">Xem thêm</a>
-                    <span>Thủ tục đơn giản</span>
-                </h3>
+                
                 <h3 class="product-detail__sidebar__title">
 
                     <i class="icon-bill"></i> Shop Mỹ Huyền xuất hóa đơn cho sản phẩm này.

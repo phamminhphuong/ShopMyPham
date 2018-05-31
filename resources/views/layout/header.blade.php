@@ -252,74 +252,7 @@
                     </div>
                 </div>
 
-                <div class="yCmsContentSlot miniCartSlot componentContainer visible-xs-inline-block">
-
-                    <div class=" visible-xs-inline-block mobile__nav__row--seperator">
-                        <button class="mobile__nav__row--btn btn mobile__nav__row--btn-search js-toggle-xs-search hidden-sm hidden-md hidden-lg"
-                            type="button">
-                            <span class="adr-icon search-icon-mobile visible-xs visible-sm"></span>
-
-                        </button>
-                    </div>
-
-                    <ul class="yCmsContentSlot nav__links">
-                        <script type="text/javascript">
-                            var js_delivery_values = [];
-                            js_delivery_values['change'] = "Thay đổi";
-                            js_delivery_values['choose'] = "Chọn địa điểm";
-
-                            var ACC = ACC || {};
-                            ACC.userInfo = ACC.userInfo || { "uid": "anonymous", "name": "Anonymous", "defaultBillingAddress": null, "defaultShippingAddress": null, "titleCode": null, "firstName": "Anonymous", "lastName": "", "currency": null, "language": { "isocode": "vi", "name": "Vietnam", "nativeName": "Vietnam", "active": true, "cockpitName": null, "required": false }, "displayUid": null, "defaultAddress": null, "latestCartId": null, "profilePicture": null, "birthday": null, "gender": null, "email": null, "phone": null, "phoneVerified": null, "emailVerified": null, "externalId": null, "enabled1ClickCheckout": false, "prospectCustomer": null, "vinIdCreatedDate": null, "vinIdAccount": null, "title": null, "defaultPaymentMode": null };
-                        </script>
-
-                        <li class="liOffcanvas header--user-group col-md-10 visible-md visible-lg">
-                            <div class="icon-user">
-                                <div class="icon-user--inner">
-                                       <img src="img/user.png" alt="">
-                                    <span class="js-user-gift-code user-group--gift hide"></span>
-                                </div>
-                            </div>
-                            <div class="js-user--info">
-                                <div class="user-group--info">
-                                    <div class="pop-hover js-pop-hover">
-                                        <a href="javascript:void(0);" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="pop-hover-title">
-                                            <span>Đăng nhập & Đăng ký Tài khoản</span>
-                                            <span class="adr-icon dropdownlist-header"></span>
-                                        </a>
-
-                                        <div class="dropdown-menu">
-                                            <ul>
-                                                <li>
-                                                    <a href="#" class="btn btn-login js-sign-in__popup">
-                                                        Đăng nhập</a>
-                                                </li>
-                                                <li>
-                                                    <span>Chưa có tài khoản?</span>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="btn-sigup highlight-blue js-sign-up__popup_button">
-                                                        Đăng ký tài khoản mới</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-sm-12 col-md-2">
-                            <div class="nav-cart">
-                                <a href="#" class="mini-cart-link js-mini-cart-link" data-mini-cart-url="/cart/rollover" data-mini-cart-refresh-url="/cart/miniCart/SUBTOTAL"
-                                    data-mini-cart-name="Cart" data-mini-cart-empty-name="Empty Cart" data-mini-cart-items-text="Items">
-                                    <div class="mini-cart-icon">
-                                        <span class="adr-icon icon-cart hidden-xs hidden-sm"></span>
-                                        <span class="adr-icon icon-cart-mobile visible-xs visible-sm"></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="mini-cart-container js-mini-cart-container"></div>
-                        </li>
-                    </ul>
-                </div>
+                
             </div>
             <div class="row desktop__nav">
                 <div class="nav__left col-xs-12 col-sm-11 col-md-9">
@@ -377,19 +310,12 @@
                 <div class="nav__right col-xs-6 col-sm-1 col-md-3 hidden-xs">
                     <!-- <li class="col-sm-12 col-md-2"> -->
                     <ul class="yCmsContentSlot nav__links">
-                        <script type="text/javascript">
-                            var js_delivery_values = [];
-                            js_delivery_values['change'] = "Thay đổi";
-                            js_delivery_values['choose'] = "Chọn địa điểm";
-
-                            var ACC = ACC || {};
-                            ACC.userInfo = ACC.userInfo || { "uid": "anonymous", "name": "Anonymous", "defaultBillingAddress": null, "defaultShippingAddress": null, "titleCode": null, "firstName": "Anonymous", "lastName": "", "currency": null, "language": { "isocode": "vi", "name": "Vietnam", "nativeName": "Vietnam", "active": true, "cockpitName": null, "required": false }, "displayUid": null, "defaultAddress": null, "latestCartId": null, "profilePicture": null, "birthday": null, "gender": null, "email": null, "phone": null, "phoneVerified": null, "emailVerified": null, "externalId": null, "enabled1ClickCheckout": false, "prospectCustomer": null, "vinIdCreatedDate": null, "vinIdAccount": null, "title": null, "defaultPaymentMode": null };
-                        </script>
+                        
 
                         <li class="liOffcanvas header--user-group col-md-10 visible-md visible-lg">
                             <div class="icon-user">
                                 <div class="icon-user--inner">
-                                    <img src="#" alt="">
+                                    <img src="img/user.png" alt="">
                                     <span class="js-user-gift-code user-group--gift hide"></span>
                                 </div>
                             </div>
@@ -449,10 +375,9 @@
                             <div class="nav-cart">
                                 <a href="#" class="mini-cart-link js-mini-cart-link" data-mini-cart-url="/cart/rollover" data-mini-cart-refresh-url="/cart/miniCart/SUBTOTAL"
                                     data-mini-cart-name="Cart" data-mini-cart-empty-name="Empty Cart" data-mini-cart-items-text="Items">
-                                    <div class="mini-cart-icon" style="margin-top:-10px">
-                                        <h3><a href="gio-hang"><i class="fas fa-cart-arrow-down"></i></a></h3>
+                                    <div class="mini-cart-icon"><span class="adr-icon icon-cart hidden-xs hidden-sm"></span>
                                         <span class="adr-icon icon-cart-mobile visible-xs visible-sm"></span>
-                                    </div>
+                                        <span class="mini-cart-price js-cart-total-unit">1</span></div>
                                 </a>
                             </div>
                             <div class="mini-cart-container js-mini-cart-container"></div>
