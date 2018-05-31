@@ -275,7 +275,7 @@
                         <li class="liOffcanvas header--user-group col-md-10 visible-md visible-lg">
                             <div class="icon-user">
                                 <div class="icon-user--inner">
-                                        <i class="far fa-user-circle"></i>
+                                       <img src="img/user.png" alt="">
                                     <span class="js-user-gift-code user-group--gift hide"></span>
                                 </div>
                             </div>
