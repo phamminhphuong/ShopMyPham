@@ -71,7 +71,7 @@
                                     <div class="cart-total">
                                         <div class="cart-total__item">
                                             <div class="cart-total__item-label">Thành tiền:</div>
-                                            <div class="cart-total__item-value text-red cart-total__bill">{!! Cart::total() !!} $</div>
+                                            <div class="cart-total__item-value text-red cart-total__bill">{!! Cart::subtotal() !!} $</div>
                                         </div>
                                         <small>Giá đã bao gồm VAT</small>
                                     </div>

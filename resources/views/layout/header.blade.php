@@ -377,7 +377,7 @@
                                     data-mini-cart-name="Cart" data-mini-cart-empty-name="Empty Cart" data-mini-cart-items-text="Items">
                                     <div class="mini-cart-icon"><span class="adr-icon icon-cart hidden-xs hidden-sm"></span>
                                         <span class="adr-icon icon-cart-mobile visible-xs visible-sm"></span>
-                                        <span class="mini-cart-price js-cart-total-unit">1</span></div>
+                                    <span class="mini-cart-price js-cart-total-unit">{{Cart::count()}}</span></div>
                                 </a>
                             </div>
                             <div class="mini-cart-container js-mini-cart-container"></div>
