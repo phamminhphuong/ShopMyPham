@@ -5,7 +5,7 @@
                 <div class="section__sidebar section__category">
                     <ul data-role="listview" data-inset="true" data-theme="e" data-content-theme="e" class="category-menu ">
                         <li class="selected active category-item category-item_lv1">
-                            <a href="https://www.adayroi.com/suc-khoe-sac-dep-c139">DANH MỤC SẢN PHẨM</a>
+                            <a href="#">DANH MỤC SẢN PHẨM</a>
                             <ul data-role="listview" data-inset="true" data-theme="e" data-content-theme="e" class="category-menu child-level-1">
                                 @foreach($danhmucsanpham as $dmsp)
                                 <li class=" category-item category-item_lv2">
@@ -87,47 +87,7 @@
                             </ul>
                         </div>
                     </div>
-                    {{--  <div class="facet-group js-facet-group">
-
-                        <!-- <div class="facet__name js-facet-name"> -->
-                        <div class="facet-group-title">
-                            <!-- <span class="glyphicon facet__arrow"></span> -->
-                            <a href="javascript:;"> Giảm giá</a>
-                        </div>
-
-                        <!-- <div class="facet__values js-facet-values js-facet-form"> -->
-                        <div class="facet-group-content js-facet-form">
-
-                            <ul class="facet-list js-facet-list">
-                                <!-- <ul class="facet__list js-facet-list "> -->
-                                <li data-label="Giảm giá từ 10%">
-                                    <span class="facet__text">
-                                        <a href="https://www.adayroi.com/suc-khoe-sac-dep-c139?q=%3Arelevance%3AofferDiscount%3AGi%E1%BA%A3m+gi%C3%A1+t%E1%BB%AB+10%25">Giảm giá từ 10%</a>
-                                    </span>
-                                </li>
-                                <li data-label="Giảm giá từ 20%">
-                                    <span class="facet__text">
-                                        <a href="https://www.adayroi.com/suc-khoe-sac-dep-c139?q=%3Arelevance%3AofferDiscount%3AGi%E1%BA%A3m+gi%C3%A1+t%E1%BB%AB+20%25">Giảm giá từ 20%</a>
-                                    </span>
-                                </li>
-                                <li data-label="Giảm giá từ 30%">
-                                    <span class="facet__text">
-                                        <a href="https://www.adayroi.com/suc-khoe-sac-dep-c139?q=%3Arelevance%3AofferDiscount%3AGi%E1%BA%A3m+gi%C3%A1+t%E1%BB%AB+30%25">Giảm giá từ 30%</a>
-                                    </span>
-                                </li>
-                                <li data-label="Giảm giá từ 40%">
-                                    <span class="facet__text">
-                                        <a href="https://www.adayroi.com/suc-khoe-sac-dep-c139?q=%3Arelevance%3AofferDiscount%3AGi%E1%BA%A3m+gi%C3%A1+t%E1%BB%AB+40%25">Giảm giá từ 40%</a>
-                                    </span>
-                                </li>
-                                <li data-label="Giảm giá từ 50%">
-                                    <span class="facet__text">
-                                        <a href="https://www.adayroi.com/suc-khoe-sac-dep-c139?q=%3Arelevance%3AofferDiscount%3AGi%E1%BA%A3m+gi%C3%A1+t%E1%BB%AB+50%25">Giảm giá từ 50%</a>
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>  --}}
+                  
                 </div>
             </div>
         </div>

@@ -370,44 +370,9 @@
                                                 <div class="comment-form__navigation">
                                                     <div class="row">
                                                         <div id="anonymous-info">
-                                                            {{--  <div class="col-xs-12 col-sm-3" id="alias-comment-process">
-                                                                <div class="form-group">
-                                                                    <label class="control-label invisible-label hidden" for="alias">
-                                                                    </label>
-
-                                                                    <input id="alias" name="alias" class="form-control form-control" placeholder="Tên của bạn" type="text" value="">
-                                                                </div>
-                                                            </div>  --}}
+                                                        
                                                         </div>
-                                                        {{--  <div class="comment-form__rating-wrapper js-review-write">
-                                                            <div class="form-group comment-form__rating">
-                                                                <div class="vertical-alignment-helper">
-                                                                    <div class="vertical-align-center">
-                                                                        <span class="comment-form__rating-label">Đánh giá</span>
-                                                                        <div class="rating rating-set js-ratingCalcSet">
-                                                                            <div class="rating-stars js-writeReviewStars" id="all-starts">
-                                                                                <span class="js-ratingIcon glyphicon glyphicon-star fh"></span>
-                                                                                <span class="js-ratingIcon glyphicon glyphicon-star lh"></span>
-                                                                                <span class="js-ratingIcon glyphicon glyphicon-star fh"></span>
-                                                                                <span class="js-ratingIcon glyphicon glyphicon-star lh"></span>
-                                                                                <span class="js-ratingIcon glyphicon glyphicon-star fh"></span>
-                                                                                <span class="js-ratingIcon glyphicon glyphicon-star lh"></span>
-                                                                                <span class="js-ratingIcon glyphicon glyphicon-star fh"></span>
-                                                                                <span class="js-ratingIcon glyphicon glyphicon-star lh"></span>
-                                                                                <span class="js-ratingIcon glyphicon glyphicon-star fh"></span>
-                                                                                <span class="js-ratingIcon glyphicon glyphicon-star lh"></span>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="form-group">
-                                                                            <label class="control-label sr-only" for="review.rating">
-                                                                                Your Rating</label>
-
-                                                                            <input id="review.rating" name="rating" class="sr-only js-ratingSetInput form-control" type="text" value="">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>  --}}
+                                                      
                                                         <div class="comment-form__captcha-wrapper">
                                                             <div class="comment-form__captcha">
                                                             </div>
@@ -794,17 +759,18 @@
             <h1 class="sidebar-similar-product__title">Sản phẩm tương tự</h1>
             <div class="sidebar-similar-product__content">
                 <div class="product-list__container" id="count-product-together">
+                    @foreach($sanphamgiong as $sp)
                     <a href="/tinh-dau-sa-chanh-milaganics-lemongrass-essential-oil-30ml-p-PRI796535?offer=PRI796535_MU7&amp;ref=tog" class="product-item">
                         <div class="product-item__container">
                             <div class="product-item__thumbnail">
-                                <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/h37/hf6/11518733221918.jpg"
-                                    alt="Tinh dầu sả chanh Milaganics Lemongrass Essential Oil 30ml" title="Tinh dầu sả chanh Milaganics Lemongrass Essential Oil 30ml">
+                                <img id="together-viewed-product" class="img-responsive lazy " src="image_SanPham/{!!$sp->HinhAnh!!}"
+                                    alt="SanPham" title="">
                             </div>
                             <div class="product-item__info">
                                 {{--  <h3 class="product-item__info-title">Tinh dầu sả chanh Milaganics Lemongrass Essential Oil 30ml</h3>  --}}
                                 <div class="product-item__info-price">
-                                    <span class="product-item__info-price-sale">193.500đ</span>
-                                    <span class="product-item__info-price-original">215.000đ</span>
+                                    <span class="product-item__info-price-sale">{{ number_format($sp->GiaUuDai, 0, '.', '.') }}đ</span>
+                                    <span class="product-item__info-price-original">{{ number_format($sp->Gia, 0, '.', '.') }}đ</span>
                                 </div>
                                 <div class="product-item__info-discount">
 
@@ -813,301 +779,11 @@
                             </div>
                         </div>
                     </a>
-                    <a href="/tinh-dau-nhuc-dau-khau-milaganics-nutmeg-essential-oil-10ml-p-PRI797022?offer=PRI797022_MU7&amp;ref=tog" class="product-item">
-                        <div class="product-item__container">
-                            <div class="product-item__thumbnail">
-                                <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/h38/hc3/11490222768158.jpg"
-                                    alt="Tinh dầu nhục đậu khấu Milaganics Nutmeg Essential Oil 10ml" title="Tinh dầu nhục đậu khấu Milaganics Nutmeg Essential Oil 10ml">
-                            </div>
-                            <div class="product-item__info">
-                                <h3 class="product-item__info-title">Tinh dầu nhục đậu khấu Milaganics Nutmeg Essential Oil 10ml</h3>
-                                <div class="product-item__info-price">
-                                    <span class="product-item__info-price-sale">193.500đ</span>
-                                    <span class="product-item__info-price-original">215.000đ</span>
-                                </div>
-                                <div class="product-item__info-discount">
-
-                                    -10%
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/tinh-dau-hoa-hong-treo-o-to-evarosa-rose-essential-oil-hinh-thap-8ml-p-1315063?offer=1315063_R4W&amp;ref=tog" class="product-item">
-                        <div class="product-item__container">
-                            <div class="product-item__thumbnail">
-                                <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/images/he7/h04/13334702096414.jpg"
-                                    alt="Tinh dầu hoa hồng treo ô tô Evarosa Rose Essential Oil hình tháp 8ml" title="Tinh dầu hoa hồng treo ô tô Evarosa Rose Essential Oil hình tháp 8ml">
-                            </div>
-                            <div class="product-item__info">
-                                <h3 class="product-item__info-title">Tinh dầu hoa hồng treo ô tô Evarosa Rose Essential Oil hình tháp 8ml</h3>
-                                <div class="product-item__info-price">
-                                    <span class="product-item__info-price-sale">195.000đ</span>
-                                    <span class="product-item__info-price-original">250.000đ</span>
-                                </div>
-                                <div class="product-item__info-discount">
-
-                                    -22%
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/tinh-dau-tram-tra-milaganics-tea-tree-essential-oil-30ml-p-PRI795968?offer=PRI795968_MU7&amp;ref=tog" class="product-item">
-                        <div class="product-item__container">
-                            <div class="product-item__thumbnail">
-                                <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/h59/hba/11493727961118.jpg"
-                                    alt="Tinh dầu tràm trà Milaganics Tea Tree Essential Oil 30ml" title="Tinh dầu tràm trà Milaganics Tea Tree Essential Oil 30ml">
-                            </div>
-                            <div class="product-item__info">
-                                <h3 class="product-item__info-title">Tinh dầu tràm trà Milaganics Tea Tree Essential Oil 30ml</h3>
-                                <div class="product-item__info-price">
-                                    <span class="product-item__info-price-sale">198.000đ</span>
-                                    <span class="product-item__info-price-original">220.000đ</span>
-                                </div>
-                                <div class="product-item__info-discount">
-
-                                    -10%
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/tinh-dau-loc-de-xanh-milaganics-winter-green-essential-oil-30ml-p-PRI797244?offer=PRI797244_MU7&amp;ref=tog" class="product-item">
-                        <div class="product-item__container">
-                            <div class="product-item__thumbnail">
-                                <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/h6d/hf7/11528892907550.jpg"
-                                    alt="Tinh dầu lộc đề xanh Milaganics Winter Green Essential Oil 30ml" title="Tinh dầu lộc đề xanh Milaganics Winter Green Essential Oil 30ml">
-                            </div>
-                            <div class="product-item__info">
-                                <h3 class="product-item__info-title">Tinh dầu lộc đề xanh Milaganics Winter Green Essential Oil 30ml</h3>
-                                <div class="product-item__info-price">
-                                    <span class="product-item__info-price-sale">198.000đ</span>
-                                    <span class="product-item__info-price-original">220.000đ</span>
-                                </div>
-                                <div class="product-item__info-discount">
-
-                                    -10%
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/tinh-dau-oai-huong-cay-lavender-true-essential-oil-premium-5ml-p-1342010?offer=1342010_094175&amp;ref=tog" class="product-item">
-                        <div class="product-item__container">
-                            <div class="product-item__thumbnail">
-                                <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/images/h1d/hc4/14565114183710.jpg"
-                                    alt="Tinh dầu oải hương Cây Lavender True Essential Oil Premium 5ml" title="Tinh dầu oải hương Cây Lavender True Essential Oil Premium 5ml">
-                            </div>
-                            <div class="product-item__info">
-                                <h3 class="product-item__info-title">Tinh dầu oải hương Cây Lavender True Essential Oil Premium 5ml</h3>
-                                <div class="product-item__info-price">
-                                    <span class="product-item__info-price-sale">198.000đ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/tinh-dau-hoa-lai-treo-o-to-evarosa-hinh-thap-10ml-p-PRI1215173?offer=PRI1215173_R4W&amp;ref=tog" class="product-item">
-                        <div class="product-item__container">
-                            <div class="product-item__thumbnail">
-                                <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/h39/h02/11540828618782.jpg"
-                                    alt="Tinh dầu hoa lài treo ô tô Evarosa hình tháp 10ml" title="Tinh dầu hoa lài treo ô tô Evarosa hình tháp 10ml">
-                            </div>
-                            <div class="product-item__info">
-                                <h3 class="product-item__info-title">Tinh dầu hoa lài treo ô tô Evarosa hình tháp 10ml</h3>
-                                <div class="product-item__info-price">
-                                    <span class="product-item__info-price-sale">199.000đ</span>
-                                    <span class="product-item__info-price-original">250.000đ</span>
-                                </div>
-                                <div class="product-item__info-discount">
-
-                                    -20%
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="/tinh-dau-dot-dame-clemence-ky-uc-tuoi-tho-15ml-p-PRI773210?offer=PRI773210_PCN&amp;ref=tog" class="product-item">
-                        <div class="product-item__container">
-                            <div class="product-item__thumbnail">
-                                <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/hbb/h43/11493690212382.jpg"
-                                    alt="Tinh dầu đốt Dame Clemence Ký Ức Tuổi Thơ 15ml" title="Tinh dầu đốt Dame Clemence Ký Ức Tuổi Thơ 15ml">
-                            </div>
-                            <div class="product-item__info">
-                                <h3 class="product-item__info-title">Tinh dầu đốt Dame Clemence Ký Ức Tuổi Thơ 15ml</h3>
-                                <div class="product-item__info-price">
-                                    <span class="product-item__info-price-sale">200.000đ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+              @endforeach
                 </div>
             </div>
         </div>
 
-        <div class="product-detail__sidebar-similar-product visible-xs visible-sm">
-            <h1 class="sidebar-similar-product__title">Sản phẩm tương tự</h1>
-            <div class="adr-swiper-wrapper">
-                <div class="swiper-container product-detail__related js-swiper-carousel js-swiper-product-detail__related swiper-container-horizontal initialized">
-                    <div class="swiper-wrapper" id="count-product-together-mobile" style="transition-duration: 0ms;">
-                        <div class="swiper-slide swiper-slide-active">
-                            <a href="/tinh-dau-sa-chanh-milaganics-lemongrass-essential-oil-30ml-p-PRI796535?offer=PRI796535_MU7&amp;ref=tog" class="product-item">
-                                <div class="product-item__container">
-                                    <div class="product-item__thumbnail">
-                                        <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/h37/hf6/11518733221918.jpg"
-                                            alt="Tinh dầu sả chanh Milaganics Lemongrass Essential Oil 30ml" title="Tinh dầu sả chanh Milaganics Lemongrass Essential Oil 30ml">
-                                    </div>
-                                    <div class="product-item__info">
-                                        <h3 class="product-item__info-title">Tinh dầu sả chanh Milaganics Lemongrass Essential Oil 30ml</h3>
-                                        <div class="product-item__info-price">
-                                            <span class="product-item__info-price-sale">193.500đ</span>
-                                            <span class="product-item__info-price-original">215.000đ</span>
-                                        </div>
-                                        <div class="product-item__info-discount">
-
-                                            -10%
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide swiper-slide-next">
-                            <a href="/tinh-dau-nhuc-dau-khau-milaganics-nutmeg-essential-oil-10ml-p-PRI797022?offer=PRI797022_MU7&amp;ref=tog" class="product-item">
-                                <div class="product-item__container">
-                                    <div class="product-item__thumbnail">
-                                        <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/h38/hc3/11490222768158.jpg"
-                                            alt="Tinh dầu nhục đậu khấu Milaganics Nutmeg Essential Oil 10ml" title="Tinh dầu nhục đậu khấu Milaganics Nutmeg Essential Oil 10ml">
-                                    </div>
-                                    <div class="product-item__info">
-                                        <h3 class="product-item__info-title">Tinh dầu nhục đậu khấu Milaganics Nutmeg Essential Oil 10ml</h3>
-                                        <div class="product-item__info-price">
-                                            <span class="product-item__info-price-sale">193.500đ</span>
-                                            <span class="product-item__info-price-original">215.000đ</span>
-                                        </div>
-                                        <div class="product-item__info-discount">
-
-                                            -10%
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="/tinh-dau-hoa-hong-treo-o-to-evarosa-rose-essential-oil-hinh-thap-8ml-p-1315063?offer=1315063_R4W&amp;ref=tog" class="product-item">
-                                <div class="product-item__container">
-                                    <div class="product-item__thumbnail">
-                                        <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/images/he7/h04/13334702096414.jpg"
-                                            alt="Tinh dầu hoa hồng treo ô tô Evarosa Rose Essential Oil hình tháp 8ml" title="Tinh dầu hoa hồng treo ô tô Evarosa Rose Essential Oil hình tháp 8ml">
-                                    </div>
-                                    <div class="product-item__info">
-                                        <h3 class="product-item__info-title">Tinh dầu hoa hồng treo ô tô Evarosa Rose Essential Oil hình tháp 8ml
-                                        </h3>
-                                        <div class="product-item__info-price">
-                                            <span class="product-item__info-price-sale">195.000đ</span>
-                                            <span class="product-item__info-price-original">250.000đ</span>
-                                        </div>
-                                        <div class="product-item__info-discount">
-
-                                            -22%
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="/tinh-dau-tram-tra-milaganics-tea-tree-essential-oil-30ml-p-PRI795968?offer=PRI795968_MU7&amp;ref=tog" class="product-item">
-                                <div class="product-item__container">
-                                    <div class="product-item__thumbnail">
-                                        <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/h59/hba/11493727961118.jpg"
-                                            alt="Tinh dầu tràm trà Milaganics Tea Tree Essential Oil 30ml" title="Tinh dầu tràm trà Milaganics Tea Tree Essential Oil 30ml">
-                                    </div>
-                                    <div class="product-item__info">
-                                        <h3 class="product-item__info-title">Tinh dầu tràm trà Milaganics Tea Tree Essential Oil 30ml</h3>
-                                        <div class="product-item__info-price">
-                                            <span class="product-item__info-price-sale">198.000đ</span>
-                                            <span class="product-item__info-price-original">220.000đ</span>
-                                        </div>
-                                        <div class="product-item__info-discount">
-
-                                            -10%
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="/tinh-dau-loc-de-xanh-milaganics-winter-green-essential-oil-30ml-p-PRI797244?offer=PRI797244_MU7&amp;ref=tog" class="product-item">
-                                <div class="product-item__container">
-                                    <div class="product-item__thumbnail">
-                                        <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/h6d/hf7/11528892907550.jpg"
-                                            alt="Tinh dầu lộc đề xanh Milaganics Winter Green Essential Oil 30ml" title="Tinh dầu lộc đề xanh Milaganics Winter Green Essential Oil 30ml">
-                                    </div>
-                                    <div class="product-item__info">
-                                        <h3 class="product-item__info-title">Tinh dầu lộc đề xanh Milaganics Winter Green Essential Oil 30ml</h3>
-                                        <div class="product-item__info-price">
-                                            <span class="product-item__info-price-sale">198.000đ</span>
-                                            <span class="product-item__info-price-original">220.000đ</span>
-                                        </div>
-                                        <div class="product-item__info-discount">
-
-                                            -10%
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="/tinh-dau-oai-huong-cay-lavender-true-essential-oil-premium-5ml-p-1342010?offer=1342010_094175&amp;ref=tog" class="product-item">
-                                <div class="product-item__container">
-                                    <div class="product-item__thumbnail">
-                                        <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/images/h1d/hc4/14565114183710.jpg"
-                                            alt="Tinh dầu oải hương Cây Lavender True Essential Oil Premium 5ml" title="Tinh dầu oải hương Cây Lavender True Essential Oil Premium 5ml">
-                                    </div>
-                                    <div class="product-item__info">
-                                        <h3 class="product-item__info-title">Tinh dầu oải hương Cây Lavender True Essential Oil Premium 5ml</h3>
-                                        <div class="product-item__info-price">
-                                            <span class="product-item__info-price-sale">198.000đ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="/tinh-dau-hoa-lai-treo-o-to-evarosa-hinh-thap-10ml-p-PRI1215173?offer=PRI1215173_R4W&amp;ref=tog" class="product-item">
-                                <div class="product-item__container">
-                                    <div class="product-item__thumbnail">
-                                        <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/h39/h02/11540828618782.jpg"
-                                            alt="Tinh dầu hoa lài treo ô tô Evarosa hình tháp 10ml" title="Tinh dầu hoa lài treo ô tô Evarosa hình tháp 10ml">
-                                    </div>
-                                    <div class="product-item__info">
-                                        <h3 class="product-item__info-title">Tinh dầu hoa lài treo ô tô Evarosa hình tháp 10ml</h3>
-                                        <div class="product-item__info-price">
-                                            <span class="product-item__info-price-sale">199.000đ</span>
-                                            <span class="product-item__info-price-original">250.000đ</span>
-                                        </div>
-                                        <div class="product-item__info-discount">
-
-                                            -20%
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="/tinh-dau-dot-dame-clemence-ky-uc-tuoi-tho-15ml-p-PRI773210?offer=PRI773210_PCN&amp;ref=tog" class="product-item">
-                                <div class="product-item__container">
-                                    <div class="product-item__thumbnail">
-                                        <img id="together-viewed-product" class="img-responsive lazy " src="https://media.static-adayroi.com/sys_master/hbb/h43/11493690212382.jpg"
-                                            alt="Tinh dầu đốt Dame Clemence Ký Ức Tuổi Thơ 15ml" title="Tinh dầu đốt Dame Clemence Ký Ức Tuổi Thơ 15ml">
-                                    </div>
-                                    <div class="product-item__info">
-                                        <h3 class="product-item__info-title">Tinh dầu đốt Dame Clemence Ký Ức Tuổi Thơ 15ml</h3>
-                                        <div class="product-item__info-price">
-                                            <span class="product-item__info-price-sale">200.000đ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <a id="data" class="data" data-missing-image-product="/_ui/responsive/common/images/missing_product_240x240.png"></a>
         <!---->
         <div class="product-detail__banner hidden-xs hidden-sm">

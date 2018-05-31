@@ -30,7 +30,9 @@ class PageController extends Controller
     // chi tiet san pham
     public function getChitiet($id){
         $chitietsanpham=SanPham::find($id);
-        return view('page.chi-tiet-san-pham',['chitietsanpham'=>$chitietsanpham]);
+        $madanhmuc=$chitietsanpham->MaDanhMuc;
+        $sanphamgiong=SanPham::where('MaDanhMuc',$madanhmuc)->get();
+        return view('page.chi-tiet-san-pham',['chitietsanpham'=>$chitietsanpham,'sanphamgiong'=>$sanphamgiong]);
     }
     // san pham theo danh muc
     public function getSanPhamDanhMuc($id){
