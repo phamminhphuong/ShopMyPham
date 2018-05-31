@@ -309,32 +309,7 @@
                                         <span class="hidden-xs">Có</span>
                                         <span id="totalComment">0</span> bình luận
                                         <span class="hidden-xs">về sản phẩm này</span>
-                                        {{--  <div class="product-comment__rating-overview">
-                                            <span class="rating-overview__title  hidden-xs hidden-sm">Đánh giá trung bình:
-                                                <b id="productAverageRating" class=" hidden-xs hidden-sm">
-                                                </b>
-                                            </span>
-                                            <div class="adr-rating-view js-ratingCalc" data-rating="">
-                                                <div class="rating-view-list">
-                                                    <i class="glyphicon glyphicon-star-empty"></i>
-                                                    <i class="glyphicon glyphicon-star-empty"></i>
-                                                    <i class="glyphicon glyphicon-star-empty"></i>
-                                                    <i class="glyphicon glyphicon-star-empty"></i>
-                                                    <i class="glyphicon glyphicon-star-empty"></i>
-                                                </div>
-                                                <div class="rating-view-active js-yellowStars" style="width: 0%;">
-                                                    <div class="rating-view-active-container">
-                                                        <i class="glyphicon glyphicon-star"></i>
-                                                        <i class="glyphicon glyphicon-star"></i>
-                                                        <i class="glyphicon glyphicon-star"></i>
-                                                        <i class="glyphicon glyphicon-star"></i>
-                                                        <i class="glyphicon glyphicon-star"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span id="rating-overview__counter" class="rating-overview__counter  hidden-xs hidden-sm">
-                                            </span>
-                                        </div>  --}}
+                                        
                                     </div>
                                     <div class="panel-body">
                                         <div class="product-detail__comment">

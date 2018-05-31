@@ -264,7 +264,7 @@
                     <div class="col-sm-3 hidden-xs hidden-sm">
                         <div class="yCmsContentSlot js-site-logo">
                             <div class="banner__component banner banner__component--logo">
-                                <a href="http://localhost:8080/ShopBanMiPham/public/">
+                                <a href="">
                                     <img title="" alt="" src="image_SanPham/logo.jpg">
                                 </a>
                             </div>
