@@ -91,7 +91,6 @@
                                     <td>
                                         {!!$nsp->ChuThich!!}
                                     </td>
-                                    
                                     <td>
                                         {!!$nsp->TrangThai!!}
                                     </td>
