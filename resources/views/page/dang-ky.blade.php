@@ -21,6 +21,13 @@
                                     <br>
                                 </div>
                                 @endif
+
+                                @if(!empty($messageSuccess))
+                                    <div class="alert alert-success">
+                                        {{$messageSuccess}}
+                                        <br>
+                                    </div>
+                                @endif
                             </li>
                         </ul>
                         <div class="auth-content">
@@ -40,20 +47,45 @@
                                         aria-autocomplete="list">
                                     <p class="error-message"></p>
                                 </div>
+
                                 <div class="form-group">
                                     <label for="confirmPassword">Nhập lại mật khẩu </label>
                                     <input type="password" name="confirmPassword" autocomplete="off" class="form-control js-normal-signup-password clearText"
                                         placeholder="Vui lòng nhập lại mật khẩu ">
                                     <p class="error-message"></p>
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="hoten">Họ tên</label>
+                                    <input type="text" name="hoten" autocomplete="off" class="form-control js-normal-signup-password clearText" placeholder="Vui lòng nhập họ tên "
+                                        aria-autocomplete="list">
+                                    <p class="error-message"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="diachi">Số điện thoại</label>
+                                    <input type="text" name="diachi" autocomplete="off" class="form-control js-normal-signup-password clearText" placeholder="Vui lòng nhập số điện thoại "
+                                        aria-autocomplete="list">
+                                    <p class="error-message"></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="sodienthoai">Địa chỉ</label>
+                                    <input type="text" name="sodienthoai" autocomplete="off" class="form-control js-normal-signup-password clearText" placeholder="Vui lòng nhập địa chỉ "
+                                        aria-autocomplete="list">
+                                    <p class="error-message"></p>
+                                </div>
+
+
                                 <div class="form-group">
                                     <p id="js-signup-normal-register-captcha-error" class="error-message"></p>
                                     <div id="js-signup-normal-register-captcha" class="form_field-elements control-group"></div>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block js_button_normal_signup_continue">
-                                    Tiếp tục </button>
+                                    Đăng ký </button>
                             </form>
                         </div>
+                        <div style="text-align: right; padding: 10px 0;"><a href="dangnhap">Đã có tài khoản</a></div>
                     </div>
                 </div>
             </div>

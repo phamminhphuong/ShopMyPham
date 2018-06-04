@@ -28,7 +28,7 @@
                                 @foreach($nhacungcap as $ncc)
                                 <li data-label="BEAUTY CONCEPT">
                                     <span class="facet__text">
-                                        <a href="https://www.adayroi.com/suc-khoe-sac-dep-c139?q=%3Arelevance%3Amerchant%3A105004">{!!$ncc->TenNhaCC!!}</a>
+                                        <a href="#">{!!$ncc->TenNhaCC!!}</a>
                                         <span class="facet__value__count">(99)</span>
                                     </span>
                                 </li>

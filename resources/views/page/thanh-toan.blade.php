@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="row">
-
+            @if(empty($messageSuccess))
             <div class="col-xs-12 col-sm-12 col-md-12 checkout-main">
                 <div id="checkoutSummaryInformation1">
                     <h2 class="checkout-title">
@@ -79,7 +79,7 @@
                                                             <label for="" class="col-sm-3">Họ và tên*</label>
                                                             <div class="col-sm-9">
                                                                 <input id="fullName" name="fullName" class="form-control js-script-check" placeholder="Vui lòng nhập Họ và tên" type="text"
-                                                                    value="" maxlength="50">
+                                                                    value="{!!empty(Auth::user()) ? '':Auth::user()->KhachHang->first()->HoTen!!}" maxlength="50">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -87,7 +87,8 @@
                                                         <div class="row">
                                                             <label for="" class="col-sm-3">Điện thoại*</label>
                                                             <div class="col-sm-9">
-                                                                <input id="phone" name="phone" class="form-control" placeholder="Vui lòng nhập Điện thoại" type="text" value="">
+                                                                <input id="phone" name="phone" class="form-control" placeholder="Vui lòng nhập Điện thoại" type="text" 
+                                                                value="{!!empty(Auth::user()) ? '':Auth::user()->KhachHang->first()->DienThoai!!}">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -96,7 +97,7 @@
                                                             <label for="" class="col-sm-3">Địa chỉ chi tiết*</label>
                                                             <div class="col-sm-9">
                                                                 <input id="detailedAddress" name="address" class="form-control" placeholder="Vui lòng nhập Địa chỉ chi tiết" type="text"
-                                                                    value="" maxlength="255">
+                                                                    value="{!!empty(Auth::user()) ? '':Auth::user()->KhachHang->first()->DiaChi!!}" maxlength="255">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -129,6 +130,13 @@
                     </form>
                 </div>
             </div>
+            @endif
+
+            @if(!empty($messageSuccess))
+            <div class="col-xs-12 col-sm-12 col-md-12 checkout-main">
+                <h2>{!!$messageSuccess!!}</h2>
+            </div>
+            @endif
         </div>
     </div>
 </div>

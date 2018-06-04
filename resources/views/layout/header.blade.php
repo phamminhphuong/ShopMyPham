@@ -182,8 +182,6 @@
                         </div>
                     </div>
                 </div>
-
-                
             </div>
             <div class="row desktop__nav">
                 <div class="nav__left col-xs-12 col-sm-11 col-md-9">

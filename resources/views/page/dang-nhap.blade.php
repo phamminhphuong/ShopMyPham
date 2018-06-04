@@ -44,10 +44,10 @@
                                     <p id="js-signup-normal-register-captcha-error" class="error-message"></p>
                                     <div id="js-signup-normal-register-captcha" class="form_field-elements control-group"></div>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block js_button_normal_signup_continue">
-                                    Đăng nhập </button>
+                                <button type="submit" class="btn btn-primary btn-block js_button_normal_signup_continue">Đăng nhập </button>
                             </form>
                         </div>
+                        <div style="text-align: right; padding: 10px 0;"><a href="dangky">Đăng ký tài khoản mới</a></div>
                     </div>
                 </div>
             </div>

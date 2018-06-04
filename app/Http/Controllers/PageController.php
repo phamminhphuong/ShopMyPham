@@ -182,6 +182,7 @@ class PageController extends Controller
 
     //GET /thanh-toan
     public function getThanhToan() {
+
         return view('page.thanh-toan');
     }
 
@@ -201,7 +202,10 @@ class PageController extends Controller
         //FIXME - check when login save MaKhachHang
         $xuat->TenVanChuyen = "";
         $xuat->ChuThich     = "";
-
+        
+        if(Auth::user() && Auth::user()->KhachHang->first()) {
+            $xuat->MaKhachHang = Auth::user()->KhachHang->first()->id;
+        }
         DB::beginTransaction();
         
         $xuat->save();
@@ -219,8 +223,6 @@ class PageController extends Controller
         DB::commit();
 
         Cart::destroy();
-
-        //FIXME - Thêm hiển thị thành công khi thanh toán
         return view('page.thanh-toan', ['messageSuccess' => 'Đơn đặt hàng của bạn đã sẵn sàng. Đơn vị vận chuyển sẽ chuyển hàng cho bạn sớm nhất có thể. Chúc bạn hạnh phúc!!!']);
     }
 
@@ -246,11 +248,27 @@ class PageController extends Controller
             'confirmPassword.required'=>'Bạn không được để trống nhập lại mật khẩu',
             'confirmPassword.same'=>'Bạn phải nhập giống mật khẩu'
         ]);
+
+        DB::beginTransaction();
         $taikhoan=new User();
         $taikhoan->email=$request->email;
         $taikhoan->password=bcrypt($request->password);
         $taikhoan->MaLoaiTaiKhoan=2;
         $taikhoan->save();
-        return redirect('dangnhap');
+
+
+        $khachHang = new KhachHang();
+        $khachHang->DiaChi = $request->diachi;
+        $khachHang->HoTen = $request->hoten;
+        $khachHang->DienThoai = $request->sodienthoai;
+        
+        $khachHang->NgaySinh = date('Y-m-d');
+        $khachHang->GioiTinh = false;
+        $khachHang->MaTaiKhoan = $taikhoan->id;
+        $khachHang->HinhAnh = '';
+
+        $khachHang->save();
+        DB::commit();
+        return view('page.dang-ky', ['messageSuccess' => 'Đăng ký thành công']);
     }
 }

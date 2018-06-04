@@ -1,4 +1,5 @@
-@extends('layout.index') @section('content')
+@extends('layout.index') 
+@section('content')
 <div id="content" class="clearfix">
     <a id="skip-to-content"></a>
     <div class="page-category">
@@ -50,6 +51,10 @@
                                 <div class="col-xs-6 col-sm-4 col-lg-3 product-item__wrapper product-item__wrapper--hover">
                                     <div class="product-item__placeholder hidden-sm hidden-xs"></div>
                                     <div class="product-item">
+                                    <form action="gio-hang" method="post">
+                                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                        <input type="hidden" name="productId" value="{!!$sp->id!!}">
+                                        <input type="hidden" name="quantity" value="1">
                                         <div class="product-item__container">
                                             <a class="product-item__thumbnail " href="chi-tiet-san-pham/{!!$sp->id!!}">
                                                 <img class="default lazy swiper-lazy " src="image_SanPham/{!!$sp->HinhAnh!!}"  style="width:200px;height:200px"/> 
@@ -66,8 +71,12 @@
                                                 <div class="product-item__info-discount">
                                                         -{!!$sp->PhanTramKhauTru!!}%
                                                 </div>
+                                                <div style="padding: 15px 40px">
+                                                    <button type="submit" class="btn btn-block btn-primary btnAddToCart">Cho vào giỏ hàng</button>
+                                                </div>
                                             </div>
                                         </div>
+                                    </form>
                                     </div>
                                 </div>
                                  @endforeach
@@ -90,4 +99,14 @@
 </div>
 
 </div>
+@endsection
+
+@section('script')
+<script>
+    $(document).ready(function() {
+        $('.btnAddToCart').click(function() {
+            console.log('test');
+        });
+    });
+</script>
 @endsection
