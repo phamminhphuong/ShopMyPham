@@ -78,13 +78,13 @@
                                         <img width="150" src="image_SanPham/{!!$item->SanPham->HinhAnh!!}" alt="">
                                     </td>
                                     <td>
-                                        {!!$item->Gia!!} $
+                                        {!!$item->Gia!!}
                                     </td>
                                     <td>
                                         {!!$item->SoLuong!!}
                                     </td>
                                     <td>
-                                        {!!$item->Gia * $item->SoLuong!!} $
+                                        {!!$item->Gia * $item->SoLuong!!} 
                                     </td>
                                 </tr>
                                 @endforeach

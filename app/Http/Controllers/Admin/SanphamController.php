@@ -28,7 +28,6 @@ class SanphamController extends Controller
             'HanSuDung'=>'required',
             'MieuTa'=>'required|min:3|max:2500',
             'Gia'=>'required',
-            'GiaUuDai'=>'required',
             'PhanTramKhauTru'=>'required',
         ],
         [
@@ -49,7 +48,6 @@ class SanphamController extends Controller
             'MieuTa.min'=>'Bạn nhập mô tả sản phẩm ít nhất 3 ký tự',
             'MieuTa.max'=>'Bạn nhập mô tả sản phẩm không quá 2500 ký tự',
             'Gia.required'=>'Bạn không được để trống giá của sản phẩm',
-            'GiaUuDai.required'=>'Bạn không được để trống giá ưu đãi của sản phẩm',
             'GiaPhanTramKhauTruUuDai.required'=>'Bạn không được để trống phần trăm ưu đãi của sản phẩm',
         ]);
         $sanpham=new SanPham();
@@ -73,13 +71,12 @@ class SanphamController extends Controller
         }
         $sanpham->SoLuong=$request->SoLuong;
         $sanpham->Gia=$request->Gia;
-
         setlocale(LC_MONETARY,"en_US");
-        $sanpham->GiaUuDai=$request->GiaUuDai;
+        $sanpham->GiaUuDai=$sanpham->Gia * (1 - 1.0 * $request->PhanTramKhauTru / 100);
         $sanpham->PhanTramKhauTru=$request->PhanTramKhauTru;
         $sanpham->DoUuTien=$request->DoUuTien;
-        $sanpham->SoLuotXem=$request->SoLuotXem;
-        $sanpham->SoLuotMua=$request->SoLuotMua;
+        $sanpham->SoLuotXem=0;
+        $sanpham->SoLuotMua=0;
         $sanpham->save();
         return redirect('admin/sanpham/list');
     }
@@ -99,7 +96,6 @@ class SanphamController extends Controller
             'HanSuDung'=>'required',
             'MieuTa'=>'required|min:3|max:2500',
             'Gia'=>'required',
-            'GiaUuDai'=>'required',
             'PhanTramKhauTru'=>'required',
         ],
         [
@@ -120,7 +116,6 @@ class SanphamController extends Controller
             'MieuTa.min'=>'Bạn nhập mô tả sản phẩm ít nhất 3 ký tự',
             'MieuTa.max'=>'Bạn nhập mô tả sản phẩm không quá 2500 ký tự',
             'Gia.required'=>'Bạn không được để trống giá của sản phẩm',
-            'GiaUuDai.required'=>'Bạn không được để trống giá ưu đãi của sản phẩm',
             'GiaPhanTramKhauTruUuDai.required'=>'Bạn không được để trống phần trăm ưu đãi của sản phẩm',
         ]);
         $sanpham=SanPham::find($id);
@@ -144,11 +139,11 @@ class SanphamController extends Controller
         }
         $sanpham->SoLuong=$request->SoLuong;
         $sanpham->Gia=$request->Gia;
-        $sanpham->GiaUuDai=$request->GiaUuDai;
+        $sanpham->GiaUuDai = $sanpham->Gia * (1 - 1.0 * $request->PhanTramKhauTru / 100);
         $sanpham->PhanTramKhauTru=$request->PhanTramKhauTru;
         $sanpham->DoUuTien=$request->DoUuTien;
-        $sanpham->SoLuotXem=$request->SoLuotXem;
-        $sanpham->SoLuotMua=$request->SoLuotMua;
+        $sanpham->SoLuotXem = 0;
+        $sanpham->SoLuotMua = 0;
         $sanpham->save();
         return redirect('admin/sanpham/list');
     }

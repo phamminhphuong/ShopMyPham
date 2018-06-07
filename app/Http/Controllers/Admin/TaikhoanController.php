@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\LoaiTaiKhoan;
+use App\KhachHang;
 class TaikhoanController extends Controller
 {
      // danh sach
@@ -42,6 +43,19 @@ class TaikhoanController extends Controller
         $taikhoan->password=bcrypt($request->password);
         $taikhoan->MaLoaiTaiKhoan=$request->MaLoaiTaiKhoan;
         $taikhoan->save();
+
+        $khachHang = new KhachHang();
+        $khachHang->DiaChi = '';
+        $khachHang->HoTen = '';
+        $khachHang->DienThoai = '';
+        
+        $khachHang->NgaySinh = date('Y-m-d');
+        $khachHang->GioiTinh = false;
+        $khachHang->MaTaiKhoan = $taikhoan->id;
+        $khachHang->HinhAnh = '';
+
+        $khachHang->save();
+
         return redirect('admin/taikhoan/list');
     }
     // sua

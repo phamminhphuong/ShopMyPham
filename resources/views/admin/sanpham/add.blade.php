@@ -94,12 +94,6 @@
                             </div>
                     </div>
                     <div class="form-group">
-                            <b class="control-label col-md-2"> Giá ưu đãi</b>
-                            <div class="col-md-10">
-                                <input type="text" name="GiaUuDai" class="form-control" placeholder="Nhập giá ưu đãi" value=""> 
-                            </div>
-                    </div>
-                    <div class="form-group">
                             <b class="control-label col-md-2"> Phần trăm khấu trừ</b>
                             <div class="col-md-10">
                                 <input type="text" name="PhanTramKhauTru" class="form-control" placeholder="Nhập phần trăm khấu trừ" value=""> 
@@ -109,18 +103,6 @@
                             <b class="control-label col-md-2"> Độ ưu tiên</b>
                             <div class="col-md-10">
                                 <input type="number" name="DoUuTien" class="form-control" value="0"> 
-                            </div>
-                    </div>
-                    <div class="form-group">
-                            <b class="control-label col-md-2"> Số lượt xem</b>
-                            <div class="col-md-10">
-                                <input type="number" name="SoLuotXem" class="form-control" value="0"> 
-                            </div>
-                    </div>
-                    <div class="form-group">
-                            <b class="control-label col-md-2"> Số lượt mua</b>
-                            <div class="col-md-10">
-                                <input type="number" name="SoLuotMua" class="form-control" value="0"> 
                             </div>
                     </div>
                 <div class="form-group">

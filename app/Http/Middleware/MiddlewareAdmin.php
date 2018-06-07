@@ -17,7 +17,7 @@ class MiddlewareAdmin
     {
         if(Auth::check()){
             $user=Auth::user();
-            if($user->MaLoaiTaiKhoan==1){
+            if($user->MaLoaiTaiKhoan==1 || $user->MaLoaiTaiKhoan==3){
                   return $next($request);
             }
             else{

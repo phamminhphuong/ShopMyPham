@@ -30,7 +30,7 @@
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
-                                       Mã nhập sản phẩm
+                                       Hóa đơn nhập
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
@@ -92,9 +92,13 @@
                                         {!!$nsp->ChuThich!!}
                                     </td>
                                     <td>
-                                        {!!$nsp->TrangThai!!}
+                                        @if($nsp->TrangThai)
+                                            <span class="text-success"> Đã giao hàng </span>
+                                        @endif
+                                        @if(!$nsp->TrangThai)
+                                            <span class="text-danger"> Chưa giao hàng </span>
+                                        @endif
                                     </td>
-                                   
                                      <td>
                                         {!!$nsp->created_at!!}
                                     </td>
@@ -102,6 +106,10 @@
                                         {!!$nsp->updated_at!!}
                                     </td> 
                                     <td>
+                                        @if(empty($xsp->NgayNhap))
+                                            <a href="admin/nhapsanpham/giao-hang/{!!$nsp->id!!}">Giao hàng</a> |
+                                        @endif
+                                        <a href="admin/nhapsanpham/export/{!!$nsp->id!!}">In hóa đơn</a> |
                                         <a href="admin/nhapsanpham/detail/{!!$nsp->id!!}">Chi tiết</a>
                                     </td>
                                 </tr>

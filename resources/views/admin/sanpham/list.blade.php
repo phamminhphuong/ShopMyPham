@@ -85,16 +85,6 @@
                         : activate to sort column ascending" style="width: 239.799px;">
                                       Độ ưu tiên
                                     </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
-                            Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                       Số lượt xem
-                                    </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
-                            Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                       Số lượt mua
-                                    </th>
                                     {{--  <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
@@ -152,15 +142,9 @@
                                         {!!$sp->DoUuTien!!}
                                     </td>
                                     <td>
-                                        {!!$sp->SoLuotXem!!}
-                                    </td>
-                                    <td>
-                                        {!!$sp->SoLuotMua!!}
-                                    </td>
-                                    <td>
                                         <a href="admin/sanpham/edit/{!!$sp->id!!}">Sửa</a> |
                                         <a href="admin/sanpham/detail/{!!$sp->id!!}">Chi tiết</a> |
-                                        <a href="admin/sanpham/delete/{!!$sp->id!!}">Xóa</a>
+                                        <a href="admin/sanpham/delete/{!!$sp->id!!}" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');">Xóa</a>
                                     </td>
                                 </tr>
                                 @endforeach

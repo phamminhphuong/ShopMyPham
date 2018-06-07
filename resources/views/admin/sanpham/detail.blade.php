@@ -113,22 +113,6 @@
                     {!!$sanpham->DoUuTien!!}
                 </dd>
             </dl>
-            <dl class="dl-horizontal">
-                <dt>
-                   Số lượt xem
-                </dt>
-                <dd>
-                    {!!$sanpham->SoLuotXem!!}
-                </dd>
-            </dl>
-            <dl class="dl-horizontal">
-                <dt>
-                   Số lượt mua
-                </dt>
-                <dd>
-                    {!!$sanpham->SoLuotMua!!}
-                </dd>
-            </dl>
             <br>
             <br>
         </div>

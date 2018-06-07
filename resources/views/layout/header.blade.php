@@ -28,7 +28,7 @@
                                         <a href="cau-hoi-thuong-gap">Câu hỏi thường gặp</a>
                                     </li>
                                     <li>
-                                        <a href="lien-he">Liên hệ Adayroi</a>
+                                        <a href="lien-he">Liên hệ</a>
                                     </li>
                                 </ul>
                             </div>

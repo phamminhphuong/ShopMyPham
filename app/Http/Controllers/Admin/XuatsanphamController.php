@@ -24,7 +24,7 @@ class XuatsanphamController extends Controller
             if($sanPham->SoLuong < $item->SoLuong) {
                 return redirect('admin/xuatsanpham/list')->withErrors(['msg', 'Sản phẩm '.$sanPham->TenSanPham.' đã hết hàng']);
             }
-            else {  
+            else {
                 $sanPham->SoLuong -= $item->SoLuong;
                 $sanPham->save();
             }
@@ -36,7 +36,12 @@ class XuatsanphamController extends Controller
 
     // GET admin/xuatsanpham/detail/{$id}
     public function getDetail($id) {
-        //FIXME Hiển thị danh sách chi tiết xuất
+        $xuatSanPham = XuatSanPham::find($id);
+        return view('admin.xuatsanpham.detail', ['xuatSanPham' => $xuatSanPham]);
+    }
+
+    //GET /admin/nhapsanpham/export/{id}
+    public function getExport($id) {
         $xuatSanPham = XuatSanPham::find($id);
         return view('admin.xuatsanpham.detail', ['xuatSanPham' => $xuatSanPham]);
     }

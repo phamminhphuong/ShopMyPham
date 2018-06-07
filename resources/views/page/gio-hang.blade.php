@@ -9,7 +9,7 @@
                             <a class="cart-title" href="gio-hang">
                                 <span class="cart-subtitle">Giỏ hàng của bạn </span>
                                 <span class="bracket">(</span>
-                                <span class="js-cart-total-unit">4</span>
+                                <span class="js-cart-total-unit">{{Cart::count()}}</span>
                                 <span>sản phẩm</span>
                                 <span class="bracket">)</span>
                             </a>

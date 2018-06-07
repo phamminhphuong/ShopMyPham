@@ -96,12 +96,6 @@
                                 </div>
                         </div>
                         <div class="form-group">
-                                <b class="control-label col-md-2"> Giá ưu đãi</b>
-                                <div class="col-md-10">
-                                    <input type="text" name="GiaUuDai" class="form-control" placeholder="Nhập giá ưu đãi" value="{!!$sanpham->GiaUuDai!!}"> 
-                                </div>
-                        </div>
-                        <div class="form-group">
                                 <b class="control-label col-md-2"> Phần trăm khấu trừ</b>
                                 <div class="col-md-10">
                                     <input type="text" name="PhanTramKhauTru" class="form-control" placeholder="Nhập phần trăm khấu trừ" value="{!!$sanpham->PhanTramKhauTru!!}"> 
@@ -113,19 +107,6 @@
                                     <input type="number" name="DoUuTien" class="form-control" value="{!!$sanpham->DoUuTien!!}"> 
                                 </div>
                         </div>
-                        <div class="form-group">
-                                <b class="control-label col-md-2"> Số lượt xem</b>
-                                <div class="col-md-10">
-                                    <input type="number" name="SoLuotXem" class="form-control" value="{!!$sanpham->SoLuotXem!!}"> 
-                                </div>
-                        </div>
-                        <div class="form-group">
-                                <b class="control-label col-md-2"> Số lượt mua</b>
-                                <div class="col-md-10">
-                                    <input type="number" name="SoLuotMua" class="form-control" value="{!!$sanpham->SoLuotMua!!}"> 
-                                </div>
-                        </div>
-                
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <input type="submit" value="Sửa" class="btn btn-primary">

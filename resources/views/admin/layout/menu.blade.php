@@ -25,11 +25,14 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
+        @if(Auth::user()->MaLoaiTaiKhoan == 1)
         <li>
           <a href="admin/bangdieukhien/index">
             <i class="fas fa-tachometer-alt"></i><span> Bảng điều khiển</span>
           </a>
         </li>
+        @endif
+        @if(Auth::user()->MaLoaiTaiKhoan == 1)
         <li class="treeview">
           <a href="#">
               <i class="fas fa-address-book"></i>  <span>Loại tài khoản</span>
@@ -42,7 +45,9 @@
             <li><a href="admin/loaitaikhoan/add"><i class="far fa-circle small"> </i>  Thêm loại tài khoản</a></li>
           </ul>
         </li>
-      <li class="treeview">
+        @endif
+        @if(Auth::user()->MaLoaiTaiKhoan == 1)
+        <li class="treeview">
           <a href="#">
             <i class="fas fa-user-circle"></i>  <span> Tài khoản</span>
             <span class="pull-right-container"> 
@@ -54,6 +59,8 @@
             <li><a href="admin/taikhoan/add"><i class="far fa-circle small"> </i>  Thêm tài khoản</a></li>
           </ul>
         </li>
+        @endif
+        @if(Auth::user()->MaLoaiTaiKhoan == 1)
         <li class="treeview">
           <a href="#">
             <i class="fas fa-building"></i>  <span> Nhà cung cấp</span>
@@ -66,6 +73,7 @@
             <li><a href="admin/nhacungcap/add"><i class="far fa-circle small"> </i>  Thêm nhà cung cấp</a></li>
           </ul>
         </li>
+        @endif
         <li class="treeview">
           <a href="#">
             <i class="ion ion-person-add"></i>  <span> Khách hàng</span>
@@ -78,6 +86,7 @@
             <li><a href="admin/khachhang/add"><i class="far fa-circle small"> </i>  Thêm khách hàng</a></li>
           </ul>
         </li>
+        @if(Auth::user()->MaLoaiTaiKhoan == 1)
         <li class="treeview">
             <a href="#">
               <i class="fas fa-file-pdf"></i>  <span> Danh mục sản phẩm</span>
@@ -90,6 +99,7 @@
               <li><a href="admin/danhmucsanpham/add"><i class="far fa-circle small"> </i>  Thêm danh sách</a></li>
             </ul>
           </li>
+        @endif
         <li class="treeview">
             <a href="#">
               <i class="fab fa-product-hunt"></i>  <span> Sản phẩm</span>
@@ -102,7 +112,7 @@
               <li><a href="admin/sanpham/add"><i class="far fa-circle small"> </i>  Thêm sản phẩm</a></li>
             </ul>
           </li>
-      
+          @if(Auth::user()->MaLoaiTaiKhoan == 1)
         <li class="treeview">
             <a href="#">
               <i class="fas fa-keyboard"></i>  <span> Nhập sản phẩm</span>
@@ -115,6 +125,7 @@
               <li><a href="admin/nhapsanpham/add"><i class="far fa-circle small"> </i>  Thêm nhập sản phẩm</a></li>
             </ul>
           </li>
+          @endif
         <li class="treeview">
             <a href="#">
               <i class="fas fa-outdent"></i>  <span> Xuất sản phẩm</span>
@@ -124,7 +135,6 @@
             </a>
             <ul class="treeview-menu">
               <li class="active"><a href="admin/xuatsanpham/list"><i class="far fa-circle small"> </i>  Danh sách xuất sản phẩm</a></li>
-              <li><a href="admin/xuatsanpham/add"><i class="far fa-circle small"> </i>  Thêm xuất sản phẩm</a></li>
             </ul>
           </li>
       </ul>

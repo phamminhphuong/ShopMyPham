@@ -41,7 +41,7 @@
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                               
+                                <a href="quan-ly-tai-khoan" class="btn btn-default btn-flat">TT cá nhân</a>
                             </div>
                             <div class="pull-right">
                                 <a href="dangxuat" class="btn btn-default btn-flat">Đăng xuất</a>

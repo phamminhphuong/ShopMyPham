@@ -27,22 +27,12 @@
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
-                                       Mã nhập sản phẩm
+                                       Hóa đơn xuất
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
                                         Mã khách hàng
-                                    </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
-                            Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                        Tên vận chuyển
-                                    </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
-                            Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                        Chú thích
                                     </th>
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
@@ -79,16 +69,13 @@
                                         {!!$xsp->MaKhachHang!!}
                                     </td>
                                     <td>
-                                        {!!$xsp->TenVanChuyen!!}
+                                        @if($xsp->TrangThai)
+                                            <span class="text-success"> Đã giao hàng </span>
+                                        @endif
+                                        @if(!$xsp->TrangThai)
+                                            <span class="text-danger"> Chưa giao hàng </span>
+                                        @endif
                                     </td>
-                                   
-                                    <td>
-                                        {!!$xsp->ChuThich!!}
-                                    </td>
-                                    <td>
-                                        {!!$xsp->TrangThai!!}
-                                    </td>
-                                    
                                     <td>
                                         {!!$xsp->NgayXuat!!}
                                     </td>
@@ -103,6 +90,7 @@
                                         @if(empty($xsp->NgayXuat))
                                             <a href="admin/xuatsanpham/giao-hang/{!!$xsp->id!!}">Giao hàng</a> |
                                         @endif
+                                        <a href="admin/xuatsanpham/export/{!!$xsp->id!!}">In hóa đơn</a>
                                         <a href="admin/xuatsanpham/detail/{!!$xsp->id!!}">Chi tiết</a>
                                     </td>
                                 </tr>

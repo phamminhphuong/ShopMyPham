@@ -62,4 +62,26 @@ class NhapsanphamController extends Controller
         $nhapSanPham = NhapSanPham::find($id);
         return view('admin.nhapsanpham.detail', ['nhapSanPham' => $nhapSanPham]);
     }
+
+    // GET admin/nhapsanpham/giao-hang/${id}
+    public function getGiaoHang($id) {
+        $nhapSanPham = NhapSanPham::find($id);
+        $nhapSanPham->TrangThai = 1;
+        $nhapSanPham->NgayNhap = date('Y-m-d H:i:s');
+        DB::beginTransaction();
+        foreach($nhapSanPham->ChiTietNhaps as $item) {
+            $sanPham = $item->SanPham;
+            $sanPham->SoLuong += $item->SoLuong;
+            $sanPham->save();
+        }
+        $xuatSanPham->save();
+        DB::commit();
+        return redirect('admin/nhapsanpham/list');
+    }
+
+    //GET /admin/nhapsanpham/export/{id}
+    public function getExport($id) {
+        $nhapSanPham = NhapSanPham::find($id);
+        return view('admin.nhapsanpham.detail', ['nhapSanPham' => $nhapSanPham]);
+    }
 }
