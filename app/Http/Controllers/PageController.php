@@ -25,11 +25,17 @@ class PageController extends Controller
     //  trang chu
     public function getTrangChu(){
         $sanpham=SanPham::all();
-        return view('page.trang-chu',['sanpham'=>$sanpham]);
+
+        $bestSeller = SanPham::orderBy('SoLuotMua', 'desc')->take(3)->get();
+        return view('page.trang-chu',['sanpham'=>$sanpham, 'bestSeller' => $bestSeller]);
     }
     // chi tiet san pham
     public function getChitiet($id){
         $chitietsanpham=SanPham::find($id);
+
+        $chitietsanpham->SoLuotXem += 1;
+        $chitietsanpham->save();
+
         $madanhmuc=$chitietsanpham->MaDanhMuc;
         $sanphamgiong=SanPham::where('MaDanhMuc',$madanhmuc)->Where('id','<>',$id)->get();
         return view('page.chi-tiet-san-pham',['chitietsanpham'=>$chitietsanpham,'sanphamgiong'=>$sanphamgiong]);
@@ -217,6 +223,10 @@ class PageController extends Controller
             $chiTietXuat->MaSanPham = $item->name->id;
             $chiTietXuat->SoLuong   = $item->qty;
             $chiTietXuat->Gia       = $item->name->GiaUuDai;
+
+            $sanPham = SanPham::find($chiTietXuat->MaSanPham);
+            $sanPham->SoLuotMua += $chiTietXuat->SoLuong;
+            $sanPham->save();
             $chiTietXuat->save();
         }
 

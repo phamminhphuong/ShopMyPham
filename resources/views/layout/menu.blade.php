@@ -21,15 +21,15 @@
                 <div class="js-facet section__sidebar ">
                     <div class="facet-group js-facet-group">
                         <div class="facet-group-title">
-                            <a href="javascript:;"> Nhà cung cấp</a>
+                            <a href="javascript:;"> Sản phẩm bán chạy</a>
                         </div>
                         <div class="facet-group-content js-facet-form">
                             <ul class="facet-list js-facet-list facet-list-scroll">
-                                @foreach($nhacungcap as $ncc)
+                                @foreach($bestSeller as $item)
                                 <li data-label="BEAUTY CONCEPT">
                                     <span class="facet__text">
-                                        <a href="#">{!!$ncc->TenNhaCC!!}</a>
-                                        <span class="facet__value__count">(99)</span>
+                                        <a href="#">{!!$item->TenSanPham!!}</a>
+                                        <span class="facet__value__count"></span>
                                     </span>
                                 </li>
                                 @endforeach
