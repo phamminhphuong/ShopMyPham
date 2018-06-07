@@ -15,4 +15,8 @@ class NhapSanPham extends Model
     public function NhaCungCap(){
         return $this->belongsTo('App\NhaCungCap', 'MaNhaCC', 'id');
     }
+
+    public function TaiKhoan(){
+        return $this->belongsTo('App\User', 'MaTaiKhoan', 'id');
+    }
 }

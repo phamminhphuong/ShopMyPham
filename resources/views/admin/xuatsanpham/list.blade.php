@@ -90,7 +90,7 @@
                                         @if(empty($xsp->NgayXuat))
                                             <a href="admin/xuatsanpham/giao-hang/{!!$xsp->id!!}">Giao hàng</a> |
                                         @endif
-                                        <a href="admin/xuatsanpham/export/{!!$xsp->id!!}">In hóa đơn</a>
+                                        <a href="admin/xuatsanpham/export/{!!$xsp->id!!}">In hóa đơn</a> |
                                         <a href="admin/xuatsanpham/detail/{!!$xsp->id!!}">Chi tiết</a>
                                     </td>
                                 </tr>

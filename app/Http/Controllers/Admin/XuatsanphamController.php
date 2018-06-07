@@ -43,6 +43,6 @@ class XuatsanphamController extends Controller
     //GET /admin/nhapsanpham/export/{id}
     public function getExport($id) {
         $xuatSanPham = XuatSanPham::find($id);
-        return view('admin.xuatsanpham.detail', ['xuatSanPham' => $xuatSanPham]);
+        return view('admin.xuatsanpham.export', ['xuatSanPham' => $xuatSanPham]);
     }
 }

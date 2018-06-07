@@ -82,6 +82,6 @@ class NhapsanphamController extends Controller
     //GET /admin/nhapsanpham/export/{id}
     public function getExport($id) {
         $nhapSanPham = NhapSanPham::find($id);
-        return view('admin.nhapsanpham.detail', ['nhapSanPham' => $nhapSanPham]);
+        return view('admin.nhapsanpham.export', ['nhapSanPham' => $nhapSanPham]);
     }
 }
