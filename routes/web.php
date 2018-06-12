@@ -126,16 +126,7 @@ Route::group(['prefix' => 'admin','middleware'=>'admin_login'], function() {
         Route::get('api/all','Admin\SanphamController@apiAll');
         Route::get('api/find-one/{id}','Admin\SanphamController@apiFindOne');
     });
-        //  slide
-     Route::group(['prefix' => 'slide'], function() {
-        Route::get('list','Admin\SlideController@getList');
-        Route::get('add','Admin\SlideController@getAdd');
-        Route::post('add','Admin\SlideController@postAdd');
-        Route::get('edit/{id}','Admin\SlideController@getEdit');
-        Route::post('edit/{id}','Admin\SlideController@postEdit');
-        Route::get('delete/{id}','Admin\SlideController@getDelete');
-        Route::get('detail/{id}','Admin\SlideController@getDetail');
-    });
+
         //  nhap san pham
      Route::group(['prefix' => 'nhapsanpham'], function() {
         Route::get('list','Admin\NhapsanphamController@getList');

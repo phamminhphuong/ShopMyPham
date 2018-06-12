@@ -129,4 +129,22 @@ class NhacungcapController extends Controller
             $nhacungcap=NhaCungCap::find($id);
             return view('admin.nhacungcap.detail',['nhacungcap'=>$nhacungcap]);
         }
+            //GET   /admin/nhacungcap/api/all
+    public function apiAll1() {
+        $list = NhaCungCap::all();
+        $arr = array();
+
+        foreach($list as $item) {
+            $arr[] = $item->id." - ".$item->TenNhaCC;
+        }
+        
+        return response()
+        ->json($arr);
+    }
+
+    //GET   /admin/NhaCungCap/api/find-one/{id}
+    public function apiFindOne1($id) {
+        $nhacungcap = NhaCungCap::find($id);
+        return response()->json($nhacungcap);
+    }
 }

@@ -74,7 +74,7 @@ class NhapsanphamController extends Controller
             $sanPham->SoLuong += $item->SoLuong;
             $sanPham->save();
         }
-        $xuatSanPham->save();
+        $nhapSanPham->save();
         DB::commit();
         return redirect('admin/nhapsanpham/list');
     }

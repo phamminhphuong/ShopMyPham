@@ -10,7 +10,7 @@
                     <h2 class="checkout-title">
                         <span class="visible-xs-inline"><i class="adr-icon icon-black-cart"></i></span> ĐƠN HÀNG
                     <span class="sidebar-checkout-title__quanity"> ({{count(Cart::content())}} &nbsp;sản phẩm)</span>
-                        <a href="#checkout-confirm-stop-flow" id="js-link-change-cart" data-toggle="modal" data-url="/cart" class="js-link-change-cart checkout-title-float-btn hidden-xs"
+                        <a href="gio-hang" 
                             title="Thay đổi"><i class="adr-icon icon-edit-circle"></i>
                             <span class="hidden-xs">Thay đổi</span>
                         </a>
