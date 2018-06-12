@@ -9,7 +9,7 @@
                         <ol id="header__breadcrumb" class="header__breadcrumb breadcrumb">
                             <li>
                                 <span class="item">
-                                    <a href="#">
+                                    <a href="">
                                         <span itemprop="title">Trang chủ</span>
                                     </a>
                                 </span>

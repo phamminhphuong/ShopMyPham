@@ -18,16 +18,18 @@ class PageController extends Controller
     public function __construct(){
         $danhmucsanpham=DanhMucSanPham::all();
         $nhacungcap=NhaCungCap::all();
+        $bestSeller = SanPham::orderBy('SoLuotMua', 'desc')->take(3)->get();
         view()->share('danhmucsanpham', $danhmucsanpham);
         view()->share('nhacungcap', $nhacungcap);
+        view()->share('bestSeller', $bestSeller);
         
     }
     //  trang chu
     public function getTrangChu(){
         $sanpham=SanPham::all();
 
-        $bestSeller = SanPham::orderBy('SoLuotMua', 'desc')->take(3)->get();
-        return view('page.trang-chu',['sanpham'=>$sanpham, 'bestSeller' => $bestSeller]);
+        
+        return view('page.trang-chu',['sanpham'=>$sanpham]);
     }
     // chi tiet san pham
     public function getChitiet($id){
@@ -70,6 +72,11 @@ class PageController extends Controller
             $sanpham=SanPham::Where('Gia','>=',10000000)->get();
         }
         return view('page.san-pham-theo-gia',['sanpham'=>$sanpham]);
+    }
+    // san pham ban chay
+    public function getSanPhamBanChay($id){
+        $sanphambanchay=SanPham::find($id);
+        return view('page.san-pham-ban-chay',['sanphambanchay'=>$sanphambanchay]);
     }
     // lien he
     public function getLienHe(){

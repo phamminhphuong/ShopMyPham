@@ -20,6 +20,8 @@ Route::get('chi-tiet-san-pham/{id}','PageController@getChitiet');
 Route::get('san-pham-danh-muc/{id}','PageController@getSanPhamDanhMuc');
 // san pham theo gia
 Route::get('san-pham-theo-gia/{number}','PageController@getSanPhamGia');
+// san pham ban chay
+Route::get('san-pham-ban-chay/{id}','PageController@getSanPhamBanChay');
 // tim kiem san pham theo ten
 Route::post('tim-kiem','PageController@postTimKiem');
 // dang nhap
