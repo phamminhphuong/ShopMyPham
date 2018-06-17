@@ -116,7 +116,7 @@
                                     <td>
                                         <a href="admin/khachhang/edit/{!!$kh->id!!}">Sửa</a> |
                                         <a href="admin/khachhang/detail/{!!$kh->id!!}">Chi tiết</a> |
-                                        <a href="admin/khachhang/delete/{!!$kh->id!!}">Xóa</a>
+                                        <a onclick="return confirm('Bạn có chắc chắn muốn xóa khách hàng này?');" href="admin/khachhang/delete/{!!$kh->id!!}">Xóa</a>
                                     </td>
                                 </tr>
                                 @endforeach

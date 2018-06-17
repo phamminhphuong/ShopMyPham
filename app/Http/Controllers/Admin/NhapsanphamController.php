@@ -26,15 +26,12 @@ class NhapsanphamController extends Controller
     public function postAdd(Request $request) {
         DB::beginTransaction();
         $nhapSanPham = new NhapSanPham();
-        $nhapSanPham->MaNhaCC = $request->MaNhaCC;
+        $mancc=$request->MaNhaCC;
+        $nhapSanPham->MaNhaCC=intval($mancc);
         $nhapSanPham->NgayNhap = $request->NgayNhap;
         $nhapSanPham->ChuThich = $request->ChuThich;
         $nhapSanPham->TrangThai = 0;
         $nhapSanPham->MaTaiKhoan = 1;
-
-        $nhapSanPham->HoTen = '';
-        $nhapSanPham->DiaChi = '';
-        $nhapSanPham->DienThoai = '';
         $nhapSanPham->save();
 
         for($i = 0; $i < count($request->MaSanPham); $i++) {

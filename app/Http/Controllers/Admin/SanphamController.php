@@ -6,10 +6,12 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\SanPham;
 use App\DanhMucSanPham;
+use App\ChiTietXuat;
 class SanphamController extends Controller
 {
        // danh sach
        public function getList(){
+       
         $sanpham=SanPham::all();
         return view('admin.sanpham.list',['sanpham'=>$sanpham]);
     }
@@ -74,9 +76,9 @@ class SanphamController extends Controller
         setlocale(LC_MONETARY,"en_US");
         $sanpham->GiaUuDai=$sanpham->Gia * (1 - 1.0 * $request->PhanTramKhauTru / 100);
         $sanpham->PhanTramKhauTru=$request->PhanTramKhauTru;
-        $sanpham->DoUuTien=$request->DoUuTien;
         $sanpham->SoLuotXem=0;
         $sanpham->SoLuotMua=0;
+        
         $sanpham->save();
         return redirect('admin/sanpham/list');
     }
@@ -141,7 +143,6 @@ class SanphamController extends Controller
         $sanpham->Gia=$request->Gia;
         $sanpham->GiaUuDai = $sanpham->Gia * (1 - 1.0 * $request->PhanTramKhauTru / 100);
         $sanpham->PhanTramKhauTru=$request->PhanTramKhauTru;
-        $sanpham->DoUuTien=$request->DoUuTien;
         $sanpham->SoLuotXem = 0;
         $sanpham->SoLuotMua = 0;
         $sanpham->save();

@@ -22,8 +22,8 @@
                     <p style="text-align:right;">Mã khách hàng: {{$nhapSanPham->NhaCungCap->TenNhaCC}}</p>
                     <p style="text-align:right;">Địa chỉ: {{$nhapSanPham->NhaCungCap->DiaChi}}</p>
                     <p style="text-align:right;">Điện thoại: {{$nhapSanPham->NhaCungCap->DienThoai}}</p>
-                    <p style="text-align:right;">Điện thoại: {{$nhapSanPham->NhaCungCap->Email}}</p>
-                    <p style="text-align:right;">Điện thoại: {{$nhapSanPham->NhaCungCap->DiaChiWeb}}</p>
+                    <p style="text-align:right;">Email: {{$nhapSanPham->NhaCungCap->email}}</p>
+                    <p style="text-align:right;">Địa chỉ web: {{$nhapSanPham->NhaCungCap->DiaChiWeb}}</p>
                 </div>
             </div>
         </div>
@@ -51,21 +51,21 @@
                         : activate to sort column ascending" style="width: 239.799px;">
                                         Hình ảnh
                                     </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
+                                    {{--  <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
                                         Giá
-                                    </th>
+                                    </th>  --}}
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
                                         Số lượng
                                     </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
+                                    {{--  <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
                                         Thành tiền
-                                    </th>
+                                    </th>  --}}
                             </thead>
                             <tbody>
                                 @foreach($nhapSanPham->ChiTietNhaps as $item)
@@ -79,15 +79,15 @@
                                     <td>
                                         <img width="150" src="image_SanPham/{!!$item->SanPham->HinhAnh!!}" alt="">
                                     </td>
-                                    <td>
+                                    {{--  <td>
                                         {!!$item->Gia!!}
-                                    </td>
+                                    </td>  --}}
                                     <td>
                                         {!!$item->SoLuong!!}
                                     </td>
-                                    <td>
+                                    {{--  <td>
                                         {!!$item->Gia * $item->SoLuong!!}
-                                    </td>
+                                    </td>  --}}
                                 </tr>
                                 @endforeach
                             </tbody>

@@ -27,8 +27,6 @@ class PageController extends Controller
     //  trang chu
     public function getTrangChu(){
         $sanpham=SanPham::all();
-
-        
         return view('page.trang-chu',['sanpham'=>$sanpham]);
     }
     // chi tiet san pham

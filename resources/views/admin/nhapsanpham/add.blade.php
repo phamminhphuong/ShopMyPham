@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <b class="control-label col-md-4"> Nhà cung cấp</b>
                             <div class="col-md-8">
-                                <input type="text" name="MaNhaCC" value=""  class="form-control"/>
+                                <input type="text" name="MaNhaCC"  placeholder="Enter N" id="cominityId"  class="form-control autocomplete1"/>
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                     <div class="form-group">
                         <b class="control-label col-md-4"> Chọn sản phẩm</b>
                         <div class="col-md-8">
-                            <input class="form-control autocomplete" placeholder="Enter A" id="productId"/>
+                            <input class="form-control autocomplete" placeholder="Enter P" id="productId"/>
                         </div>
                     </div>
                 </div>
@@ -129,13 +129,23 @@
             });
         })
     });
+    $(function () {
+        $.get("admin/nhacungcap/api1/all1", function (data) {
+            console.log("oki");
+            $(".autocomplete1").autocomplete({
+                source: data
+            });
+        })
+    });
     ltmApp.count = 0;
 </script>
 <script>
     $("#btnAddProduct").click(function () {
         var productId = $("#productId").val().split("-")[0];
+        var comunityId = $("#cominityId").val().split("-")[0];
         var productQty = $("#productQty").val();
         console.log(productId);
+        console.log(cominityId);
         console.log(productQty);
         $.get("admin/sanpham/api/find-one/" + productId, function (data) {
             console.log("load oki");

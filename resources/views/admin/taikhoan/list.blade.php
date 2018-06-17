@@ -78,7 +78,7 @@
                                     <td>
                                         <a href="admin/taikhoan/edit/{!!$tk->id!!}">Sửa</a> |
                                         <a href="admin/taikhoan/detail/{!!$tk->id!!}">Chi tiết</a> |
-                                        <a href="admin/taikhoan/delete/{!!$tk->id!!}">Xóa</a>
+                                        <a onclick="return confirm('Bạn có chắc chắn muốn xóa tài khoản này?');" href="admin/taikhoan/delete/{!!$tk->id!!}">Xóa</a>
                                     </td>
                                 </tr>
                                 @endforeach

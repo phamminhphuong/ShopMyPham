@@ -456,7 +456,7 @@
             <div class="sidebar-similar-product__content">
                 <div class="product-list__container" id="count-product-together">
                     @foreach($sanphamgiong as $sp)
-                    <a href="/tinh-dau-sa-chanh-milaganics-lemongrass-essential-oil-30ml-p-PRI796535?offer=PRI796535_MU7&amp;ref=tog" class="product-item">
+                    <a href="chi-tiet-san-pham/{!!$sp->id!!}" class="product-item">
                         <div class="product-item__container">
                             <div class="product-item__thumbnail">
                                 <img id="together-viewed-product" class="img-responsive lazy " src="image_SanPham/{!!$sp->HinhAnh!!}"

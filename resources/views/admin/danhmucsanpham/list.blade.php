@@ -1,4 +1,6 @@
-@extends('admin.layout.index') @section('title') Danh sách danh mục sản phẩm @endsection @section('content')
+@extends('admin.layout.index') 
+@section('title') Danh sách danh mục sản phẩm @endsection
+ @section('content')
 <section class="content container-fluid">
     <div class="box">
         <div class="box-header">
@@ -26,11 +28,7 @@
                         : activate to sort column ascending" style="width: 239.799px;">
                                         Tên danh mục sản phẩm
                                     </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
-                            Mật khẩu
-                        : activate to sort column ascending" style="width: 239.799px;">
-                                        Độ ưu tiên
-                                    </th>
+                                    
                                     <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
@@ -54,9 +52,7 @@
                                     <td>
                                         {!!$dm->TenDanhMuc!!}
                                     </td>
-                                    <td>
-                                        {!!$dm->DoUuTien!!}
-                                    </td>
+                                   
                                     <td>
                                         {!!$dm->created_at!!}
                                     </td>
@@ -66,7 +62,7 @@
                                     <td>
                                         <a href="admin/danhmucsanpham/edit/{!!$dm->id!!}">Sửa</a> |
                                         <a href="admin/danhmucsanpham/detail/{!!$dm->id!!}">Chi tiết</a> |
-                                        <a href="admin/danhmucsanpham/delete/{!!$dm->id!!}">Xóa</a>
+                                        <a onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục sản phẩm này?');" href="admin/danhmucsanpham/delete/{!!$dm->id!!}">Xóa</a>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -74,7 +70,6 @@
                         </table>
                     </div>
                 </div>
-              
             </div>
         </div>
     </div>

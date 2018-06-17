@@ -99,12 +99,7 @@
                                 <input type="text" name="PhanTramKhauTru" class="form-control" placeholder="Nhập phần trăm khấu trừ" value=""> 
                             </div>
                     </div>
-                    <div class="form-group">
-                            <b class="control-label col-md-2"> Độ ưu tiên</b>
-                            <div class="col-md-10">
-                                <input type="number" name="DoUuTien" class="form-control" value="0"> 
-                            </div>
-                    </div>
+                   
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <input type="submit" value="Tạo mới" class="btn btn-primary">

@@ -23,13 +23,13 @@
                         <div class="facet-group-title">
                             <a href="javascript:;"> Sản phẩm bán chạy</a>
                         </div>
-                        <div class="facet-group-content js-facet-form">
-                            <ul class="facet-list js-facet-list facet-list-scroll">
+                        <div class="facet-group-content js-facet-form ">
+                            <ul class="facet-list js-facet-list facet-list-scroll" style="max-height:500px">
                                 @foreach($bestSeller as $item)
                                 <li data-label="BEAUTY CONCEPT" style="margin-left:18px">
                                     <span class="facet__text">
                                         {{--  <a href="#">{!!$item->TenSanPham!!}</a>  --}}
-                                        <a href="san-pham-ban-chay/{!!$item->id!!}"><img src="image_SanPham/{!!$item->HinhAnh!!}" width="70px" height="70px" alt=""></a>
+                                        <a href="san-pham-ban-chay/{!!$item->id!!}"><img src="image_SanPham/{!!$item->HinhAnh!!}" width="125px" height="125px" alt=""></a>
                                         <span class="facet__value__count"></span>
                                     </span>
                                 </li>

@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="fontAnwesome/css/fontawesome-all.min.css">
 	<link rel="stylesheet" href="fontAnwesome/css/fontawesome.css">
 	<link rel="stylesheet" href="fontAnwesome/css/fontawesome.min.css">
+
 </head>
 
 <body class="page-vinregularcategorypage pageType-CategoryPage template-pages-category-vinCategoryPage  language-vi">

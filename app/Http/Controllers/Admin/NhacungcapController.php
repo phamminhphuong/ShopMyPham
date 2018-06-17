@@ -129,8 +129,8 @@ class NhacungcapController extends Controller
             $nhacungcap=NhaCungCap::find($id);
             return view('admin.nhacungcap.detail',['nhacungcap'=>$nhacungcap]);
         }
-            //GET   /admin/nhacungcap/api/all
-    public function apiAll1() {
+      //GET   /admin/sanpham/api/all
+      public function apiAll1() {
         $list = NhaCungCap::all();
         $arr = array();
 
@@ -142,9 +142,9 @@ class NhacungcapController extends Controller
         ->json($arr);
     }
 
-    //GET   /admin/NhaCungCap/api/find-one/{id}
+    //GET   /admin/sanpham/api/find-one/{id}
     public function apiFindOne1($id) {
-        $nhacungcap = NhaCungCap::find($id);
-        return response()->json($nhacungcap);
+        $sanpham = SanPham::find($id);
+        return response()->json($sanpham);
     }
 }

@@ -62,7 +62,7 @@ Danh sách loại tài khoản
                                     <td>
                                         <a href="admin/loaitaikhoan/edit/{!!$ltk->id!!}">Sửa</a> |
                                         <a href="admin/loaitaikhoan/detail/{!!$ltk->id!!}">Chi tiết</a> |
-                                        <a href="admin/loaitaikhoan/delete/{!!$ltk->id!!}">Xóa</a>
+                                        <a onclick="return confirm('Bạn có chắc chắn muốn xóa loại tài khoản này?');" href="admin/loaitaikhoan/delete/{!!$ltk->id!!}">Xóa</a>
                                     </td>
                                 </tr>
                                 @endforeach

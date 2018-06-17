@@ -107,10 +107,10 @@
             </dl>
             <dl class="dl-horizontal">
                 <dt>
-                   Độ ưu tiên
+                   Số lượng bán được
                 </dt>
                 <dd>
-                    {!!$sanpham->DoUuTien!!}
+                    {!!$sanpham->SoLuongBanDuoc!!}
                 </dd>
             </dl>
             <br>

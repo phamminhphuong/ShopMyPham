@@ -101,6 +101,9 @@ Route::group(['prefix' => 'admin','middleware'=>'admin_login'], function() {
         Route::post('edit/{id}','Admin\NhacungcapController@postEdit');
         Route::get('delete/{id}','Admin\NhacungcapController@getDelete');
         Route::get('detail/{id}','Admin\NhacungcapController@getDetail');
+
+        Route::get('api1/all1','Admin\NhacungcapController@apiAll1');
+        Route::get('api/find-one/{id}','Admin\NhacungcapController@apiFindOne');
     });
         // danh muc san pham
      Route::group(['prefix' => 'danhmucsanpham'], function() {

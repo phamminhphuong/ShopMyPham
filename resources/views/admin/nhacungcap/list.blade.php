@@ -111,7 +111,7 @@
                                     <td>
                                         <a href="admin/nhacungcap/edit/{!!$ncc->id!!}">Sửa</a> |
                                         <a href="admin/nhacungcap/detail/{!!$ncc->id!!}">Chi tiết</a> |
-                                        <a href="admin/nhacungcap/delete/{!!$ncc->id!!}">Xóa</a>
+                                        <a onclick="return confirm('Bạn có chắc chắn muốn xóa nhà cung cấp này?');" href="admin/nhacungcap/delete/{!!$ncc->id!!}">Xóa</a>
                                     </td>
                                 </tr>
                                 @endforeach

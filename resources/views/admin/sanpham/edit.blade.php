@@ -101,12 +101,7 @@
                                     <input type="text" name="PhanTramKhauTru" class="form-control" placeholder="Nhập phần trăm khấu trừ" value="{!!$sanpham->PhanTramKhauTru!!}"> 
                                 </div>
                         </div>
-                        <div class="form-group">
-                                <b class="control-label col-md-2"> Độ ưu tiên</b>
-                                <div class="col-md-10">
-                                    <input type="number" name="DoUuTien" class="form-control" value="{!!$sanpham->DoUuTien!!}"> 
-                                </div>
-                        </div>
+                       
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <input type="submit" value="Sửa" class="btn btn-primary">

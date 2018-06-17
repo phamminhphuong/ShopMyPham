@@ -31,13 +31,7 @@
                                     data-val-length-max="50" id="TenDanhMuc" name="TenDanhMuc" type="text" value="{{$danhmucsanpham->TenDanhMuc}}" placeholder="Nhập tên danh mục sản phẳm">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <b class="control-label col-md-2"> Độ ưu tiên</b>
-                            <div class="col-md-10">
-                                <input class="form-control text-box single-line" data-val="true" data-val-length="The field TenSanPham must be a string with a maximum length of 50."
-                                    data-val-length-max="50" id="DoUuTien" name="DoUuTien" type="number" value="{{$danhmucsanpham->DoUuTien}}">
-                            </div>
-                        </div>
+                        
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <input type="submit" value="Sửa" class="btn btn-primary">

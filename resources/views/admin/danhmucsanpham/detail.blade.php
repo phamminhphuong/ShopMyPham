@@ -21,14 +21,7 @@
                     {!!$danhmucsanpham->TenDanhMuc!!}
                 </dd>
             </dl>
-            <dl class="dl-horizontal">
-                <dt>
-                    Độ ưu tiên
-                </dt>
-                <dd>
-                    {!!$danhmucsanpham->DoUuTien!!}
-                </dd>
-            </dl>
+            
 
         </div>
         <br><br>

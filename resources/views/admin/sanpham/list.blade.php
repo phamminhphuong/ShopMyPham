@@ -80,11 +80,11 @@
                         : activate to sort column ascending" style="width: 239.799px;">
                                        Phần trăm khấu trừ
                                     </th>
-                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
+                                    {{--  <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
-                                      Độ ưu tiên
-                                    </th>
+                                      Số lượng bán được
+                                    </th>  --}}
                                     {{--  <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="
                             Mật khẩu
                         : activate to sort column ascending" style="width: 239.799px;">
@@ -136,11 +136,11 @@
                                         {!!$sp->GiaUuDai!!}
                                     </td>
                                     <td>
-                                        {!!$sp->PhanTramKhauTru!!}
+                                        {!!$sp->PhanTramKhauTru!!}%
                                     </td>
-                                    <td>
-                                        {!!$sp->DoUuTien!!}
-                                    </td>
+                                    {{--  <td>
+                                        {!!$sp->SoLuongBanDuoc!!}
+                                    </td>  --}}
                                     <td>
                                         <a href="admin/sanpham/edit/{!!$sp->id!!}">Sửa</a> |
                                         <a href="admin/sanpham/detail/{!!$sp->id!!}">Chi tiết</a> |

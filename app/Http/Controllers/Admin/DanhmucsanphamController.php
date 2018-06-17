@@ -30,7 +30,7 @@ class DanhmucsanphamController extends Controller
         ]);
         $danhmucsanpham=new DanhMucSanPham();
         $danhmucsanpham->TenDanhMuc=$request->TenDanhMuc;
-        $danhmucsanpham->DoUuTien=$request->DoUuTien;
+       
         $danhmucsanpham->save();
         return redirect('admin/danhmucsanpham/list');
     }
@@ -53,7 +53,7 @@ class DanhmucsanphamController extends Controller
         ]);
         $danhmucsanpham=DanhMucSanPham::find($id);
         $danhmucsanpham->TenDanhMuc=$request->TenDanhMuc;
-        $danhmucsanpham->DoUuTien=$request->DoUuTien;
+       
         $danhmucsanpham->save();
         return redirect('admin/danhmucsanpham/list');
     }
