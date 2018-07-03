@@ -137,6 +137,12 @@
               <li class="active"><a href="admin/xuatsanpham/list"><i class="far fa-circle small"> </i>  Danh sách xuất sản phẩm</a></li>
             </ul>
           </li>
+
+          <li>
+          <a href="admin/thong-ke/index">
+            <i class="fas fa-tachometer-alt"></i><span> Thống kê</span>
+          </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->

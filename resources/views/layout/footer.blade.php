@@ -48,7 +48,7 @@
                         <!-- end .media-left -->
                         <div class="text">
                             <div class="title">&nbsp;Uy tín hàng đầu</div>
-                            <div class="subtitle">&nbsp; Một thành viên của CT mỹ phẩm Việt Hương</div>
+                            <div class="subtitle">&nbsp; Một thành viên của CT mỹ phẩm Huyền Phạm</div>
                         </div>
                         <!-- end .media-body -->
                     </div>

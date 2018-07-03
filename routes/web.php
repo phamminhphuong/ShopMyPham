@@ -62,6 +62,11 @@ Route::group(['prefix' => 'admin','middleware'=>'admin_login'], function() {
     Route::group(['prefix' => 'bangdieukhien'], function() {
         Route::get('index','Admin\BangdieukhienController@getBangdieukhien');
     });
+    // bang dieu khien
+    Route::group(['prefix' => 'thong-ke'], function() {
+        Route::get('index','Admin\ThongKeController@getThongKe');
+        Route::post('index','Admin\ThongKeController@postThongKe');
+    });
     // Loai tai khoan
     Route::group(['prefix' => 'loaitaikhoan'], function() {
         Route::get('list','Admin\LoaitaikhoanController@getList');
