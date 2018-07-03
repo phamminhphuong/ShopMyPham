@@ -84,11 +84,15 @@
                                     </span>
                                 </li>
                                 <!-- </ul> -->
-
+                                <div>
+                                <video width="240" height="128" controls>
+                                    <source src="video\a.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             </ul>
                         </div>
                     </div>
-                  
+                    
                 </div>
             </div>
         </div>
