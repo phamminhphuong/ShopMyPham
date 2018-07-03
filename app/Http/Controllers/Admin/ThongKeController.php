@@ -32,6 +32,10 @@ class ThongKeController extends Controller
         $soLuongNhap = ChiTietNhap::whereDate('created_at', '>=', $startDate)->whereDate('created_at', '<=', $endDate)->sum('SoLuong');
         $soLuongXuat = ChiTietXuat::whereDate('created_at', '>=', $startDate)->whereDate('created_at', '<=', $endDate)->sum('SoLuong');
         $doanhThu = 0;
+        $query = ChiTietXuat::whereDate('created_at', '>=', $startDate)->whereDate('created_at', '<=', $endDate)->get();
+        foreach($query as $item) {
+            $doanhThu += $item->SoLuong * $item->Gia;
+        }
 
         //DateTime::createFromFormat('m-d-Y', $startDate);
         //var_dump($startDate);
