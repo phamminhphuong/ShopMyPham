@@ -24,13 +24,17 @@
                             <a href="javascript:;"> Sản phẩm bán chạy</a>
                         </div>
                         <div class="facet-group-content js-facet-form ">
-                            <ul class="facet-list js-facet-list facet-list-scroll" style="max-height:500px">
+                            <ul class="facet-list js-facet-list facet-list-scroll" style="max-height:550px">
                                 @foreach($bestSeller as $item)
-                                <li data-label="BEAUTY CONCEPT" style="margin-left:18px">
+                                <li data-label="BEAUTY CONCEPT" style="margin-left:18px; margin-bottom:10px;">
                                     <span class="facet__text">
                                         {{--  <a href="#">{!!$item->TenSanPham!!}</a>  --}}
                                         <a href="san-pham-ban-chay/{!!$item->id!!}"><img src="image_SanPham/{!!$item->HinhAnh!!}" width="125px" height="125px" alt=""></a>
-                                        <span class="facet__value__count"></span>
+                                        <div>
+                                            <span style="color: #ed1d24;font-size: 16px;font-weight: 700;padding:5px 0;"> {{$item->GiaUuDai}}</span> 
+                                            <span style="text-decoration: line-through; float:right; margin-right:35px; margin-top:4px;">{{$item->Gia}}</span> 
+                                            <br>
+                                            <a href="san-pham-ban-chay/{!!$item->id!!}"><span>{{ str_limit($item->TenSanPham, 20, $end = '...') }}</span></a></div>
                                     </span>
                                 </li>
                                 @endforeach
@@ -87,6 +91,10 @@
                                 <div>
                                 <video width="240" height="128" controls>
                                     <source src="video\a.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <video width="240" height="128" controls>
+                                    <source src="video\b.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </ul>

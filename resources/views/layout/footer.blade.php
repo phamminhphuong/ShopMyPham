@@ -144,13 +144,15 @@
                     </div>
                     <!--Footer Social-->
                     <div class="footer__nav-list footer__social--nav col-md-3" style="width:300px;padding-left:20px">
+                        <div class="title">
+                            <span class="nav-click">
+                                <i class="nav-arrow"></i>
+                            </span>KẾT NỐI VỚI CHÚNG TÔI</div>
                         <div class="footer__nav-links clearfix hidden-xs hidden-sm">
                             <div class="col-md-12 col-lg-6" style="padding:0">
-                            <div>
-                            <video width="320" height="240" controls>
-                                <source src="video\a.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100011365276434" rel="nofollow">
+                                    <img alt="Kết nối với Shop Mỹ Huyền trên facebook" title="" 
+                                    src="img/facebook.png" class="img-responsive"></a>
                             </div>
                         </div>
                     </div>
