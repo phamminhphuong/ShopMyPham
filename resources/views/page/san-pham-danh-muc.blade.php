@@ -44,6 +44,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
                         <div class="product-list__container">
                             <div class="row">
@@ -57,7 +58,7 @@
                                         <input type="hidden" name="quantity" value="1">
                                         <div class="product-item__container">
                                             <a class="product-item__thumbnail " href="chi-tiet-san-pham/{!!$sp->id!!}">
-                                                <img class="default lazy swiper-lazy " src="image_SanPham/{!!$sp->HinhAnh!!}"  style="width:200px;height:200px"/> 
+                                                <img class="default lazy swiper-lazy " src="image_SanPham/{!!$sp->HinhAnh!!}"  style="width:200px;height:200px"/>
                                                 <img class="hover " src="image_SanPham/{!!$sp->HinhAnh!!}"/>
                                             </a>
                                             <div class="product-item__info">
@@ -92,6 +93,34 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
+                <section class="section__pagination text-center">
+                    <nav class="Page navigation">
+                        <ul class="pagination hidden-xs">
+                            <li><a href="?page=1"
+                                @if($paging->page == 1)
+                                    class='btn disabled'
+                                @endif
+                            ><i class="adr-icon icon-arrow-left-sm"></i> Trang đầu</a></li>
+                            <li><a href="?page={{$paging->page - 1}}" aria-label="Next"
+                                @if($paging->page == 1)
+                                    class='btn disabled'
+                                @endif
+                            > Trang trước<i class="adr-icon icon-arrow-right-sm"></i></a></li>
+                            <li class="active"><a href="?page={{$paging->page}}">{{$paging->page}}</a></li>
+                            <li><a href="?page={{$paging->page + 1}}" aria-label="Next"
+                                @if($paging->page == $paging->numberOfPages)
+                                    class='btn disabled'
+                                @endif
+                            > Trang sau<i class="adr-icon icon-arrow-right-sm"></i></a></li>
+                            <li><a aria-label="Next" href="?page={{$paging->numberOfPages}}"
+                                @if($paging->page == $paging->numberOfPages)
+                                    class='btn disabled'
+                                @endif
+                            > Trang cuối<i class="adr-icon icon-arrow-right-sm"></i></a></li>
+                        </ul>
+                        <div class="clearfix visible-xs"></div>
+                    </nav>
+                </section>
             </div>
         </div>
     </div>

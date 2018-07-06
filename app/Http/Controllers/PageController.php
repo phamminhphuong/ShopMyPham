@@ -25,9 +25,25 @@ class PageController extends Controller
         
     }
     //  trang chu
-    public function getTrangChu(){
-        $sanpham=SanPham::all();
-        return view('page.trang-chu',['sanpham'=>$sanpham]);
+    public function getTrangChu(Request $request){
+
+        $page = 0;
+        if(!empty($request->page)) {
+            $page = intval($request->page) - 1;
+        }
+        $recordsOfPage = 12;
+
+        $paging = (object) [];
+        $paging->count = SanPham::all()->count();
+        $paging->numberOfPages = ceil(1.0 * $paging->count / $recordsOfPage);
+
+        if($page <=0) $page = 0;
+        else if($page >= $paging->numberOfPages) $page = $paging->numberOfPages - 1;
+        $paging->page = $page + 1;
+        
+
+        $sanpham=SanPham::skip($recordsOfPage*$page)->take($recordsOfPage)->get();
+        return view('page.trang-chu',['sanpham'=>$sanpham, 'paging'=>$paging]);
     }
     // chi tiet san pham
     public function getChitiet($id){
@@ -41,9 +57,24 @@ class PageController extends Controller
         return view('page.chi-tiet-san-pham',['chitietsanpham'=>$chitietsanpham,'sanphamgiong'=>$sanphamgiong]);
     }
     // san pham theo danh muc
-    public function getSanPhamDanhMuc($id){
-        $sanpham=SanPham::Where('MaDanhMuc',$id)->get();
-        return view('page.san-pham-danh-muc',['sanpham'=>$sanpham]);
+    public function getSanPhamDanhMuc($id, Request $request){
+
+        $page = 0;
+        if(!empty($request->page)) {
+            $page = intval($request->page) - 1;
+        }
+        $recordsOfPage = 12;
+
+        $paging = (object) [];
+        $paging->count = SanPham::all()->count();
+        $paging->numberOfPages = ceil(1.0 * $paging->count / $recordsOfPage);
+
+        if($page <=0) $page = 0;
+        else if($page >= $paging->numberOfPages) $page = $paging->numberOfPages - 1;
+        $paging->page = $page + 1;
+        
+        $sanpham=SanPham::Where('MaDanhMuc',$id)->skip($recordsOfPage*$page)->take($recordsOfPage)->get();
+        return view('page.san-pham-danh-muc',['sanpham'=>$sanpham, 'paging'=>$paging]);
     }
     // tim kiem san pham
     public function postTimKiem(Request $request){

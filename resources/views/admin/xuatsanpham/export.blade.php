@@ -103,6 +103,16 @@
                 <span>Ngày xuất</span> <span>{{$xuatSanPham->NgayXuat}}</span>
             </div>
         </section>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div style="display:flex; font-weight:bold;">
+            <span style="flex:1; margin-left:60px;">Nhân viên bán hàng:</span>
+            <span style="flex:1">Người giao:</span>
+            <span style="flex:1">Người nhận:</span>
+        </div>
 
         <section id="terms">
             <div class="notes"></div>
