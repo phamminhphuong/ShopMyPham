@@ -62,7 +62,7 @@
                     <tr>
                         <td>3</td>
                         <td>Doanh thu</td>
-                        <td>{{$doanhThu}}</td>
+                        <td>{{number_format($doanhThu,0)}}</td>
                     </tr>
                 </tbody>
             </table>
