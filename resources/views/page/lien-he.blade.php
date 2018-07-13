@@ -36,7 +36,7 @@
                                             <p>
                                                 <b>Tại </b>
                                             </p>
-                                            <p>Cầu Giấy - Hà Nội</p>
+                                            <p>Số 41 ngõ 66B Triều Khúc- Thanh Xuân - Hà Nội</p>
                                         </div>
                                         <div class="col-xs-12 col-sm-6">
                                             
@@ -58,7 +58,7 @@
                                                         <i class="fas fa-phone-volume"></i>
                                                 </span>Hotline:
                                                 <a href="#">
-                                                    <b>12345678888</b>
+                                                    <b>0967442796</b>
                                                 </a>
                                             </li>
                                         
@@ -66,7 +66,7 @@
                                                 <span class="item-icon">
                                                         <i class="fas fa-envelope-open"></i>
                                                 </span> Email:
-                                                <a href="#">admin.com</a>
+                                                <a href="#">huyenbaby596@gmail.com</a>
                                             </li>
                                         </ul>
                                     </div>

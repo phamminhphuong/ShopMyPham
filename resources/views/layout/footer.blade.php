@@ -150,7 +150,7 @@
                             </span>KẾT NỐI VỚI CHÚNG TÔI</div>
                         <div class="footer__nav-links clearfix hidden-xs hidden-sm">
                             <div class="col-md-12 col-lg-6" style="padding:0">
-                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100011365276434" rel="nofollow">
+                                <a target="_blank" href="https://www.facebook.com/HuyenPham25051996" rel="nofollow">
                                     <img alt="Kết nối với Shop Mỹ Huyền trên facebook" title="" 
                                     src="img/facebook.png" class="img-responsive"></a>
                             </div>
